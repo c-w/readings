@@ -1,1 +1,5 @@
 Date	URL	Title	Topic	Summary
+2014-08-04	https://www.youtube.com/watch?v=Xg8UtTgziZE	Hierarchical Text Classification using Python (and friends)	Machine Learning	Interesting learning approach that uses tree-like structure in data explicitly.
+2014-08-04	https://www.youtube.com/watch?v=dBqyvpfHy8k	Authorship Attribution Using Python	Machine Learning	Stylometry using POS, word and character level TF-IDF 1,2,3-grams.
+2014-08-04	https://www.youtube.com/watch?v=MdkHLS0FPMk	Most Winning A/B Test Results are Illusory	Statistics	Great list of A/B testing gotchas.
+2014-08-04	https://www.youtube.com/watch?v=CHjWMpWVaTQ	Recommenders in Python	Machine Learning	Basic recommender systems using distance measures and SVD.
