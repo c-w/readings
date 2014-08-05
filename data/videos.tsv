@@ -3,3 +3,9 @@ Date	URL	Title	Topic	Summary
 2014-08-04	https://www.youtube.com/watch?v=dBqyvpfHy8k	Authorship Attribution Using Python	Machine Learning	Stylometry using POS, word and character level TF-IDF 1,2,3-grams.
 2014-08-04	https://www.youtube.com/watch?v=MdkHLS0FPMk	Most Winning A/B Test Results are Illusory	Statistics	Great list of A/B testing gotchas.
 2014-08-04	https://www.youtube.com/watch?v=CHjWMpWVaTQ	Recommenders in Python	Machine Learning	Basic recommender systems using distance measures and SVD.
+2014-08-05	https://www.youtube.com/watch?v=SpBeJxIiLSs	ApacheCon Keynote	Data Science	Motivational keynote: history, definition, current applications and future of data science.
+2014-08-05	https://www.youtube.com/watch?v=jVMWT7I3ATM	Search is not a solved problem	Computer Science	Better search using real-time engagement metrics and content overlap.
+2014-08-05	https://www.youtube.com/watch?v=P74spbN4PLE	Real-World Machine Learning on Big Data: Which Methods Should You Use?	Machine Learning	Overview of different types of machine learning formulations and how to pragmatically choose between them: accuracy vs training/test speed vs interpretability vs simplicity.
+2014-08-05	https://www.youtube.com/watch?v=3Z8Y_NCS0Tk	 Text mining to correct missing CRM information	Machine Learning	Tokenization + TF-IDF + SVD to find and propagate similarities in text.
+2014-08-05	https://www.youtube.com/watch?v=t4IYPCnC5iA	Measuring and Predicting Departures from Routine in Human Mobility	Machine Learning	Using Bayesian Nets to model spatio-temporal behavior.
+2014-08-05	https://www.youtube.com/watch?v=zQFHHHwc-9g	Winning Ways for Your Visualization Plays	Data Science	Biases and pitfalls in visualization.
