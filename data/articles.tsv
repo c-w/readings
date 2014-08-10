@@ -15,3 +15,6 @@ Date	URL	Title	Topic	Summary
 2014-08-08	http://zacstewart.com/2014/08/05/pipelines-of-featureunions-of-pipelines.html	Machine Learning	Sci-kit feature: pipeline to make working with feature extraction, transformation and model training easier.
 2014-08-08	http://www.datasciencecentral.com/profiles/blogs/17-analytic-disciplines-compared	16 analytic disciplines compared to data science	Data Science	Pretty in-depth comparison of different fields that are often confused or overlap with data science. Good reference for people asking about data science.
 2014-08-09	http://bertolami.com/index.php?engine=blog&content=posts&detail=perceptual-hashing	Machine Learning	SimHash for images.
+2014-08-10	http://stevehanov.ca/blog/index.php?id=114	Fast and Easy Levenshtein distance using a Trie	Computer Science	Faster one-to-many edit distance algorithm.
+2014-08-10	http://snippyhollow.github.io/blog/2014/08/09/so-you-wanna-try-deep-learning/	So You Wanna Try Deep Learning?	Machine Learning	Practical intro to deep learning: libraries, papers, gotchas.
+2014-08-10	http://waldo.jaquith.org/blog/2011/02/ocr-video/	How I OCR Hundreds of Hours of Video	API mashup to make videos searchable by extracting text-overlays from videos.
