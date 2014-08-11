@@ -1,1 +1,2 @@
 Date	URL	Title	Topic	Summary
+2014-08-11	http://web.stanford.edu/~jpennin/papers/glove.pdf	GloVe: Global Vectors for Word Representation	Natural Language Processing	Semantic modelling: combine word-co-occurrence approach with word-context approach to get significantly better performance. Only consider non-zero elements of co-occurrence matrix in order to reduce noise. Not all training data is created equal: less in-domain data can outperform more out-of-domain data.
