@@ -1,4 +1,19 @@
 #!/bin/sh
+#
+# This script is a git pre-commit hook.
+#
+# The hook runs after any invocation of `git commit` and validates the files
+# that are about to be committed.
+#
+# All the functions below that start with `validate_` will abort the commit if
+# any of the staged files violates some constraints. Functions that start with
+# the prefix `autofix_` will modify the files about to be committed in-place and
+# re-stage the changed files. Any changes made will be logged to stderr.
+#
+# Usage:
+#   Set up the hook by linking it into the hooks directory of your repository:
+#       $ ln -s ../../scripts/pre-commit.sh .git/hooks
+
 
 ################################################################################
 #                           utility functions
