@@ -17,8 +17,11 @@ space2tab() { sed -i '/'"    "'/{s//'"\t"'/g;h};${x;/./{x;q1};x}' "$1"; }
 
 # replace spaces with tabs in TSV files
 for TSV_FILE in $(staged | tsvfilter); do
-    space2tab "${TSV_FILE}" || warning "Replaced spaces for tabs in ${TSV_FILE}"
-    git add "${TSV_FILE}"
+    space2tab "${TSV_FILE}"
+    if [ $? -ne 0 ]; then
+        warning "Replaced spaces for tabs in ${TSV_FILE}"
+        git add "${TSV_FILE}"
+    fi
 done
 
 # make sure that all the TSV files have the right number of columns
