@@ -12,7 +12,7 @@
 #
 # Usage:
 #   Set up the hook by linking it into the hooks directory of your repository:
-#       $ ln -s ../../scripts/pre-commit.sh .git/hooks
+#       $ ln -s ../../scripts/pre-commit.sh .git/hooks/pre-commit
 
 
 ################################################################################
