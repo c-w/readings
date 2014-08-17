@@ -9,12 +9,19 @@
 #   $ crontab -e
 #       @daily /path/to/repository/scripts/auto-commit.sh
 
-COMMIT_DIR="data"
-COMMIT_MSG="[AutoCommit] Readings for $(date +"%a, %b %d %Y")"
 
-CURDIR="$(pwd)" && cd "$(dirname $(readlink -f $0))" > /dev/null
+CURDIR="$(pwd)" \
+&& cd "$(dirname $(readlink -f $0))" \
+&& cd "$(git rev-parse --show-toplevel)"
 
-git add -A "$(git rev-parse --show-toplevel)/${COMMIT_DIR}"
-git commit -m "${COMMIT_MSG}"
+dates() { cat | grep -P '^\+\d{4}-\d{2}-\d{2}' | cut -f1 | cut -d'+' -f2; }
 
-cd "${CURDIR}" > /dev/null
+COMMIT_FILES="data/*.tsv"
+COMMIT_TIME="23:59:59"
+COMMIT_DATE="$(git diff ${COMMIT_FILES} | dates | tail -n1)T${COMMIT_TIME}"
+COMMIT_MSG="[AutoCommit] Readings for $(date -d${COMMIT_DATE} +"%a, %b %d %Y")"
+
+git add -A "${COMMIT_FILES}"
+git commit -m "${COMMIT_MSG}" --date="${COMMIT_DATE}"
+
+cd "${CURDIR}"
