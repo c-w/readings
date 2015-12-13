@@ -16,7 +16,7 @@ CURDIR="$(pwd)" \
 
 dates() { cat | grep -P '^\+\d{4}-\d{2}-\d{2}' | cut -f1 | cut -d'+' -f2; }
 
-COMMIT_FILES="data/*.tsv"
+COMMIT_FILES="data.tsv"
 COMMIT_TIME="23:59:59"
 COMMIT_DATE="$(git diff ${COMMIT_FILES} | dates | tail -n1)T${COMMIT_TIME}"
 COMMIT_MSG="[AutoCommit] Readings for $(date -d${COMMIT_DATE} +"%a, %b %d %Y")"
