@@ -211,7 +211,7 @@
     "date": "2015-03-21",
     "summary": "Don't always use the default loss function (e.g. Huber loss is good to not heavily penalize outliers and hinge loss is good to not penalize small mistakes). Add interaction terms to achieve non-linearity when using linear models, e.g. logistic regression. Always check for outliers! Always standardize features when using regularization. Coefficient sizes of linear models not always interpretable as feature importance, e.g. when attributes co-linear or not standardized.",
     "title": "7 common mistakes when doing Machine Learning",
-    "topic": "Machine learning",
+    "topic": "Machine Learning",
     "type": "Article",
     "url": "http://www.kdnuggets.com/2015/03/machine-learning-data-science-common-mistakes.html"
   },
