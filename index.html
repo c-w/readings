@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+  <head>
+    <title>My readings</title>
+
+    <script type='text/javascript' src='https://code.jquery.com/jquery-1.11.3.min.js'></script>
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/Shuffle/3.1.1/jquery.shuffle.modernizr.js'></script>
+    <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/c-w/jquery-handlebars-simple/1b8deea/jquery-handlebars-simple.min.js"></script>
+    <script type='text/javascript' src='https://cdn.rawgit.com/c-w/jquery-materialize-labelled-dropdown/814ee8a/jquery-materialize-labelled-dropdown.min.js'></script>
+    <script type='text/javascript' src='./page.js'></script>
+
+    <link type='text/css' rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+  </head>
+
+  <body class="blue-grey">
+    <script id="helpers" type="text/javascript">
+      Handlebars.registerHelper("stringify", function(json) {
+        return JSON.stringify(json);
+      });
+    </script>
+
+    <script id='filters-template' type='text/handlebars'>
+      <div class='navbar-fixed'>
+        <ul id='filters-dropdown' class='dropdown-content'>
+          <li class='dropdown-item filter active' data-group=''><a href='#!'>All</a></li>
+          {{#each this}}
+          <li class='dropdown-item filter' data-group='{{this}}'><a href='#!'>{{this}}</a></li>
+          {{/each}}
+        </ul>
+        <nav>
+          <div class='nav-wrapper'>
+            <ul>
+              <li>
+                <a class='dropdown-button' href='#!' data-activates='filters-dropdown'>
+                  <span class='dropdown-label' data-format='Category: {0}'></span>
+                  <i class="mdi-navigation-arrow-drop-down right"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <script type='text/javascript'>
+        $(document).ready(function() {
+          $('.dropdown-button').labelled_dropdown();
+        });
+      <{{!}}/script>
+    </script>
+
+    <script id='content-template' type='text/handlebars'>
+      <div class='container'>
+        <div class='row'>
+          {{#each this}}
+          <div class='card col s12' data-groups='{{stringify this.topics}}' data-date='{{this.date}}' data-title='{{this.title}}'>
+            <div class='card-content'>
+              <span class='card-title'>{{this.title}}</span>
+              <p>{{this.summary}}</p>
+            </div>
+            <div class='card-action'>
+              <a href='{{this.url}}'>Origin</a>
+            </div>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+    </script>
+
+    <div id='filters'></div>
+    <div id='content'></div>
+  </body>
+</html>
