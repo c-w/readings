@@ -22,43 +22,41 @@
     </script>
 
     <script id='filters-template' type='text/handlebars'>
-      <div class='navbar-fixed'>
-        <ul id='filters-dropdown' class='dropdown-content'>
-          <li class='dropdown-item filter active' data-group=''><a href='#!'>All</a></li>
-          {{#each this}}
-          <li class='dropdown-item filter' data-group='{{this}}'><a href='#!'>{{this}}</a></li>
-          {{/each}}
-        </ul>
-        <ul id='sorts-dropdown' class='dropdown-content'>
-          <li class='dropdown-item sort active' data-reverse='true' data-by='date'><a href='#!'>New&rarr;Old</a></li>
-          <li class='dropdown-item sort' data-reverse='false' data-by='date'><a href='#!'>Old&rarr;New</a></li>
-          <li class='divider'></li>
-          <li class='dropdown-item sort' data-reverse='false' data-by='title'><a href='#!'>Title A&rarr;Z</a></li>
-          <li class='dropdown-item sort' data-reverse='true' data-by='title'><a href='#!'>Title Z&rarr;A</a></li>
-        </ul>
-        <nav>
-          <div class='nav-wrapper'>
-            <ul>
-              <li>
-                <a id='filters-button' class='dropdown-button' href='#!' data-activates='filters-dropdown'>
-                  <span class='dropdown-label' data-format='Category: {0}'></span>
-                  <i class="mdi-navigation-arrow-drop-down right"></i>
-                </a>
-              </li>
-              <li>
-                <a id='sorts-button' class='dropdown-button' href='#!' data-activates='sorts-dropdown'>
-                  <span class='dropdown-label' data-format='Order: {0}'></span>
-                  <i class="mdi-navigation-arrow-drop-down right"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </div>
+      <ul id='filters-dropdown' class='dropdown-content'>
+        <li class='dropdown-item filter active' data-group=''><a href='#!'>All</a></li>
+        {{#each this}}
+        <li class='dropdown-item filter' data-group='{{this}}'><a href='#!'>{{this}}</a></li>
+        {{/each}}
+      </ul>
+
+      <a id='filters-button' class='dropdown-button' href='#!' data-activates='filters-dropdown'>
+        <span class='dropdown-label' data-format='Category: {0}'></span>
+        <i class="mdi-navigation-arrow-drop-down right"></i>
+      </a>
 
       <script type='text/javascript'>
         $(document).ready(function() {
           $('#filters-button').labelled_dropdown();
+        });
+      <{{!}}/script>
+    </script>
+
+    <script id='sorts-template' type='text/handlebars'>
+      <ul id='sorts-dropdown' class='dropdown-content'>
+        <li class='dropdown-item sort active' data-reverse='true' data-by='date'><a href='#!'>New&rarr;Old</a></li>
+        <li class='dropdown-item sort' data-reverse='false' data-by='date'><a href='#!'>Old&rarr;New</a></li>
+        <li class='divider'></li>
+        <li class='dropdown-item sort' data-reverse='false' data-by='title'><a href='#!'>Title A&rarr;Z</a></li>
+        <li class='dropdown-item sort' data-reverse='true' data-by='title'><a href='#!'>Title Z&rarr;A</a></li>
+      </ul>
+
+      <a id='sorts-button' class='dropdown-button' href='#!' data-activates='sorts-dropdown'>
+        <span class='dropdown-label' data-format='Order: {0}'></span>
+        <i class="mdi-navigation-arrow-drop-down right"></i>
+      </a>
+
+      <script type='text/javascript'>
+        $(document).ready(function() {
           $('#sorts-button').labelled_dropdown();
         });
       <{{!}}/script>
@@ -82,7 +80,21 @@
       </div>
     </script>
 
-    <div id='filters'></div>
+    <div class='navbar-fixed'>
+      <nav>
+        <div class='nav-wrapper'>
+          <ul>
+            <li>
+              <div id='filters'></div>
+            </li>
+            <li>
+              <div id='sorts'></div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
     <div id='content'></div>
   </body>
 </html>

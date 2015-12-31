@@ -25,6 +25,7 @@ function init(data) {
   createFilters();
   setupFilters(grid);
 
+  createSorts();
   setupSorts(grid);
 }
 
@@ -58,6 +59,10 @@ function setupFilters(grid) {
 
     grid.shuffle('shuffle', group);
   });
+}
+
+function createSorts() {
+  $('#sorts').handlebars($('#sorts-template'), {});
 }
 
 function setupSorts(grid) {
