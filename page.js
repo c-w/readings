@@ -21,8 +21,20 @@ $.ajax({
 function init(data) {
   $('#content').handlebars($('#content-template'), data);
 
+  var grid = setupGrid();
+
   createFilters();
-  setupFilters();
+  setupFilters(grid);
+}
+
+function setupGrid() {
+  var grid = $('#content .row');
+
+  grid.shuffle({
+    itemSelector: '.card'
+  });
+
+  return grid;
 }
 
 function createFilters() {
@@ -30,13 +42,8 @@ function createFilters() {
   $('#filters').handlebars($('#filters-template'), allGroups);
 }
 
-function setupFilters() {
-  var items = $('#content .row');
+function setupFilters(grid) {
   var filters = $('#filters-dropdown .filter');
-
-  items.shuffle({
-    itemSelector: '.card'
-  });
 
   filters.click(function(e) {
     e.preventDefault();
@@ -47,6 +54,6 @@ function setupFilters() {
     filters.removeClass('active');
     filter.addClass('active');
 
-    items.shuffle('shuffle', group);
+    grid.shuffle('shuffle', group);
   });
 }
