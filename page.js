@@ -19,9 +19,8 @@ $.ajax({
 });
 
 function init(data) {
-  $('#content').handlebars($('#content-template'), data);
-
-  var grid = setupGrid();
+  var grid = createGrid(data);
+  setupGrid(grid);
 
   createFilters();
   setupFilters(grid);
@@ -29,14 +28,15 @@ function init(data) {
   setupSorts(grid);
 }
 
-function setupGrid() {
-  var grid = $('#content .row');
+function createGrid(data) {
+  $('#content').handlebars($('#content-template'), data);
+  return $('#content .row');
+}
 
+function setupGrid(grid) {
   grid.shuffle({
     itemSelector: '.card'
   });
-
-  return grid;
 }
 
 function createFilters() {
