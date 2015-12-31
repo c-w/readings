@@ -33,7 +33,7 @@
           <div class='nav-wrapper'>
             <ul>
               <li>
-                <a class='dropdown-button' href='#!' data-activates='filters-dropdown'>
+                <a id='filters-button' class='dropdown-button' href='#!' data-activates='filters-dropdown'>
                   <span class='dropdown-label' data-format='Category: {0}'></span>
                   <i class="mdi-navigation-arrow-drop-down right"></i>
                 </a>
@@ -45,7 +45,7 @@
 
       <script type='text/javascript'>
         $(document).ready(function() {
-          $('.dropdown-button').labelled_dropdown();
+          $('#filters-button').labelled_dropdown();
         });
       <{{!}}/script>
     </script>
