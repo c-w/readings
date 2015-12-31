@@ -25,6 +25,8 @@ function init(data) {
 
   createFilters();
   setupFilters(grid);
+
+  setupSorts(grid);
 }
 
 function setupGrid() {
@@ -55,5 +57,27 @@ function setupFilters(grid) {
     filter.addClass('active');
 
     grid.shuffle('shuffle', group);
+  });
+}
+
+function setupSorts(grid) {
+  var sorts = $('#sorts-dropdown .sort');
+
+  sorts.click(function(e) {
+    e.preventDefault();
+
+    var sort = $(this);
+    var by = sort.data('by');
+    var reverse = sort.data('reverse');
+
+    sorts.removeClass('active');
+    sort.addClass('active');
+
+    grid.shuffle('sort', {
+      by: function(el) {
+        return el.data(by).toLowerCase();
+      },
+      reverse: reverse
+    });
   });
 }
