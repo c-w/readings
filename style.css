@@ -1,0 +1,7 @@
+#search .input-field label + .material-icons {
+  display: none;
+}
+
+#search .input-field label + .material-icons.active {
+  display: block;
+}
