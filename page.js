@@ -1,9 +1,9 @@
-var user = window.location.hostname.split(".")[0];
-var dataUrl = "https://rawgit.com/" + user + "/Datamine.me/master/readings.json";
+var user = window.location.hostname.split('.')[0];
+var dataUrl = 'https://rawgit.com/' + user + '/Datamine.me/master/readings.json';
 
 $.ajax({
   url: dataUrl,
-  dataType: "json",
+  dataType: 'json',
   crossDomain: true,
   success: function(data) {
     $(document).ready(function() {
@@ -11,10 +11,10 @@ $.ajax({
     });
   },
   error: function(response) {
-    console.log("AJAX error: " + JSON.stringify(response));
+    console.log('AJAX error: ' + JSON.stringify(response));
   },
   failure: function(response) {
-    console.log("AJAX failure: " + JSON.stringify(response));
+    console.log('AJAX failure: ' + JSON.stringify(response));
   }
 });
 
