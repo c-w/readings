@@ -22,6 +22,16 @@
       });
     </script>
 
+    <script id='search-template' type='text/handlebars'>
+      <form id='search-form'>
+        <div class='input-field'>
+          <input id='search-input' type='search' required>
+          <label for='search'><i class='material-icons'>search</i></label>
+          <i class='material-icons'>close</i>
+        </div>
+      </form>
+    </script>
+
     <script id='filters-template' type='text/handlebars'>
       <ul id='filters-dropdown' class='dropdown-content'>
         <li class='dropdown-item filter active' data-group=''><a href='#!'>All</a></li>
@@ -84,7 +94,12 @@
     <div class='navbar-fixed'>
       <nav>
         <div class='nav-wrapper'>
-          <ul>
+          <ul class='left'>
+            <li>
+              <div id='search'></div>
+            </li>
+          </ul>
+          <ul class='right'>
             <li>
               <div id='filters'></div>
             </li>
