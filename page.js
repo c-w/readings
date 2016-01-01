@@ -22,14 +22,11 @@ function init(data) {
   var grid = createGrid(data);
   setupGrid(grid);
 
-  createFilters();
-  setupFilters(grid);
+  createFiltersAndSearch();
+  setupFiltersAndSearch(grid);
 
   createSorts();
   setupSorts(grid);
-
-  createSearch()
-  setupSearch(grid);
 }
 
 function createGrid(data) {
@@ -43,13 +40,45 @@ function setupGrid(grid) {
   });
 }
 
-function createFilters() {
+function createFiltersAndSearch() {
   var allGroups = $.unique($('[data-groups]').map(function() { return $(this).data('groups'); })).toArray();
   $('#filters').handlebars($('#filters-template'), allGroups);
+
+  $('#search').handlebars($('#search-template'), {});
 }
 
-function setupFilters(grid) {
+function setupFiltersAndSearch(grid) {
   var filters = $('#filters-dropdown .filter');
+
+  var search_form = $('#search-form');
+  var search_input = search_form.find('#search-input');
+  var search_close = search_form.find('.material-icons:contains("close")');
+
+  function isMatch(content, terms) {
+    var notFound = terms.filter(function(term) {
+      return content.toLowerCase().indexOf(term.toLowerCase()) === -1;
+    });
+
+    return notFound.length === 0;
+  }
+
+  function executeSearch() {
+    var query = search_input.val().split(' ');
+
+    grid.shuffle('shuffle', function(el, shuffle) {
+      if (shuffle.group !== 'all' && $.inArray(shuffle.group, el.data('groups')) === -1) {
+        return false;
+      }
+
+      var content = $.trim(el.find('.card-content').text()).toLowerCase();
+      return isMatch(content, query);
+    });
+  }
+
+  function clearSearch() {
+    search_input.val('');
+    executeSearch();
+  }
 
   filters.click(function(e) {
     e.preventDefault();
@@ -61,6 +90,19 @@ function setupFilters(grid) {
     filter.addClass('active');
 
     grid.shuffle('shuffle', group);
+    executeSearch();
+  });
+
+  search_form.submit(function(e) {
+    e.preventDefault();
+
+    executeSearch();
+  });
+
+  search_close.click(function(e) {
+    e.preventDefault();
+
+    clearSearch();
   });
 }
 
@@ -87,48 +129,5 @@ function setupSorts(grid) {
       },
       reverse: reverse
     });
-  });
-}
-
-function isMatch(content, terms) {
-  var notFound = terms.filter(function(term) {
-    return content.toLowerCase().indexOf(term.toLowerCase()) === -1;
-  });
-
-  return notFound.length === 0;
-}
-
-function executeSearch(grid, terms) {
-  grid.shuffle('shuffle', function(el, shuffle) {
-    if (shuffle.group !== 'all' && $.inArray(shuffle.group, el.data('groups')) === -1) {
-      return false;
-    }
-
-    var content = $.trim(el.find('.card-content').text()).toLowerCase();
-    return isMatch(content, terms);
-  });
-}
-
-function createSearch() {
-  $('#search').handlebars($('#search-template'), {});
-}
-
-function setupSearch(grid) {
-  var search_form = $('#search-form');
-  var search_input = search_form.find('#search-input');
-  var close_button = search_form.find('.material-icons:contains("close")');
-
-  search_form.submit(function(e) {
-    e.preventDefault();
-
-    var query = search_input.val().split(' ');
-    executeSearch(grid, query);
-  });
-
-  close_button.click(function(e) {
-    e.preventDefault();
-
-    search_input.val('');
-    executeSearch(grid, []);
   });
 }
