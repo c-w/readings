@@ -5,3 +5,7 @@
 #search .input-field label + .material-icons.active {
   display: block;
 }
+
+.deemphasize {
+  opacity: .3 !important;
+}

@@ -7,6 +7,7 @@
     <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/Shuffle/3.1.1/jquery.shuffle.modernizr.js'></script>
     <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js'></script>
     <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js'></script>
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.17.0/URI.min.js'></script>
     <script type='text/javascript' src='https://cdn.rawgit.com/c-w/jquery-handlebars-simple/1b8deea/jquery-handlebars-simple.min.js'></script>
     <script type='text/javascript' src='https://cdn.rawgit.com/c-w/jquery-materialize-labelled-dropdown/814ee8a/jquery-materialize-labelled-dropdown.min.js'></script>
     <script type='text/javascript' src='./page.js'></script>
@@ -20,6 +21,10 @@
     <script id='helpers' type='text/javascript'>
       Handlebars.registerHelper('stringify', function(json) {
         return JSON.stringify(json);
+      });
+
+      Handlebars.registerHelper('permalink', function(el) {
+        return window.location.href.split('?')[0] + '?postId=' + el.uid;
       });
     </script>
 
@@ -85,6 +90,7 @@
             </div>
             <div class='card-action'>
               <a href='{{this.url}}'>Origin</a>
+              <a href='{{permalink this}}'>Permalink</a>
             </div>
           </div>
           {{/each}}

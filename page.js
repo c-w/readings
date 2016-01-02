@@ -27,6 +27,8 @@ function init(data) {
 
   createSorts();
   setupSorts(grid);
+
+  handleQueryParameters();
 }
 
 function hashCode(str) {
@@ -147,4 +149,54 @@ function setupSorts(grid) {
       reverse: reverse
     });
   });
+}
+
+function scrollTo(el, extraOffset) {
+  if (!el.length) return;
+  if (!extraOffset) extraOffset = 0;
+
+  var elOffset = el.offset().top;
+  var elHeight = el.height();
+  var windowHeight = $(window).height();
+
+  var scrollTop = elOffset - windowHeight/2 - extraOffset + elHeight/2;
+  $('html, body').animate({
+    scrollTop: scrollTop
+  }, 0);
+}
+
+function isFirefox() {
+  return /Firefox/i.test(navigator.userAgent);
+}
+
+function onAnyUserInteraction(callback) {
+  var events = [
+    'click',
+    'keydown',
+    isFirefox() ? 'DOMMouseScroll' : 'mousewheel'
+  ];
+
+  $('body').on(events.join(' '), callback);
+}
+
+function focus(el) {
+  if (!el.length) return;
+
+  $('.card').addClass('deemphasize');
+  el.removeClass('deemphasize');
+
+  onAnyUserInteraction(function() {
+    $('.card').removeClass('deemphasize');
+  });
+
+  scrollTo(el, $('#nav').height());
+}
+
+function handleQueryParameters() {
+  var queryParameters = URI(document.URL).query(true);
+
+  var postId = queryParameters['postId'];
+  if (postId) {
+    focus($('#' + postId));
+  }
 }
