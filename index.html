@@ -78,7 +78,7 @@
       <div class='container'>
         <div class='row'>
           {{#each this}}
-          <div class='card col s12' data-groups='{{stringify this.topics}}' data-date='{{this.date}}' data-title='{{this.title}}'>
+          <div class='card col s12' id='{{this.uid}}' data-groups='{{stringify this.topics}}' data-date='{{this.date}}' data-title='{{this.title}}'>
             <div class='card-content'>
               <span class='card-title'>{{this.title}}</span>
               <p>{{this.summary}}</p>

@@ -29,8 +29,25 @@ function init(data) {
   setupSorts(grid);
 }
 
+function hashCode(str) {
+  var hash = 0;
+  for (var i=str.length-1; i>=0; i--) {
+    var chr = str.charCodeAt(i);
+    hash = ((hash<<5)-hash)+chr;
+    hash = hash & hash;
+  }
+  return hash;
+}
+
+function addUniqueIds(data) {
+  data.map(function(el) {
+    el.uid = hashCode(JSON.stringify(data));
+  });
+  return data;
+}
+
 function createGrid(data) {
-  $('#content').handlebars($('#content-template'), data);
+  $('#content').handlebars($('#content-template'), addUniqueIds(data));
   return $('#content .row');
 }
 
