@@ -1,5 +1,13 @@
 [
   {
+    "date": "2016-01-11",
+    "summary": "The article states that Netflix uses an anomaly-detection system based on clustering via DBSCAN: for every performance counter, normal servers should fall within a cluster and anomalies outside of the cluster. More interestingly, the article also talks about how to drive adoption of machine learning systems by service owners. Their anomaly detection algorithm has two meta-parameters; requiring people deploying the system to tune the parameters would greatly hurt adoption. In order to address this issue, they developed an automatic tuning mechanism based on simulated annealing. They claim that the self-tuning nature of their anomaly detection algorithm was one of its main adoption-drivers.",
+    "title": "Tracking down the Villains: Outlier Detection at Netflix",
+    "topics": ["Machine Learning"],
+    "type": "Article",
+    "url": "http://techblog.netflix.com/2015/07/tracking-down-villains-outlier.html"
+  },
+  {
     "date": "2015-12-24",
     "summary": "Great overview of the software development process of the Chromium project, one of the biggest and most successful open source projects out there. The article claims that the main ingredient to their rapid ship cycle is that every developer always works off of head (to avoid costly integrations) which is enabled by high test coverage (to avoid breaking things) and feature flags (to hide partial features until they ship). They also talk about relentless refactoring but fail to mention how large-scale refactors fit in with constantly working off of head: how does one check in a partially completed refactor?",
     "title": "How Chromium Works",
