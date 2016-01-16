@@ -19,6 +19,8 @@ $.ajax({
 });
 
 function init(data) {
+  detectBrowser();
+
   var grid = createGrid(data);
   setupGrid(grid);
 
@@ -29,6 +31,12 @@ function init(data) {
   setupSorts(grid);
 
   handleQueryParameters();
+}
+
+function detectBrowser() {
+  if (isInternetExplorer()) {
+    $('html').addClass('ie');
+  }
 }
 
 function hashCode(str) {
@@ -173,6 +181,11 @@ function scrollTo(el, extraOffset) {
 
 function isFirefox() {
   return /Firefox/i.test(navigator.userAgent);
+}
+
+function isInternetExplorer() {
+  return /MSIE/i.test(navigator.userAgent) ||
+    /Trident/i.test(navigator.userAgent);
 }
 
 function onAnyUserInteraction(callback) {

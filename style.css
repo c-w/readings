@@ -9,3 +9,8 @@
 .deemphasize {
   opacity: .3 !important;
 }
+
+.ie .dropdown-label + .material-icons,
+.ie #search {
+  display: none;
+}
