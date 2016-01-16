@@ -59,8 +59,14 @@ function setupGrid(grid) {
   });
 }
 
+function unique(array) {
+  return array.filter(function(value, index, self) {
+    return self.indexOf(value) === index;
+  });
+}
+
 function createFiltersAndSearch() {
-  var allGroups = $.unique($('[data-groups]').map(function() { return $(this).data('groups'); })).toArray();
+  var allGroups = unique($('[data-groups]').map(function() { return $(this).data('groups'); }).toArray());
   $('#filters').handlebars($('#filters-template'), allGroups);
 
   $('#search').handlebars($('#search-template'), {});
