@@ -1,7 +1,7 @@
 (function() {
 
 var user = window.location.hostname.split('.')[0];
-var dataUrl = 'https://rawgit.com/' + user + '/Datamine.me/master/readings.json';
+var dataUrl = 'https://raw.githubusercontent.com/' + user + '/Datamine.me/master/readings.json';
 
 $.ajax({
   url: dataUrl,
