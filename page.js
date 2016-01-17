@@ -1,3 +1,5 @@
+(function() {
+
 var user = window.location.hostname.split('.')[0];
 var dataUrl = 'https://rawgit.com/' + user + '/Datamine.me/master/readings.json';
 
@@ -219,3 +221,5 @@ function handleQueryParameters() {
     focus($('#' + postId));
   }
 }
+
+})();
