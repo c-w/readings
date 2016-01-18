@@ -1,5 +1,13 @@
 [
   {
+    "date": "2016-01-17",
+    "summary": "The Marisa trie is a highly space-efficient read-only dictionary. Their benchmarks claim that it is about an order of magnitude more space-efficient than other deterministic dictionary implementations. Hashing-based dictionaries like bloom filters are even smaller but come with the cost of false-postives. The library is implemented in C++ with bindings for many high-level languages including Python.",
+    "title": "MARISA: Matching Algorithm with Recursively Implemented StorAge",
+    "topics": ["Libraries"],
+    "type": "Article",
+    "url": "http://marisa-trie.googlecode.com/svn/trunk/docs/readme.en.html"
+  },
+  {
     "date": "2016-01-11",
     "summary": "The article states that Netflix uses an anomaly-detection system based on clustering via DBSCAN: for every performance counter, normal servers should fall within a cluster and anomalies outside of the cluster. More interestingly, the article also talks about how to drive adoption of machine learning systems by service owners. Their anomaly detection algorithm has two meta-parameters; requiring people deploying the system to tune the parameters would greatly hurt adoption. In order to address this issue, they developed an automatic tuning mechanism based on simulated annealing. They claim that the self-tuning nature of their anomaly detection algorithm was one of its main adoption-drivers.",
     "title": "Tracking down the Villains: Outlier Detection at Netflix",
