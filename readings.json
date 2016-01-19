@@ -1,5 +1,13 @@
 [
   {
+    "date": "2016-01-18",
+    "summary": "When Steve Yegge writes, it's usually worth a read. On the surface, this blog post is an entertaining rant comparing the big tech companies: Google vs Microsoft vs Amazon vs Facebook. On a second level, the post is a critique of service-oriented-architecture and full-ownership engineering teams. But in essence, the post makes the point that for successful products, one needs to have a platform; although owning a platform is hard and difficult to retro-fit.",
+    "title": "Stevey's Google Platforms Rant",
+    "topics": ["Software Engineering"],
+    "type": "Article",
+    "url": "https://plus.google.com/+RipRowan/posts/eVeouesvaVX"
+  },
+  {
     "date": "2016-01-17",
     "summary": "The Marisa trie is a highly space-efficient read-only dictionary. Their benchmarks claim that it is about an order of magnitude more space-efficient than other deterministic dictionary implementations. Hashing-based dictionaries like bloom filters are even smaller but come with the cost of false-positives. The library is implemented in C++ with bindings for many high-level languages including Python.",
     "title": "MARISA: Matching Algorithm with Recursively Implemented StorAge",
