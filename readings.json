@@ -1,7 +1,7 @@
 [
   {
     "date": "2016-01-17",
-    "summary": "The Marisa trie is a highly space-efficient read-only dictionary. Their benchmarks claim that it is about an order of magnitude more space-efficient than other deterministic dictionary implementations. Hashing-based dictionaries like bloom filters are even smaller but come with the cost of false-postives. The library is implemented in C++ with bindings for many high-level languages including Python.",
+    "summary": "The Marisa trie is a highly space-efficient read-only dictionary. Their benchmarks claim that it is about an order of magnitude more space-efficient than other deterministic dictionary implementations. Hashing-based dictionaries like bloom filters are even smaller but come with the cost of false-positives. The library is implemented in C++ with bindings for many high-level languages including Python.",
     "title": "MARISA: Matching Algorithm with Recursively Implemented StorAge",
     "topics": ["Libraries"],
     "type": "Article",
