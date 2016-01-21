@@ -1,5 +1,13 @@
 [
   {
+    "date": "2016-01-20",
+    "summary": "The article talks about a common problem with legacy software and summarizes the points with a succinct tl;dr: Successive, well intentioned, changes to architecture and technology throughout the lifetime of an application can lead to a fragmented and hard to maintain code base. Sometimes it is better to favour consistent legacy technology over fragmentation. Unfortunately, the article doesn't provide any strategies how to avoid the lava layer anti-pattern, other than appealing to the developer's sense of professionalism and business value. Perhaps providing developers who work on legacy applications with a counter-balance such as a playground to work on green-field projects could help fight the lava layer?",
+    "title": "The Lava Layer Anti-Pattern",
+    "topics": ["Software Engineering"],
+    "type": "Article",
+    "url": "http://mikehadlow.blogspot.ca/2014/12/the-lava-layer-anti-pattern.html"
+  },
+  {
     "date": "2016-01-18",
     "summary": "When Steve Yegge writes, it's usually worth a read. On the surface, this blog post is an entertaining rant comparing the big tech companies: Google vs Microsoft vs Amazon vs Facebook. On a second level, the post is a critique of service-oriented-architecture and full-ownership engineering teams. But in essence, the post makes the point that for successful products, one needs to have a platform; although owning a platform is hard and difficult to retro-fit.",
     "title": "Stevey's Google Platforms Rant",
