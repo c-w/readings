@@ -1,7 +1,8 @@
 (function() {
 
 var user = window.location.hostname.split('.')[0];
-var dataUrl = 'https://raw.githubusercontent.com/' + user + '/Datamine.me/master/readings.json';
+var repo = window.location.pathname;
+var dataUrl = 'https://raw.githubusercontent.com/' + user + repo + 'master/data.json';
 
 $.ajax({
   url: dataUrl,
@@ -23,7 +24,7 @@ $.ajax({
 function init(data) {
   detectBrowser();
 
-  var grid = createGrid(data);
+  var grid = createGrid(data.content);
   setupGrid(grid);
 
   createFiltersAndSearch();
