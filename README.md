@@ -1,5 +1,7 @@
 # DataMineMe
 
+## What's this?
+
 The purpose of this repository is to keep track of stuff I read and watch. There
 are multiple expectations for this effort:
 
@@ -12,3 +14,22 @@ are multiple expectations for this effort:
 * Data mining! Think of the possibilities: reading profiles, word clouds, track
   interests over time, automatically generated monthly summaries, article
   recommendations, etc. The possibilities are endless.
+
+## Data schema
+
+```json
+{
+  "content": [
+    {
+    "date": "YYYY-MM-DD",
+    "summary": "string",
+    "title": "string",
+    "topics": [
+      "string"
+    ],
+    "type": "string",
+    "url": "string"
+    }
+  ]
+}
+```
