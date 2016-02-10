@@ -76,9 +76,36 @@ function unique(array) {
   });
 }
 
+function createFiltersData() {
+  var groupCounter = {};
+  var totalPosts = 0;
+  $('[data-groups]').map(function() {
+    $(this).data('groups').map(function(groupName) {
+      totalPosts += 1;
+      if (groupName in groupCounter) {
+        groupCounter[groupName] += 1;
+      } else {
+        groupCounter[groupName] = 1;
+      }
+    });
+  });
+
+  var filters = [];
+  for (var key in groupCounter) {
+    if (groupCounter.hasOwnProperty(key)) {
+      filters.push({'name': key, 'count': groupCounter[key]});
+    }
+  }
+  filters.sort(function(a, b) { return b.count - a.count; });
+
+  return {
+    'filters': filters,
+    'totalPosts': totalPosts
+  };
+}
+
 function createFiltersAndSearch() {
-  var allGroups = unique($('[data-groups]').map(function() { return $(this).data('groups'); }).toArray());
-  $('#filters').handlebars($('#filters-template'), allGroups);
+  $('#filters').handlebars($('#filters-template'), createFiltersData());
 
   $('#search').handlebars($('#search-template'), {});
 }

@@ -40,9 +40,9 @@
 
     <script id='filters-template' type='text/handlebars'>
       <ul id='filters-dropdown' class='dropdown-content'>
-        <li class='dropdown-item filter active' data-group=''><a href='#!'>All</a></li>
-        {{#each this}}
-        <li class='dropdown-item filter' data-group='{{this}}'><a href='#!'>{{this}}</a></li>
+        <li class='dropdown-item filter active' data-group=''><a href='#!'>All ({{totalPosts}})</a></li>
+        {{#each filters}}
+        <li class='dropdown-item filter' data-group='{{this.name}}'><a href='#!'>{{this.name}} ({{this.count}})</a></li>
         {{/each}}
       </ul>
 
