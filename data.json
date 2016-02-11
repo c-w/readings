@@ -1,6 +1,22 @@
 {
   "content": [
     {
+      "date": "2016-02-10",
+      "summary": "The paper reviews an old trigram-based contextual spelling correction system. The system is straight forward. First, compute the probability of the sentence under a language model. Then, replace the candidate incorrect word with all spelling alternatives and recompute the sentence probability for each alternative spelling. If the probability of the original sentence is low compared to the alternative sentences, the candidate incorrect word is a spelling mistake and is replaced with the alternative word in the alternative sentence with the highest probability under the language model. They find that this approach is quite effective at finding errors in all but closed-class words, especially when training the language model on larger corpora. The model is limited to spelling mistakes at edit distance one, but they find that this covers the vast majority of cases. Extending the model to cope with more than one mistake per word increases false positives and does not increase overall performance. The approach is pretty neat: conceptually simple and doesn't rely on labelled training data.",
+      "title": "Real-word spelling correction with trigrams: A reconsideration of the Mays, Damerau, and Mercer model",
+      "topics": ["Natural Language Processing"],
+      "type": "Paper",
+      "url": "http://ftp.cs.toronto.edu/pub/gh/WilcoxOHearn-etal-2006.pdf"
+    },
+    {
+      "date": "2016-02-10",
+      "summary": "The paper proposes a contextual spelling correction system based on latent semantic analysis (LSA). Their approach relies on having a training set of confusion words. One example of confusion words are homophones such as 'affect' and 'effect'. Another set of confusion words are typing mistakes that lead to correct words such as 'quiet' and 'quite'. They build an LSA space for each set of confusion words, treating each sentence in which one of the confusion words occurs as a training document. They also apply some cleanup, weighting and n-gram expansion. Given a sentence they can now predict which word in the confusion set is the correct one: replace the confusion candidate in the sentence with each word from the confusion set, turn the sentence into a vector in the LSA space and see to which confusion word in the space the sentence is closest using cosine similarity. Their approach is a bit weak: they barely outperform a trigram Naive Bayes model, they need labelled sets of training confusion words and the all-versus-all cosine similarity computation probably won't scale to large amounts of data.",
+      "title": "Contextual Spelling Correction Using Latent Semantic Analysis",
+      "topics": ["Natural Language Processing"],
+      "type": "Paper",
+      "url": "http://www.aclweb.org/anthology/A97-1025.pdf"
+    },
+    {
       "date": "2016-01-20",
       "summary": "The article talks about a common problem with legacy software and summarizes the points with a succinct tl;dr: Successive, well intentioned, changes to architecture and technology throughout the lifetime of an application can lead to a fragmented and hard to maintain code base. Sometimes it is better to favour consistent legacy technology over fragmentation. Unfortunately, the article doesn't provide any strategies how to avoid the lava layer anti-pattern, other than appealing to the developer's sense of professionalism and business value. Perhaps providing developers who work on legacy applications with a counter-balance such as a playground to work on green-field projects could help fight the lava layer?",
       "title": "The Lava Layer Anti-Pattern",
