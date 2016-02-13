@@ -9,7 +9,7 @@
     <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js'></script>
     <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.17.0/URI.min.js'></script>
     <script type='text/javascript' src='https://cdn.rawgit.com/c-w/jquery-handlebars-simple/1b8deea/jquery-handlebars-simple.min.js'></script>
-    <script type='text/javascript' src='https://cdn.rawgit.com/c-w/jquery-materialize-labelled-dropdown/814ee8a/jquery-materialize-labelled-dropdown.min.js'></script>
+    <script type='text/javascript' src='https://cdn.rawgit.com/c-w/jquery-materialize-labelled-dropdown/a5d4acc/jquery-materialize-labelled-dropdown.min.js'></script>
     <script type='text/javascript' src='./page.js'></script>
 
     <link type='text/css' rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css'>
@@ -40,9 +40,17 @@
 
     <script id='filters-template' type='text/handlebars'>
       <ul id='filters-dropdown' class='dropdown-content'>
-        <li class='dropdown-item filter active' data-group=''><a href='#!' role='button'>All ({{totalPosts}})</a></li>
+        <li class='dropdown-item filter active' data-group=''>
+          <a href='#!' role='button'>
+            <span class='dropdown-label-text'>All</span><span class='badge'>{{totalPosts}}</span>
+          </a>
+        </li>
         {{#each filters}}
-        <li class='dropdown-item filter' data-group='{{this.name}}'><a href='#!' role='button'>{{this.name}} ({{this.count}})</a></li>
+        <li class='dropdown-item filter' data-group='{{this.name}}'>
+          <a href='#!' role='button'>
+            <span class='dropdown-label-text'>{{this.name}}</span><span class='badge'>{{this.count}}</span>
+          </a>
+        </li>
         {{/each}}
       </ul>
 
@@ -53,18 +61,34 @@
 
       <script type='text/javascript'>
         $(document).ready(function() {
-          $('#filters-button').labelled_dropdown();
+          $('#filters-button').labelledDropdown();
         });
       <{{!}}/script>
     </script>
 
     <script id='sorts-template' type='text/handlebars'>
       <ul id='sorts-dropdown' class='dropdown-content'>
-        <li class='dropdown-item sort active' data-reverse='true' data-by='date'><a href='#!' role='button'>New&rarr;Old</a></li>
-        <li class='dropdown-item sort' data-reverse='false' data-by='date'><a href='#!' role='button'>Old&rarr;New</a></li>
+        <li class='dropdown-item sort active' data-reverse='true' data-by='date'>
+          <a href='#!' role='button'>
+            <span class='dropdown-label-text'>New&rarr;Old
+          </a>
+        </li>
+        <li class='dropdown-item sort' data-reverse='false' data-by='date'>
+          <a href='#!' role='button'>
+            <span class='dropdown-label-text'>Old&rarr;New</span>
+          </a>
+        </li>
         <li class='divider'></li>
-        <li class='dropdown-item sort' data-reverse='false' data-by='title'><a href='#!' role='button'>Title A&rarr;Z</a></li>
-        <li class='dropdown-item sort' data-reverse='true' data-by='title'><a href='#!' role='button'>Title Z&rarr;A</a></li>
+        <li class='dropdown-item sort' data-reverse='false' data-by='title'>
+          <a href='#!' role='button'>
+            Title <span class='dropdown-label-text'>A&rarr;Z</span>
+          </a>
+        </li>
+        <li class='dropdown-item sort' data-reverse='true' data-by='title'>
+          <a href='#!' role='button'>
+            Title <span class='dropdown-label-text'>Z&rarr;A</span>
+          </a>
+        </li>
       </ul>
 
       <a id='sorts-button' class='dropdown-button' href='#!' data-activates='sorts-dropdown' role='button'>
@@ -74,7 +98,7 @@
 
       <script type='text/javascript'>
         $(document).ready(function() {
-          $('#sorts-button').labelled_dropdown();
+          $('#sorts-button').labelledDropdown();
         });
       <{{!}}/script>
     </script>
