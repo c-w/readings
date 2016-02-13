@@ -17,7 +17,7 @@
     <link type="text/css" rel="stylesheet" href="./style.css">
   </head>
 
-  <body class='blue-grey'>
+  <body>
     <script id='helpers' type='text/javascript'>
       Handlebars.registerHelper('stringify', function(json) {
         return JSON.stringify(json);
@@ -98,26 +98,27 @@
       </div>
     </script>
 
-    <div id='nav-container' class='navbar-fixed'>
-      <nav id='nav'>
-        <div class='nav-wrapper'>
-          <ul class='left'>
-            <li>
-              <div id='search'></div>
-            </li>
-          </ul>
-          <ul class='right'>
-            <li>
-              <div id='filters'></div>
-            </li>
-            <li>
-              <div id='sorts'></div>
-            </li>
-          </ul>
-        </div>
-      </nav>
+    <div id='page' class='hide'>
+      <div id='nav-container' class='navbar-fixed'>
+        <nav id='nav'>
+          <div class='nav-wrapper'>
+            <ul class='left'>
+              <li>
+                <div id='search'></div>
+              </li>
+            </ul>
+            <ul class='right'>
+              <li>
+                <div id='filters'></div>
+              </li>
+              <li>
+                <div id='sorts'></div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div id='content'></div>
     </div>
-
-    <div id='content'></div>
   </body>
 </html>

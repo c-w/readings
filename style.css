@@ -14,3 +14,7 @@
 .ie #search {
   display: none;
 }
+
+.hide {
+  display: none;
+}

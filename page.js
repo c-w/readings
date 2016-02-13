@@ -11,6 +11,7 @@ $.ajax({
   success: function(data) {
     $(document).ready(function() {
       detectBrowser();
+      applyStyling(data.styling);
       setupContent(data.content);
     });
   },
@@ -33,6 +34,12 @@ function setupContent(content) {
   setupSorts(grid);
 
   handleQueryParameters();
+}
+
+function applyStyling(styling) {
+  $('body').addClass(styling.backgroundColor);
+  $('#nav').addClass(styling.navbarColor);
+  $('#page').removeClass('hide');
 }
 
 function detectBrowser() {
