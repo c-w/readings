@@ -1440,5 +1440,9 @@
       "type": "Book",
       "url": "http://columbia-applied-data-science.github.io/appdatasci.pdf"
     }
-  ]
+  ],
+  "styling": {
+    "navbarColor": "red lighten-2",
+    "backgroundColor": "blue-grey"
+  }
 }
