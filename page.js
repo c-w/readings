@@ -25,22 +25,6 @@ $.ajax({
   }
 });
 
-function handleCookies() {
-  var lastVisited = Cookies.get('lastVisited');
-  if (lastVisited !== undefined) {
-    lastVisited = new Date(parseDate(lastVisited));
-  } else {
-    lastVisited = new Date();
-  }
-
-  Cookies.set('lastVisited', formatDate(new Date()), {
-    expires: 365,
-    domain: window.location.hostname
-  });
-
-  return lastVisited;
-}
-
 function setupContent(content) {
   var grid = createGrid(content);
   setupGrid(grid);
@@ -66,16 +50,6 @@ function detectBrowser() {
   }
 }
 
-function hashCode(str) {
-  var hash = 0;
-  for (var i=str.length-1; i>=0; i--) {
-    var chr = str.charCodeAt(i);
-    hash = ((hash<<5)-hash)+chr;
-    hash = hash & hash;
-  }
-  return hash;
-}
-
 function addUniqueIds(data) {
   data.map(function(el) {
     el.uid = hashCode(JSON.stringify(data));
@@ -93,12 +67,6 @@ function setupGrid(grid) {
     itemSelector: '.card'
   });
   grid.shuffle('shuffle', '');
-}
-
-function unique(array) {
-  return array.filter(function(value, index, self) {
-    return self.indexOf(value) === index;
-  });
 }
 
 function createFiltersData() {
@@ -145,23 +113,10 @@ function createFiltersData() {
   };
 }
 
-function parseDate(str) {
-  var parts = str.split('-');
-  return new Date(parts[0], parts[1]-1, parts[2]);
-}
-
-function formatDate(date) {
-  return date.toISOString().slice(0, 10);
-}
-
 function createFiltersAndSearch() {
   $('#filters').handlebars($('#filters-template'), createFiltersData());
 
   $('#search').handlebars($('#search-template'), {});
-}
-
-function contains(array, element) {
-  return $.inArray(element, array) !== -1;
 }
 
 function setupFiltersAndSearch(grid) {
@@ -251,6 +206,51 @@ function setupSorts(grid) {
   });
 }
 
+function focus(el) {
+  if (!el.length) {
+    return;
+  }
+
+  $('.card').addClass('deemphasize');
+  el.removeClass('deemphasize');
+
+  onAnyUserInteraction(function() {
+    $('.card').removeClass('deemphasize');
+  });
+
+  scrollTo(el, $('#nav-container').height());
+}
+
+function handleQueryParameters() {
+  var queryParameters = URI(document.URL).query(true);
+
+  var postId = queryParameters['postId'];
+  if (postId) {
+    focus($('#' + postId));
+  }
+}
+
+function handleCookies() {
+  var lastVisited = Cookies.get('lastVisited');
+  if (lastVisited !== undefined) {
+    lastVisited = new Date(parseDate(lastVisited));
+  } else {
+    lastVisited = new Date();
+  }
+
+  Cookies.set('lastVisited', formatDate(new Date()), {
+    expires: 365,
+    domain: window.location.hostname
+  });
+
+  return lastVisited;
+}
+
+
+/*----------------------------------------------------------------------------*/
+/* utility functions                                                          */
+/*----------------------------------------------------------------------------*/
+
 function scrollTo(el, extraOffset) {
   if (!el.length) {
     return;
@@ -288,28 +288,33 @@ function onAnyUserInteraction(callback) {
   $('body').on(events.join(' '), callback);
 }
 
-function focus(el) {
-  if (!el.length) {
-    return;
+function hashCode(str) {
+  var hash = 0;
+  for (var i=str.length-1; i>=0; i--) {
+    var chr = str.charCodeAt(i);
+    hash = ((hash<<5)-hash)+chr;
+    hash = hash & hash;
   }
-
-  $('.card').addClass('deemphasize');
-  el.removeClass('deemphasize');
-
-  onAnyUserInteraction(function() {
-    $('.card').removeClass('deemphasize');
-  });
-
-  scrollTo(el, $('#nav-container').height());
+  return hash;
 }
 
-function handleQueryParameters() {
-  var queryParameters = URI(document.URL).query(true);
+function contains(array, element) {
+  return $.inArray(element, array) !== -1;
+}
 
-  var postId = queryParameters['postId'];
-  if (postId) {
-    focus($('#' + postId));
-  }
+function unique(array) {
+  return array.filter(function(value, index, self) {
+    return self.indexOf(value) === index;
+  });
+}
+
+function parseDate(str) {
+  var parts = str.split('-');
+  return new Date(parts[0], parts[1]-1, parts[2]);
+}
+
+function formatDate(date) {
+  return date.toISOString().slice(0, 10);
 }
 
 })();
