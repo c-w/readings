@@ -40,13 +40,13 @@
 
     <script id='filters-template' type='text/handlebars'>
       <ul id='filters-dropdown' class='dropdown-content'>
-        <li class='dropdown-item filter active' data-group=''><a href='#!'>All ({{totalPosts}})</a></li>
+        <li class='dropdown-item filter active' data-group=''><a href='#!' role='button'>All ({{totalPosts}})</a></li>
         {{#each filters}}
-        <li class='dropdown-item filter' data-group='{{this.name}}'><a href='#!'>{{this.name}} ({{this.count}})</a></li>
+        <li class='dropdown-item filter' data-group='{{this.name}}'><a href='#!' role='button'>{{this.name}} ({{this.count}})</a></li>
         {{/each}}
       </ul>
 
-      <a id='filters-button' class='dropdown-button' href='#!' data-activates='filters-dropdown'>
+      <a id='filters-button' class='dropdown-button' href='#!' data-activates='filters-dropdown' role='button'>
         <span class='dropdown-label' data-format='Category: {0}'></span>
         <i class='material-icons right'>arrow_drop_down</i>
       </a>
@@ -60,14 +60,14 @@
 
     <script id='sorts-template' type='text/handlebars'>
       <ul id='sorts-dropdown' class='dropdown-content'>
-        <li class='dropdown-item sort active' data-reverse='true' data-by='date'><a href='#!'>New&rarr;Old</a></li>
-        <li class='dropdown-item sort' data-reverse='false' data-by='date'><a href='#!'>Old&rarr;New</a></li>
+        <li class='dropdown-item sort active' data-reverse='true' data-by='date'><a href='#!' role='button'>New&rarr;Old</a></li>
+        <li class='dropdown-item sort' data-reverse='false' data-by='date'><a href='#!' role='button'>Old&rarr;New</a></li>
         <li class='divider'></li>
-        <li class='dropdown-item sort' data-reverse='false' data-by='title'><a href='#!'>Title A&rarr;Z</a></li>
-        <li class='dropdown-item sort' data-reverse='true' data-by='title'><a href='#!'>Title Z&rarr;A</a></li>
+        <li class='dropdown-item sort' data-reverse='false' data-by='title'><a href='#!' role='button'>Title A&rarr;Z</a></li>
+        <li class='dropdown-item sort' data-reverse='true' data-by='title'><a href='#!' role='button'>Title Z&rarr;A</a></li>
       </ul>
 
-      <a id='sorts-button' class='dropdown-button' href='#!' data-activates='sorts-dropdown'>
+      <a id='sorts-button' class='dropdown-button' href='#!' data-activates='sorts-dropdown' role='button'>
         <span class='dropdown-label' data-format='Order: {0}'></span>
         <i class='material-icons right'>arrow_drop_down</i>
       </a>
@@ -99,11 +99,11 @@
     </script>
 
     <div id='page' class='hide'>
-      <div id='nav-container' class='navbar-fixed'>
+      <div id='nav-container' class='navbar-fixed' role='navigation'>
         <nav id='nav'>
           <div class='nav-wrapper'>
             <ul class='left'>
-              <li><div id='search'></div></li>
+              <li><div id='search' role='search'></div></li>
             </ul>
             <ul class='right'>
               <li><div id='filters'></div></li>
@@ -112,7 +112,7 @@
           </div>
         </nav>
       </div>
-      <div id='content'></div>
+      <div id='content' role='main'></div>
     </div>
   </body>
 </html>
