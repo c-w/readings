@@ -18,3 +18,15 @@
 .hide {
   display: none;
 }
+
+@media (max-width: 640px) {
+  #sorts {
+    display: none;
+  }
+}
+
+@media (max-width: 460px) {
+  #filters {
+    display: none;
+  }
+}
