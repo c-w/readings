@@ -1,14 +1,10 @@
 (function() {
 
-var user = window.location.hostname.split('.')[0];
-var repo = window.location.pathname;
-var dataUrl = 'https://raw.githubusercontent.com/' + user + repo + 'master/data.json';
-
 var cookies = parseCookies();
 var queryParameters = parseQueryParameters();
 
 $.ajax({
-  url: dataUrl,
+  url: formatDataUrl(),
   dataType: 'json',
   crossDomain: true,
   success: function(data) {
@@ -25,6 +21,12 @@ $.ajax({
     console.log('AJAX failure: ' + JSON.stringify(response));
   }
 });
+
+function formatDataUrl() {
+  var user = window.location.hostname.split('.')[0];
+  var repo = window.location.pathname;
+  return 'https://raw.githubusercontent.com/' + user + repo + 'master/data.json';
+}
 
 function setupContent(content) {
   var grid = createGrid(content);
