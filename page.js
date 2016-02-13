@@ -160,6 +160,10 @@ function createFiltersAndSearch() {
   $('#search').handlebars($('#search-template'), {});
 }
 
+function contains(array, element) {
+  return $.inArray(element, array) !== -1;
+}
+
 function setupFiltersAndSearch(grid) {
   var filters = $('#filters-dropdown .filter');
 
@@ -179,7 +183,9 @@ function setupFiltersAndSearch(grid) {
     var query = search_input.val().split(' ');
 
     grid.shuffle('shuffle', function(el, shuffle) {
-      if (shuffle.group !== 'all' && $.inArray(shuffle.group, el.data('groups')) === -1) {
+      var group = shuffle.group;
+
+      if (group !== 'all' && !contains(el.data('groups'), group)) {
         return false;
       }
 
