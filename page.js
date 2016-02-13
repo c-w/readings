@@ -68,6 +68,7 @@ function setupGrid(grid) {
   grid.shuffle({
     itemSelector: '.card'
   });
+  grid.shuffle('shuffle', '');
 }
 
 function unique(array) {
