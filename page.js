@@ -11,7 +11,7 @@ $.ajax({
   success: function(data) {
     $(document).ready(function() {
       detectBrowser();
-      init(data);
+      setupContent(data.content);
     });
   },
   error: function(response) {
@@ -22,8 +22,8 @@ $.ajax({
   }
 });
 
-function init(data) {
-  var grid = createGrid(data.content);
+function setupContent(content) {
+  var grid = createGrid(content);
   setupGrid(grid);
 
   createFiltersAndSearch();
