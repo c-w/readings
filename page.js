@@ -4,7 +4,8 @@ var user = window.location.hostname.split('.')[0];
 var repo = window.location.pathname;
 var dataUrl = 'https://raw.githubusercontent.com/' + user + repo + 'master/data.json';
 
-var lastVisited = handleCookies();
+var cookies = parseCookies();
+var queryParameters = parseQueryParameters();
 
 $.ajax({
   url: dataUrl,
@@ -35,7 +36,9 @@ function setupContent(content) {
   createSorts();
   setupSorts(grid);
 
-  handleQueryParameters();
+  if (queryParameters.postId) {
+    focus($('#' + postId));
+  }
 }
 
 function applyStyling(styling) {
@@ -76,7 +79,7 @@ function createFiltersData() {
 
   $('[data-groups]').map(function() {
     var card = $(this);
-    var isNew = parseDate(card.data('date')) >= lastVisited ? 1 : 0;
+    var isNew = parseDate(card.data('date')) >= cookies.lastVisited ? 1 : 0;
 
     card.data('groups').map(function(groupName) {
       totalPosts += 1;
@@ -221,16 +224,15 @@ function focus(el) {
   scrollTo(el, $('#nav-container').height());
 }
 
-function handleQueryParameters() {
+function parseQueryParameters() {
   var queryParameters = URI(document.URL).query(true);
 
-  var postId = queryParameters['postId'];
-  if (postId) {
-    focus($('#' + postId));
-  }
+  return {
+    postId: queryParameters['postId']
+  };
 }
 
-function handleCookies() {
+function parseCookies() {
   var lastVisited = Cookies.get('lastVisited');
   if (lastVisited !== undefined) {
     lastVisited = new Date(parseDate(lastVisited));
@@ -243,7 +245,9 @@ function handleCookies() {
     domain: window.location.hostname
   });
 
-  return lastVisited;
+  return {
+    lastVisited: lastVisited
+  };
 }
 
 
