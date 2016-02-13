@@ -10,6 +10,7 @@ $.ajax({
   crossDomain: true,
   success: function(data) {
     $(document).ready(function() {
+      detectBrowser();
       init(data);
     });
   },
@@ -22,8 +23,6 @@ $.ajax({
 });
 
 function init(data) {
-  detectBrowser();
-
   var grid = createGrid(data.content);
   setupGrid(grid);
 
