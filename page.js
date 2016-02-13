@@ -13,23 +13,12 @@ var queryParameters = parseQueryParameters();
 /* main                                                                       */
 /*----------------------------------------------------------------------------*/
 
-$.ajax({
-  url: formatDataUrl(),
-  dataType: 'json',
-  crossDomain: true,
-  success: function(data) {
-    $(document).ready(function() {
-      detectBrowser();
-      applyStyling(data.styling);
-      setupContent(data.content);
-    });
-  },
-  error: function(response) {
-    console.log('AJAX error: ' + JSON.stringify(response));
-  },
-  failure: function(response) {
-    console.log('AJAX failure: ' + JSON.stringify(response));
-  }
+getJson(formatDataUrl(), function(data) {
+  $(document).ready(function() {
+    detectBrowser();
+    applyStyling(data.styling);
+    setupContent(data.content);
+  });
 });
 
 
@@ -336,6 +325,21 @@ function parseDate(str) {
 
 function formatDate(date) {
   return date.toISOString().slice(0, 10);
+}
+
+function getJson(url, callback) {
+  $.ajax({
+    url: url,
+    dataType: 'json',
+    crossDomain: true,
+    success: callback,
+    error: function(response) {
+      console.log('AJAX error: ' + JSON.stringify(response));
+    },
+    failure: function(response) {
+      console.log('AJAX failure: ' + JSON.stringify(response));
+    }
+  });
 }
 
 
