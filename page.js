@@ -246,8 +246,12 @@ function setupSorts(grid) {
 }
 
 function scrollTo(el, extraOffset) {
-  if (!el.length) return;
-  if (!extraOffset) extraOffset = 0;
+  if (!el.length) {
+    return;
+  }
+  if (!extraOffset) {
+    extraOffset = 0;
+  }
 
   var elOffset = el.offset().top;
   var elHeight = el.height();
@@ -279,7 +283,9 @@ function onAnyUserInteraction(callback) {
 }
 
 function focus(el) {
-  if (!el.length) return;
+  if (!el.length) {
+    return;
+  }
 
   $('.card').addClass('deemphasize');
   el.removeClass('deemphasize');
