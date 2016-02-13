@@ -239,7 +239,7 @@ function focus(el) {
     $('.card').removeClass('deemphasize');
   });
 
-  scrollTo(el, $('#nav').height());
+  scrollTo(el, $('#nav-container').height());
 }
 
 function handleQueryParameters() {
