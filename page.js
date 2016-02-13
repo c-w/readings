@@ -4,6 +4,8 @@ var user = window.location.hostname.split('.')[0];
 var repo = window.location.pathname;
 var dataUrl = 'https://raw.githubusercontent.com/' + user + repo + 'master/data.json';
 
+var lastVisited = handleCookies();
+
 $.ajax({
   url: dataUrl,
   dataType: 'json',
@@ -22,6 +24,22 @@ $.ajax({
     console.log('AJAX failure: ' + JSON.stringify(response));
   }
 });
+
+function handleCookies() {
+  var lastVisited = Cookies.get('lastVisited');
+  if (lastVisited !== undefined) {
+    lastVisited = new Date(parseDate(lastVisited));
+  } else {
+    lastVisited = new Date();
+  }
+
+  Cookies.set('lastVisited', formatDate(new Date()), {
+    expires: 365,
+    domain: window.location.hostname
+  });
+
+  return lastVisited;
+}
 
 function setupContent(content) {
   var grid = createGrid(content);
@@ -86,13 +104,24 @@ function unique(array) {
 function createFiltersData() {
   var groupCounter = {};
   var totalPosts = 0;
+  var newPosts = 0;
+
   $('[data-groups]').map(function() {
-    $(this).data('groups').map(function(groupName) {
+    var card = $(this);
+    var isNew = parseDate(card.data('date')) >= lastVisited ? 1 : 0;
+
+    card.data('groups').map(function(groupName) {
       totalPosts += 1;
+      newPosts += isNew;
+
       if (groupName in groupCounter) {
-        groupCounter[groupName] += 1;
+        groupCounter[groupName].totalPosts += 1;
+        groupCounter[groupName].newPosts += isNew;
       } else {
-        groupCounter[groupName] = 1;
+        groupCounter[groupName] = {
+          totalPosts: 1,
+          newPosts: isNew
+        };
       }
     });
   });
@@ -100,15 +129,29 @@ function createFiltersData() {
   var filters = [];
   for (var key in groupCounter) {
     if (groupCounter.hasOwnProperty(key)) {
-      filters.push({'name': key, 'count': groupCounter[key]});
+      filters.push({
+        'name': key,
+        'newPosts': groupCounter[key].newPosts,
+        'totalPosts': groupCounter[key].totalPosts
+      });
     }
   }
-  filters.sort(function(a, b) { return b.count - a.count; });
+  filters.sort(function(a, b) { return b.totalPosts - a.totalPosts; });
 
   return {
     'filters': filters,
+    'newPosts': newPosts,
     'totalPosts': totalPosts
   };
+}
+
+function parseDate(str) {
+  var parts = str.split('-');
+  return new Date(parts[0], parts[1]-1, parts[2]);
+}
+
+function formatDate(date) {
+  return date.toISOString().slice(0, 10);
 }
 
 function createFiltersAndSearch() {
