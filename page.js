@@ -318,13 +318,22 @@ function unique(array) {
   });
 }
 
+function pad(str, width, chr) {
+  str = '' + str;
+  return str.length < width
+    ? new Array(width - str.length + 1).join(chr || '0') + str
+    : str;
+}
+
 function parseDate(str) {
   var parts = str.split('-');
   return new Date(parts[0], parts[1]-1, parts[2]);
 }
 
 function formatDate(date) {
-  return date.toISOString().slice(0, 10);
+  return date.getFullYear()
+    + '-' + pad(date.getMonth()+1, 2)
+    + '-' + pad(date.getDate(), 2);
 }
 
 function getJson(url, callback) {
