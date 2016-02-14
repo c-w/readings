@@ -1,6 +1,22 @@
 {
   "content": [
     {
+      "date": "2016-02-23",
+      "summary": "Short overview of the code review process of one of the Mozilla core developers. Great to see a strong focus on reviewing the commit message and the high-level changes such as public method signatures instead of focusing only on the implementation itself.",
+      "title": "How I Do Code Reviews at Mozilla",
+      "topics": ["Software Engineering"],
+      "type": "Article",
+      "url": "http://benjamin.smedbergs.us/blog/2014-10-22/how-i-do-code-reviews-at-mozilla"
+    },
+    {
+      "date": "2016-02-23",
+      "summary": "Interesting article that summarizes a number papers on quantitative analysis of software development methodologies published by Microsoft Research and thus provides data to back up some best practices in the industry. For example they provide evidence for using TDD and assertion-dense code: they found that TDD reduces the number of bugs by 60-90% and that assertion density has a significant correlation with fewer bugs. The cost: TDD increases development time by 15-35%. They also provide evidence for distributed teams: they didn't find a significant correlation between a team's geographic dispersal and increased software defects.",
+      "title": "Exploding Software-Engineering Myths",
+      "topics": ["Software Engineering"],
+      "type": "Article",
+      "url": "http://research.microsoft.com/en-us/news/features/nagappan-100609.aspx"
+    },
+    {
       "date": "2016-02-15",
       "summary": "They propose an extension of the n-gram spelling correction model: multiply the language model probability by the probability of observing a n-character spelling correction. Their extension outperforms the stand-alone n-gram language model approach. Another take-away is how they automatically generate spelling correction training data from search engine query logs. They take all sessions where the user searches for something and then for another thing straight thereafter without any other interaction. If the two queries are similar in terms of edit distance, the second query likely is a correction of the first. In order to increase the yield from the technique, they also extend the candidate corrections using n-gram expansion.",
       "title": "Spelling Correction Based on User Search Contextual Analysis and Domain Knowledge",
