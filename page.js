@@ -43,7 +43,7 @@ function setupContent(content) {
   setupSorts(grid);
 
   if (queryParameters.postId) {
-    focus($('#' + postId));
+    focus($('#' + queryParameters.postId));
   }
 }
 
