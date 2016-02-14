@@ -1,6 +1,30 @@
 {
   "content": [
     {
+      "date": "2016-02-13",
+      "summary": "Some well-intentioned wise words around what to expect as a open source maintainer - or rather, what to not expect: don't expect praise, don't expect people to be nice, etc. The points around user engagement were useful: use animated gifs if you want people to understand something, visual demos are more effective than plans.",
+      "title": "Advice To Open Source Project Contributors",
+      "topics": ["Software Engineering"],
+      "type": "Article",
+      "url": "http://taskwarrior.org/docs/advice.html"
+    },
+    {
+      "date": "2016-02-13",
+      "summary": "The paper claims that trigram-based real-word spelling correction systems have a performance bottle-neck: data sparsity. In order to address this issue, they propose a mixed approach, incorporating part of speech information to augment the available trigrams. For example, for a source trigram like the/det mouse/noun eats/verb, they would generate the mixed trigrams det-noun-verb, the-noun-verb, det-mouse-verb, and so forth. They then use a Markov Model to perform the spelling correction. Unfortunately, they don't compare their model to a standard model like MDM. They note that their approach has a relatively high recall but also a high false positive rate which may be linked to the part-of-speech tags not having enough discriminative power. Perhaps a simpler and more robust approach to dealing with trigram data sparsity would be using bigrams or some sort of smoothing and interpolation.",
+      "title": "A Mixed Trigrams Approach for Context Sensitive Spell Checking",
+      "topics": ["Natural Language Processing"],
+      "type": "Paper",
+      "url": "http://nlp.cs.uic.edu/PS-papers/spell-cicling07.pdf"
+    },
+    {
+      "date": "2016-02-13",
+      "summary": "An apology-by-example to the Hungarian notation: misunderstood and more useful than many believe. Contrary to popular opinion, the original intent of the Hungarian notation was not to encode a variable type, such as integer or string, but instead to encode a variable intent, such as width or unsafe-user-input. As such, the Hungarian notation is actually pretty useful since it increases collocation by permanently reminding the programmer what a variable is supposed to do without having to trace the origin of the variable. Hungarian notation also makes it obvious to spot mistakes arising from variables being misused for incorrect purposes, such as multiplying a width by an array-index. Nevertheless, the article arises the question: instead of encoding intent in the variable name, why not create a custom class?",
+      "title": "Making Wrong Code Look Wrong",
+      "topics": ["Software Engineering"],
+      "type": "Article",
+      "url": "http://www.joelonsoftware.com/articles/Wrong.html"
+    },
+    {
       "date": "2016-02-10",
       "summary": "The paper reviews an old trigram-based contextual spelling correction system. The system is straight forward. First, compute the probability of the sentence under a language model. Then, replace the candidate incorrect word with all spelling alternatives and recompute the sentence probability for each alternative spelling. If the probability of the original sentence is low compared to the alternative sentences, the candidate incorrect word is a spelling mistake and is replaced with the alternative word in the alternative sentence with the highest probability under the language model. They find that this approach is quite effective at finding errors in all but closed-class words, especially when training the language model on larger corpora. The model is limited to spelling mistakes at edit distance one, but they find that this covers the vast majority of cases. Extending the model to cope with more than one mistake per word increases false positives and does not increase overall performance. The approach is pretty neat: conceptually simple and doesn't rely on labelled training data.",
       "title": "Real-word spelling correction with trigrams: A reconsideration of the Mays, Damerau, and Mercer model",
