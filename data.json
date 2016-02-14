@@ -1,6 +1,14 @@
 {
   "content": [
     {
+      "date": "2016-02-15",
+      "summary": "They propose an extension of the n-gram spelling correction model: multiply the language model probability by the probability of observing a n-character spelling correction. Their extension outperforms the stand-alone n-gram language model approach. Another take-away is how they automatically generate spelling correction training data from search engine query logs. They take all sessions where the user searches for something and then for another thing straight thereafter without any other interaction. If the two queries are similar in terms of edit distance, the second query likely is a correction of the first. In order to increase the yield from the technique, they also extend the candidate corrections using n-gram expansion.",
+      "title": "Spelling Correction Based on User Search Contextual Analysis and Domain Knowledge",
+      "topics": ["Natural Language Processing"],
+      "type": "Paper",
+      "url": "http://maroo.cs.umass.edu/getpdf.php?id=878"
+    },
+    {
       "date": "2016-02-13",
       "summary": "Some well-intentioned wise words around what to expect as a open source maintainer - or rather, what to not expect: don't expect praise, don't expect people to be nice, etc. The points around user engagement were useful: use animated gifs if you want people to understand something, visual demos are more effective than plans.",
       "title": "Advice To Open Source Project Contributors",
