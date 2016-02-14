@@ -1,3 +1,7 @@
+@-ms-viewport {
+  width: device-width;
+}
+
 #search .input-field label + .material-icons {
   display: none;
 }
