@@ -18,6 +18,7 @@ getJson(formatDataUrl(), function(data) {
     detectBrowser();
     applyStyling(data.styling);
     setupContent(data.content);
+    setupAnchors();
   });
 });
 
@@ -43,8 +44,23 @@ function setupContent(content) {
   setupSorts(grid);
 
   if (queryParameters.postId) {
-    focus($('#' + queryParameters.postId));
+    focus($(queryParameters.postId));
   }
+}
+
+function setupAnchors() {
+  $(window).on('hashchange load', function() {
+    var anchor = $(':target');
+    if (anchor.length > 0) {
+      focus(anchor);
+    }
+  });
+
+  $('a').on('click', function(e) {
+    if (window.location.hash === $(this).attr('href')) {
+      e.preventDefault();
+    }
+  });
 }
 
 function applyStyling(styling) {
@@ -231,10 +247,10 @@ function focus(el) {
 }
 
 function parseQueryParameters() {
-  var queryParameters = URI(document.URL).query(true);
+  var hash = window.location.hash;
 
   return {
-    postId: queryParameters['postId']
+    postId: hash.startsWith('#post_') ? hash : undefined
   };
 }
 

@@ -12,7 +12,6 @@
     <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/Shuffle/3.1.1/jquery.shuffle.modernizr.min.js'></script>
     <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js'></script>
     <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js'></script>
-    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.17.0/URI.min.js'></script>
     <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.0/js.cookie.min.js'></script>
     <script type='text/javascript' src='https://cdn.rawgit.com/c-w/jquery-handlebars-simple/1b8deea/jquery-handlebars-simple.min.js'></script>
     <script type='text/javascript' src='https://cdn.rawgit.com/c-w/jquery-materialize-labelled-dropdown/f301248/jquery-materialize-labelled-dropdown.min.js'></script>
@@ -27,10 +26,6 @@
     <script id='helpers' type='text/javascript'>
       Handlebars.registerHelper('stringify', function(json) {
         return JSON.stringify(json);
-      });
-
-      Handlebars.registerHelper('permalink', function(el) {
-        return window.location.href.split('?')[0] + '?postId=' + el.uid;
       });
     </script>
 
@@ -119,14 +114,14 @@
       <div class='container'>
         <div class='row'>
           {{#each this}}
-          <div class='card col s12' id='{{this.uid}}' data-groups='{{stringify this.topics}}' data-date='{{this.date}}' data-title='{{this.title}}'>
+          <div class='card col s12' id='post_{{this.uid}}' data-groups='{{stringify this.topics}}' data-date='{{this.date}}' data-title='{{this.title}}'>
             <div class='card-content'>
               <span class='card-title'>{{this.title}}</span>
               <p>{{this.summary}}</p>
             </div>
             <div class='card-action'>
               <a href='{{this.url}}'>Origin</a>
-              <a href='{{permalink this}}'>Permalink</a>
+              <a href='#post_{{this.uid}}'>Permalink</a>
             </div>
           </div>
           {{/each}}
