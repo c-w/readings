@@ -5,6 +5,7 @@
 /* globals                                                                    */
 /*----------------------------------------------------------------------------*/
 
+var postPrefix = 'post_'
 var cookies = parseCookies();
 var queryParameters = parseQueryParameters();
 
@@ -77,7 +78,7 @@ function detectBrowser() {
 
 function addUniqueIds(data) {
   data.map(function(el) {
-    el.uid = hashCode(JSON.stringify(data));
+    el.uid = postPrefix + hashCode(JSON.stringify(data));
   });
   return data;
 }
@@ -250,7 +251,7 @@ function parseQueryParameters() {
   var hash = window.location.hash;
 
   return {
-    postId: hash.startsWith('#post_') ? hash : undefined
+    postId: hash.startsWith('#' + postPrefix) ? hash : undefined
   };
 }
 
