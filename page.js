@@ -77,8 +77,20 @@ function detectBrowser() {
 }
 
 function addUniqueIds(data) {
-  data.map(function(el) {
-    el.uid = postPrefix + hashCode(JSON.stringify(data));
+  function idFromPost(post) {
+    var title = post.title.toLowerCase().replace(/[^a-z ]/g, '');
+    var titleId = title.split(' ').map(function (word) {
+      return word.charAt(0);
+    }).join('');
+
+    var date = parseDate(post.date).toString().toLowerCase().split(' ');
+    var dateId = date[2] + date[1] + date[3].substring(2, 4);
+
+    return dateId + titleId;
+  }
+
+  data.map(function(post) {
+    post.uid = postPrefix + idFromPost(post)
   });
   return data;
 }
@@ -313,16 +325,6 @@ function onAnyUserInteraction(callback) {
   ];
 
   $('body').on(events.join(' '), callback);
-}
-
-function hashCode(str) {
-  var hash = 0;
-  for (var i=str.length-1; i>=0; i--) {
-    var chr = str.charCodeAt(i);
-    hash = ((hash<<5)-hash)+chr;
-    hash = hash & hash;
-  }
-  return hash;
 }
 
 function contains(array, element) {
