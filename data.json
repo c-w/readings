@@ -1,6 +1,22 @@
 {
   "content": [
     {
+      "date": "2016-02-25",
+      "summary": "This is the baseline presented in the Duan and Hsu paper. In essence, they have a very fast and memory-efficient trie-based way to look up strings that are approximately prefix equivalent. This algorithm isn't an entirely fair baseline for the Duan and Hsu paper because in order to work in a general search engine context, the algorithm would require the entire corpus of the search engine or of all acceptable search queries to be in memory.",
+      "title": "Extending Autocompletion To Tolerate Errors",
+      "topics": ["Natural Language Processing"],
+      "type": "Paper",
+      "url": "http://research.microsoft.com/pubs/80005/sigmod513.pdf"
+    },
+    {
+      "date": "2016-02-25",
+      "summary": "The paper presents a quite sophisticated spelling correction model based on a Markov model that encodes the probability of transforming a sequence of misspelled word chunks into a sequence of word chunks of a correct query. The most surprising thing about the paper is the great performance of the baseline against which they compare their model. They suggest an evaluation using the 'minimal keystrokes' metric which counts the number of keystrokes that a user has to enter before being able to get to the correctly spelled query. They find that their model outperforms the baseline, but only by about two keystrokes and a few percentage points of recall and precision. The baseline is based on simple edit-distance.",
+      "title": "Online Spelling Correction for Query Completion",
+      "topics": ["Natural Language Processing"],
+      "type": "Paper",
+      "url": "http://research.microsoft.com/pubs/148103/www11-onlinespellingcorrection.pdf"
+    },
+    {
       "date": "2016-02-23",
       "summary": "Short overview of the code review process of one of the Mozilla core developers. Great to see a strong focus on reviewing the commit message and the high-level changes such as public method signatures instead of focusing only on the implementation itself.",
       "title": "How I Do Code Reviews at Mozilla",
