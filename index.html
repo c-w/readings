@@ -83,20 +83,33 @@
                    v-bind:class="{'deemphasize': selectedPostUid && selectedPostUid !== post.uid}"
                    transition="fade"
                    class="post card col s12 hoverable">
-                <a v-if="selectedPostUid === post.uid"
-                   v-on:click="selectedPostUid = ''"
-                   class="card-close" href="#!" role="button">
-                  <i class="material-icons close">close</i>
-                </a>
+                <div class="card-deselect">
+                  <a v-if="selectedPostUid === post.uid"
+                     v-on:click="selectedPostUid = ''"
+                     href="#!" role="button">
+                    <i class="material-icons close card-menu">close</i>
+                  </a>
+                </div>
                 <div class="card-block card-content">
                   <h4 class="card-title">{{*post.title}}</h4>
                   <p class="card-text">{{*post.summary}}</p>
                 </div>
-                <div class="card-block card-action">
+                <div class="card-block card-action activator">
                   <a v-if="post.url"
                      class="card-link" href="{{*post.url}}">Origin</a>
                   <a v-on:click="selectedPostUid = post.uid"
                      class="card-link" href="#{{*post.uid}}">Permalink</a>
+                  <i class="material-icons more-vert card-menu">more_vert</i>
+                </div>
+                <div class="card-reveal">
+                  <h4 class="card-title">{{*post.title}}<i class="material-icons close card-menu">close</i></h4>
+                  <p class="card-text">
+                    <ul>
+                      <li>Date: {{post | displayDate}}</li>
+                      <li>Topics: {{post | displayTopics}}</li>
+                      <li>Type: {{*post.type}}</li>
+                    </ul>
+                  <p>
                 </div>
               </div>
             </div>

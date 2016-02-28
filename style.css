@@ -11,11 +11,31 @@
   opacity: .3 !important;
 }
 
-.card-close {
+.card-menu {
   position: absolute;
-  top: 15px;
-  right: 15px;
   color: black;
+  cursor: pointer;
+}
+
+.card-action .card-menu,
+.card-reveal .card-menu {
+  bottom: 20px;
+}
+
+.card-reveal .card-menu.close {
+  right: 25px;
+}
+
+.card-action .card-menu.more-vert {
+  right: 15px;
+}
+
+.card-deselect .card-menu {
+  top: 15px;
+}
+
+.card-deselect .card-menu.close {
+  right: 15px;
 }
 
 .toast.error .message {

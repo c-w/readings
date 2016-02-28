@@ -17,6 +17,16 @@ var queryParameters = parseQueryParameters();
 /* main                                                                       */
 /*----------------------------------------------------------------------------*/
 
+Vue.filter('displayDate', function(post) {
+  return formatDate(post.date);
+});
+
+Vue.filter('displayTopics', function(post) {
+  return post.topics.filter(function (topic) {
+    return topic !== allTopic;
+  }).join(', ');
+});
+
 new Vue({
   el: '#page',
 
