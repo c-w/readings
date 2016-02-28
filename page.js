@@ -51,7 +51,6 @@ new Vue({
         vue.$set('filters', createFilters(data.content));
         vue.$set('styling', data.styling);
         vue.highlightPost(queryParameters.selectedPostUid);
-        vue.initializeDynamicComponents();
       });
     },
 
@@ -71,14 +70,6 @@ new Vue({
       });
 
       this.$set('selectedPostUid', uid);
-    },
-
-    initializeDynamicComponents: function() {
-      $(document).ready(function(){
-        $('.labelled-dropdown').each(function() {
-          $(this).labelledDropdown();
-        });
-      });
     }
   }
 });

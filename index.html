@@ -10,7 +10,6 @@
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
-    <script type="text/javascript" src="https://cdn.rawgit.com/c-w/jquery-materialize-labelled-dropdown/f301248/jquery-materialize-labelled-dropdown.min.js"></script>
     <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
     <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
@@ -28,23 +27,6 @@
           <nav class="{{styling.navbarColor}}">
             <div class="nav-wrapper">
               <ul class="left">
-                <li>
-                  <div class="search-form">
-                    <div class="input-field">
-                      <input v-model="searchKey"
-                             role="search"
-                             autocomplete="off"
-                             debounce="300"
-                             type="search"
-                             class="search form-control"/>
-                      <label for="search"><i class="material-icons search">search</i></label>
-                      <i class="material-icons close" role="button" v-on:click="searchKey = ''">close</i>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-
-              <ul class="right">
                 <li>
                   <div id="filters">
                     <ul id="filters-dropdown" class="dropdown-content">
@@ -65,9 +47,28 @@
                        data-constrainwidth="false"
                        data-beloworigin="true"
                        data-alignment="right"
-                       class="dropdown-button labelled-dropdown" href="#!" role="button">
-                      <span class="dropdown-label" data-format="Category: {0}"></span>
+                       class="dropdown-button" href="#!" role="button"
+                       id="filters-trigger">
+                      <i class="material-icons">filter_list</i>
                     </a>
+                  </div>
+                </li>
+
+                <li>
+                  <div id="search" class="search-form">
+                    <div class="input-field">
+                      <input v-model="searchKey"
+                             role="search"
+                             autocomplete="off"
+                             debounce="300"
+                             type="search"
+                             class="search form-control"
+                             id="search-input"/>
+                      <label for="search-input">
+                        <i class="material-icons search">search</i>
+                      </label>
+                      <i class="material-icons close" role="button" v-on:click="searchKey = ''">close</i>
+                    </div>
                   </div>
                 </li>
               </ul>
@@ -121,5 +122,13 @@
     </div>
 
     <script src="./page.js"></script>
+
+    <script>
+      $(document).ready(function(){
+        $('.dropdown-button').each(function() {
+          $(this).dropdown();
+        });
+      });
+    </script>
   </body>
 </html>

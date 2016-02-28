@@ -53,12 +53,20 @@
   opacity: 0;
 }
 
-.search-form .material-icons.close {
+nav i.material-icons {
+  color: rgba(255, 255, 255, .7);
+}
+
+nav .active i.material-icons {
+  color: rgba(255, 255, 255, 1);
+}
+
+nav .search-form .material-icons.close {
   display: none;
 }
 
-.search-form .material-icons.close.active {
-  display: block;
+nav .search-form .material-icons.close.active {
+   display: block;
 }
 
 [v-cloak] {
