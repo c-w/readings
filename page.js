@@ -5,7 +5,10 @@
 /* globals                                                                    */
 /*----------------------------------------------------------------------------*/
 
-var postPrefix = 'post_'
+var allTopic = 'All';
+var postPrefix = 'post_';
+var filterPrefix = 'filter_';
+
 var cookies = parseCookies();
 var queryParameters = parseQueryParameters();
 
@@ -14,14 +17,124 @@ var queryParameters = parseQueryParameters();
 /* main                                                                       */
 /*----------------------------------------------------------------------------*/
 
-getJson(formatDataUrl(), function(data) {
-  $(document).ready(function() {
-    detectBrowser();
-    applyStyling(data.styling);
-    setupContent(data.content);
-    setupAnchors();
-  });
+new Vue({
+  el: '#page',
+
+  data: {
+    posts: [],
+    styling: {},
+    filters: [],
+    filterKey: allTopic,
+    searchKey: '',
+    selectedPostUid: ''
+  },
+
+  ready: function() {
+    this.fetchData();
+  },
+
+  methods: {
+    fetchData: function() {
+      var vue = this;
+      getJson(formatDataUrl(), function(data) {
+        vue.$set('posts', createPosts(data.content));
+        vue.$set('filters', createFilters(data.content));
+        vue.$set('styling', data.styling);
+        vue.highlightPost(queryParameters.selectedPostUid);
+        vue.initializeDynamicComponents();
+      });
+    },
+
+    highlightPost: function(uid) {
+      if (!uid) {
+        return;
+      }
+
+      this.posts.sort(function(a, b) {
+        if (a.uid === uid) {
+          return -1;
+        }
+        if (b.uid === uid) {
+          return 1;
+        }
+        return 0;
+      });
+
+      this.$set('selectedPostUid', uid);
+    },
+
+    initializeDynamicComponents: function() {
+      $(document).ready(function(){
+        $('.labelled-dropdown').each(function() {
+          var dropdown = $(this);
+          dropdown.labelledDropdown({
+            constrain_width: dropdown.data('constrain-width')
+          });
+        });
+      });
+    }
+  }
 });
+
+function createPosts(posts) {
+  return posts.map(function(post) {
+    post.topics.unshift(allTopic);
+
+    return {
+      date: parseDate(post.date),
+      summary: post.summary,
+      title: post.title,
+      topics: post.topics,
+      type: post.type,
+      url: post.url,
+      uid: postPrefix + idFromPost(post)
+    };
+  });
+}
+
+function createFilters(posts) {
+  var topicCounter = {};
+  var totalPosts = 0;
+  var newPosts = 0;
+
+  posts.map(function(post) {
+    var isNew = parseDate(post.date) >= cookies.lastVisited ? 1 : 0;
+
+    post.topics.map(function(topic) {
+      totalPosts += 1;
+      newPosts += isNew;
+
+      if (topic in topicCounter) {
+        topicCounter[topic].totalPosts += 1;
+        topicCounter[topic].newPosts += isNew;
+      } else {
+        topicCounter[topic] = {
+          totalPosts: 1,
+          newPosts: isNew
+        };
+      }
+    });
+  });
+
+  var filters = [];
+  for (var key in topicCounter) {
+    if (topicCounter.hasOwnProperty(key)) {
+      filters.push({
+        name: key,
+        topic: key,
+        newPosts: topicCounter[key].newPosts,
+        totalPosts: topicCounter[key].totalPosts,
+        uid: filterPrefix + idFromFilter(key)
+      });
+    }
+  }
+
+  filters.sort(function(a, b) {
+    return b.totalPosts - a.totalPosts;
+  });
+
+  return filters;
+}
 
 
 /*----------------------------------------------------------------------------*/
@@ -34,236 +147,25 @@ function formatDataUrl() {
   return 'https://raw.githubusercontent.com/' + user + repo + 'master/data.json';
 }
 
-function setupContent(content) {
-  var grid = createGrid(content);
-  setupGrid(grid);
-
-  createFiltersAndSearch();
-  setupFiltersAndSearch(grid);
-
-  createSorts();
-  setupSorts(grid);
-
-  if (queryParameters.postId) {
-    focus($(queryParameters.postId));
-  }
+function idFromFilter(filter) {
+  return filter.toLowerCase().replace(/[^a-z]/g, '');
 }
 
-function setupAnchors() {
-  $(window).on('hashchange load', function() {
-    var anchor = $(':target');
-    if (anchor.length > 0) {
-      focus(anchor);
-    }
-  });
+function idFromPost(post) {
+  var title = post.title.toLowerCase().replace(/[^a-z ]/g, '');
+  var titleId = title.split(' ').map(function (word) {
+    return word.charAt(0);
+  }).join('');
 
-  $('a').on('click', function(e) {
-    if (window.location.hash === $(this).attr('href')) {
-      e.preventDefault();
-    }
-  });
-}
+  var date = parseDate(post.date).toString().toLowerCase().split(' ');
+  var dateId = date[2] + date[1] + date[3].substring(2, 4);
 
-function applyStyling(styling) {
-  $('body').addClass(styling.backgroundColor);
-  $('#nav').addClass(styling.navbarColor);
-  $('#page').removeClass('hide');
-}
-
-function detectBrowser() {
-  if (isInternetExplorer()) {
-    $('html').addClass('ie');
-  }
-}
-
-function addUniqueIds(data) {
-  function idFromPost(post) {
-    var title = post.title.toLowerCase().replace(/[^a-z ]/g, '');
-    var titleId = title.split(' ').map(function (word) {
-      return word.charAt(0);
-    }).join('');
-
-    var date = parseDate(post.date).toString().toLowerCase().split(' ');
-    var dateId = date[2] + date[1] + date[3].substring(2, 4);
-
-    return dateId + titleId;
-  }
-
-  data.map(function(post) {
-    post.uid = postPrefix + idFromPost(post)
-  });
-  return data;
-}
-
-function createGrid(data) {
-  $('#content').handlebars($('#content-template'), addUniqueIds(data));
-  return $('#content .row');
-}
-
-function setupGrid(grid) {
-  grid.shuffle({
-    itemSelector: '.card'
-  });
-  grid.shuffle('shuffle', '');
-}
-
-function createFiltersData() {
-  var groupCounter = {};
-  var totalPosts = 0;
-  var newPosts = 0;
-
-  $('[data-groups]').map(function() {
-    var card = $(this);
-    var isNew = parseDate(card.data('date')) >= cookies.lastVisited ? 1 : 0;
-
-    card.data('groups').map(function(groupName) {
-      totalPosts += 1;
-      newPosts += isNew;
-
-      if (groupName in groupCounter) {
-        groupCounter[groupName].totalPosts += 1;
-        groupCounter[groupName].newPosts += isNew;
-      } else {
-        groupCounter[groupName] = {
-          totalPosts: 1,
-          newPosts: isNew
-        };
-      }
-    });
-  });
-
-  var filters = [];
-  for (var key in groupCounter) {
-    if (groupCounter.hasOwnProperty(key)) {
-      filters.push({
-        'name': key,
-        'newPosts': groupCounter[key].newPosts,
-        'totalPosts': groupCounter[key].totalPosts
-      });
-    }
-  }
-  filters.sort(function(a, b) { return b.totalPosts - a.totalPosts; });
-
-  return {
-    'filters': filters,
-    'newPosts': newPosts,
-    'totalPosts': totalPosts
-  };
-}
-
-function createFiltersAndSearch() {
-  $('#filters').handlebars($('#filters-template'), createFiltersData());
-
-  $('#search').handlebars($('#search-template'), {});
-}
-
-function setupFiltersAndSearch(grid) {
-  var filters = $('#filters-dropdown .filter');
-
-  var search_form = $('#search-form');
-  var search_input = search_form.find('#search-input');
-  var search_close = search_form.find('.material-icons:contains("close")');
-
-  function isMatch(content, terms) {
-    var notFound = terms.filter(function(term) {
-      return content.toLowerCase().indexOf(term.toLowerCase()) === -1;
-    });
-
-    return notFound.length === 0;
-  }
-
-  function executeSearch() {
-    var query = search_input.val().split(' ');
-
-    grid.shuffle('shuffle', function(el, shuffle) {
-      var group = shuffle.group;
-
-      if (group !== 'all' && !contains(el.data('groups'), group)) {
-        return false;
-      }
-
-      var content = $.trim(el.find('.card-content').text()).toLowerCase();
-      return isMatch(content, query);
-    });
-  }
-
-  function clearSearch() {
-    search_input.val('');
-    executeSearch();
-  }
-
-  filters.click(function(e) {
-    e.preventDefault();
-
-    var filter = $(this);
-    var group = filter.data('group');
-
-    filters.removeClass('active');
-    filter.addClass('active');
-
-    grid.shuffle('shuffle', group);
-    executeSearch();
-  });
-
-  search_form.submit(function(e) {
-    e.preventDefault();
-
-    executeSearch();
-  });
-
-  search_close.click(function(e) {
-    e.preventDefault();
-
-    clearSearch();
-  });
-}
-
-function createSorts() {
-  $('#sorts').handlebars($('#sorts-template'), {});
-}
-
-function setupSorts(grid) {
-  var sorts = $('#sorts-dropdown .sort');
-
-  sorts.click(function(e) {
-    e.preventDefault();
-
-    var sort = $(this);
-    var by = sort.data('by');
-    var reverse = sort.data('reverse');
-
-    sorts.removeClass('active');
-    sort.addClass('active');
-
-    grid.shuffle('sort', {
-      by: function(el) {
-        return el.data(by).toLowerCase();
-      },
-      reverse: reverse
-    });
-  });
-}
-
-function focus(el) {
-  if (!el.length) {
-    return;
-  }
-
-  $('.card').addClass('deemphasize');
-  el.removeClass('deemphasize');
-
-  onAnyUserInteraction(function() {
-    $('.card').removeClass('deemphasize');
-  });
-
-  scrollTo(el, $('#nav-container').height());
+  return dateId + titleId;
 }
 
 function parseQueryParameters() {
-  var hash = window.location.hash;
-
   return {
-    postId: hash.startsWith('#' + postPrefix) ? hash : undefined
+    selectedPostUid: parseHash(postPrefix)
   };
 }
 
@@ -290,58 +192,16 @@ function parseCookies() {
 /* utilities                                                                  */
 /*----------------------------------------------------------------------------*/
 
-function scrollTo(el, extraOffset) {
-  if (!el.length) {
-    return;
-  }
-  if (!extraOffset) {
-    extraOffset = 0;
-  }
-
-  var elOffset = el.offset().top;
-  var elHeight = el.height();
-  var windowHeight = $(window).height();
-
-  var scrollTop = elOffset - windowHeight/2 - extraOffset + elHeight/2;
-  $('html, body').animate({
-    scrollTop: scrollTop
-  }, 0);
-}
-
-function isFirefox() {
-  return /Firefox/i.test(navigator.userAgent);
-}
-
-function isInternetExplorer() {
-  return /MSIE/i.test(navigator.userAgent) ||
-    /Trident/i.test(navigator.userAgent);
-}
-
-function onAnyUserInteraction(callback) {
-  var events = [
-    'click',
-    'keydown',
-    isFirefox() ? 'DOMMouseScroll' : 'mousewheel'
-  ];
-
-  $('body').on(events.join(' '), callback);
-}
-
-function contains(array, element) {
-  return $.inArray(element, array) !== -1;
-}
-
-function unique(array) {
-  return array.filter(function(value, index, self) {
-    return self.indexOf(value) === index;
-  });
-}
-
 function pad(str, width, chr) {
   str = '' + str;
   return str.length < width
     ? new Array(width - str.length + 1).join(chr || '0') + str
     : str;
+}
+
+function parseHash(prefix) {
+  var hash = window.location.hash;
+  return hash.startsWith('#' + prefix) ? hash.substring(1) : undefined;
 }
 
 function parseDate(str) {
@@ -362,12 +222,20 @@ function getJson(url, callback) {
     crossDomain: true,
     success: callback,
     error: function(response) {
-      console.log('AJAX error: ' + JSON.stringify(response));
+      showError('AJAX error: ' + response.statusText)
+      console.log(JSON.stringify(response));
     },
     failure: function(response) {
-      console.log('AJAX failure: ' + JSON.stringify(response));
+      showError('AJAX failure: ' + respones.statusText);
+      console.log(JSON.stringify(response));
     }
   });
+}
+
+function showError(message) {
+  var content = '<i class="material-icons">error</i>' +
+                '<span class="message">' + message + '</span>';
+  Materialize.toast(content, undefined, 'error');
 }
 
 
