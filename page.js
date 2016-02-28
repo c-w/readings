@@ -76,10 +76,7 @@ new Vue({
     initializeDynamicComponents: function() {
       $(document).ready(function(){
         $('.labelled-dropdown').each(function() {
-          var dropdown = $(this);
-          dropdown.labelledDropdown({
-            constrain_width: dropdown.data('constrain-width')
-          });
+          $(this).labelledDropdown();
         });
       });
     }
