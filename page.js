@@ -197,9 +197,13 @@ function pad(str, width, chr) {
     : str;
 }
 
+function startsWith(str, prefix) {
+  return str.indexOf(prefix) === 0;
+}
+
 function parseHash(prefix) {
   var hash = window.location.hash;
-  return hash.startsWith('#' + prefix) ? hash.substring(1) : undefined;
+  return startsWith(hash, '#' + prefix) ? hash.substring(1) : undefined;
 }
 
 function parseDate(str) {
