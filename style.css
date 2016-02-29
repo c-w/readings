@@ -22,11 +22,11 @@
   bottom: 20px;
 }
 
-.card-reveal .card-menu.close {
+.card-reveal .card-menu.icon.close {
   right: 25px;
 }
 
-.card-action .card-menu.more-vert {
+.card-action .card-menu.icon.more {
   right: 15px;
 }
 
@@ -34,7 +34,7 @@
   top: 15px;
 }
 
-.card-deselect .card-menu.close {
+.card-deselect .card-menu.icon.close {
   right: 15px;
 }
 
@@ -53,20 +53,16 @@
   opacity: 0;
 }
 
-nav i.material-icons {
+.icon {
+  font-size: 25px;
+}
+
+nav .icon {
   color: rgba(255, 255, 255, .7);
 }
 
-nav .active i.material-icons {
+nav .active .icon {
   color: rgba(255, 255, 255, 1);
-}
-
-nav .search-form .material-icons.close {
-  display: none;
-}
-
-nav .search-form .material-icons.close.active {
-   display: block;
 }
 
 [v-cloak] {

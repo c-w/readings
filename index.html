@@ -11,7 +11,7 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
     <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
-    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.16/vue.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.0/js.cookie.min.js"></script>
@@ -49,7 +49,7 @@
                        data-alignment="right"
                        class="dropdown-button" href="#!" role="button"
                        id="filters-trigger">
-                      <i class="material-icons">filter_list</i>
+                      <i class="icon filter zmdi zmdi-filter-list"></i>
                     </a>
                   </div>
                 </li>
@@ -65,9 +65,8 @@
                              class="search form-control"
                              id="search-input"/>
                       <label for="search-input">
-                        <i class="material-icons search">search</i>
+                        <i class="icon search zmdi zmdi-search"></i>
                       </label>
-                      <i class="material-icons close" role="button" v-on:click="searchKey = ''">close</i>
                     </div>
                   </div>
                 </li>
@@ -89,7 +88,7 @@
                   <a v-if="selectedPostUid === post.uid"
                      v-on:click="selectedPostUid = ''"
                      href="#!" role="button">
-                    <i class="material-icons close card-menu">close</i>
+                    <i class="icon close card-menu zmdi zmdi-close"></i>
                   </a>
                 </div>
                 <div class="card-block card-content">
@@ -101,10 +100,10 @@
                      class="card-link" href="{{*post.url}}">Origin</a>
                   <a v-on:click="selectedPostUid = post.uid"
                      class="card-link" href="#{{*post.uid}}">Permalink</a>
-                  <i class="material-icons more-vert card-menu">more_vert</i>
+                  <i class="card-menu icon more zmdi zmdi-more-vert"></i>
                 </div>
                 <div class="card-reveal">
-                  <h4 class="card-title">{{*post.title}}<i class="material-icons close card-menu">close</i></h4>
+                  <h4 class="card-title">{{*post.title}}<i class="card-menu icon close zmdi zmdi-close"></i></h4>
                   <p class="card-text">
                     <ul>
                       <li>Date: {{post | displayDate}}</li>
