@@ -1,6 +1,22 @@
 {
   "content": [
     {
+      "date": "2016-03-28",
+      "summary": "A bit self-help oriented and somewhat short on practical content. The writing is straight-forward and somewhat entertaining to read, making at least the first section on career development worth a browse.",
+      "title": "Soft Skills: The Software Developer's Life Manual",
+      "topics": ["Software Engineering"],
+      "type": "Book",
+      "url": "http://www.amazon.co.uk/dp/1617292397/"
+    },
+    {
+      "date": "2016-03-28",
+      "summary": "The author criticizes three aspects of the scrum methodology. Planning poker too easily devolves into the opinion of the highest importance person with little to no discussion to find a consensus estimate. Velocity is too easily abused for micro management and for setting delivery targets. Standups get out of hand and are an unproductive use of face to face time. These points all ring true but are more criticisms of a scrum implementation rather than attacking the methodology at its core and could easily be mitigated, for instance by openly encouraging discord during planning poker, avoiding to use velocity as anything but a sprint-size estimation tool and by holding standups asynchronously.",
+      "title": "Why Scrum Should Basically Just Die In A Fire",
+      "topics": ["Software Engineering"],
+      "type": "Article",
+      "url": "http://gilesbowkett.blogspot.ca/2014/09/why-scrum-should-basically-just-die-in.html"
+    },
+    {
       "date": "2016-02-25",
       "summary": "This is the baseline presented in the Duan and Hsu paper. In essence, they have a very fast and memory-efficient trie-based way to look up strings that are approximately prefix equivalent. This algorithm isn't an entirely fair baseline for the Duan and Hsu paper because in order to work in a general search engine context, the algorithm would require the entire corpus of the search engine or of all acceptable search queries to be in memory.",
       "title": "Extending Autocompletion To Tolerate Errors",
