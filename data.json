@@ -1,6 +1,22 @@
 {
   "content": [
     {
+      "date": "2016-03-29",
+      "summary": "Three main pieces of advice on how to avoid legacy code becoming too much of a pain. Constantly upgrade dependencies in order to avoid big migrations that are sure to be expensive and need to be factored into a sprint as opposed to small upgrades that just come out in the wash of the day to day. Prioritize execution speed of unit tests in order to encourage developers to add to the test suite before making a change and to run tests regularly while developing. Having an infinite backlog makes it easy to ignore technical debt from the management side so once a development team claims that a particular cause of debt slowed development of a feature down more than some number of times, it's their responsibility to push for those debt reduction tasks to get prioritized.",
+      "title": " How to Avoid Brittle Code",
+      "topics": ["Software Engineering"],
+      "type": "Article",
+      "url": "https://www.go.cd/2016/03/24/how-to-avoid-brittle-code.html"
+    },
+    {
+      "date": "2016-03-29",
+      "summary": "Quick overview of the most important ingredients for clean code, maybe to be read as a prelude to Code Complete. Make code look the same by avoiding to slip-in personal quirks or preferences that ultimately don't matter like Yoda conditionals. Apply the single responsibility principle and aim to keep the level of abstraction consistent across a function. Reduce the element of surprise by keeping the architecture straight forward, use meaningful names and avoid using new hard to understand technology.",
+      "title": "How to reduce the cognitive load of your code",
+      "topics": ["Software Engineering"],
+      "type": "Article",
+      "url": "http://chrismm.com/blog/how-to-reduce-the-cognitive-load-of-your-code/"
+    },
+    {
       "date": "2016-03-28",
       "summary": "A bit self-help oriented and somewhat short on practical content. The writing is straight-forward and somewhat entertaining to read, making at least the first section on career development worth a browse.",
       "title": "Soft Skills: The Software Developer's Life Manual",
