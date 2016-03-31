@@ -35,6 +35,7 @@ new Vue({
   data: {
     posts: [],
     styling: {},
+    meta: {},
     filters: [],
     filterKey: allTopic,
     searchKey: '',
@@ -52,6 +53,7 @@ new Vue({
         vue.$set('posts', createPosts(data.content));
         vue.$set('filters', createFilters(data.content));
         vue.$set('styling', data.styling);
+        vue.$set('meta', data.meta);
         vue.highlightPost(queryParameters.selectedPostUid);
       });
     },
