@@ -27,7 +27,9 @@ Vue.filter('displayTopics', function(post) {
   }).join(', ');
 });
 
-Vue.filter('marked', marked);
+Vue.filter('marked', function(markdown) {
+  return markdown ? marked(markdown) : "";
+});
 
 new Vue({
   el: '#page',
