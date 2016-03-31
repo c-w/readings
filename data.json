@@ -1,6 +1,14 @@
 {
   "content": [
     {
+      "date": "2016-03-30",
+          "summary": "A short piece that focuses on how to implement one of the main things that makes an engineer senior: teaching others. Unsurprisingly, pair programming gets a mention. On a more subtle note, the article also mentions that great mentors should be on the look-out for systemic issues and people with problems to proactively offer help.",
+      "title": "On Engineering Mentorship",
+      "topics": ["Software Engineering"],
+      "type": "Article",
+      "url": "https://medium.com/@justinbean/on-engineering-mentorship-7fddd187cf3e"
+    },
+    {
       "date": "2016-03-29",
       "summary": "Three main pieces of advice on how to avoid legacy code becoming too much of a pain. Constantly upgrade dependencies in order to avoid big migrations that are sure to be expensive and need to be factored into a sprint as opposed to small upgrades that just come out in the wash of the day to day. Prioritize execution speed of unit tests in order to encourage developers to add to the test suite before making a change and to run tests regularly while developing. Having an infinite backlog makes it easy to ignore technical debt from the management side so once a development team claims that a particular cause of debt slowed development of a feature down more than some number of times, it's their responsibility to push for those debt reduction tasks to get prioritized.",
       "title": " How to Avoid Brittle Code",
