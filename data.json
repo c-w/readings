@@ -1,6 +1,14 @@
 {
   "content": [
     {
+      "date": "2016-04-03",
+      "summary": "Demonstration of how easy it is to combine Spark and Scikit for simple parallelization of the more advanced algorithms that Scikit provides but that don't exist in ML-Lib.",
+      "title": "Integrating Spark with Scikit-Learn",
+      "topics": ["Machine Learning"],
+      "type": "Article",
+      "url": "https://adventuresindatascience.wordpress.com/2016/04/02/integrating-spark-with-scikit-learn-visualizing-eigenvectors-and-fun/"
+    },
+    {
       "date": "2016-03-30",
           "summary": "A short piece that focuses on how to implement one of the main things that makes an engineer senior: teaching others. Unsurprisingly, pair programming gets a mention. On a more subtle note, the article also mentions that great mentors should be on the look-out for systemic issues and people with problems to proactively offer help.",
       "title": "On Engineering Mentorship",
