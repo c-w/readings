@@ -1,6 +1,14 @@
 {
   "content": [
     {
+      "date": "2016-04-05",
+      "summary": "The CMMI process recommends to keep a short personal code review checklist that prompts the developer to code review their own code for common mistakes that they make pre submission for wider review. This list can be mined from peer review comments and should evolve over time.",
+      "title": "Personal Code Reviews",
+      "topics": ["Software Engineering"],
+      "type": "Article",
+      "url": "https://helloscriptkitty.wordpress.com/2010/03/03/personal-code-reviews/"
+    },
+    {
       "date": "2016-04-03",
       "summary": "Demonstration of how easy it is to combine Spark and Scikit for simple parallelization of the more advanced algorithms that Scikit provides but that don't exist in ML-Lib.",
       "title": "Integrating Spark with Scikit-Learn",
