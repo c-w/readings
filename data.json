@@ -1,6 +1,14 @@
 {
   "content": [
     {
+      "date": "2016-04-06",
+      "summary": "Mostly straight forward advice about code reviewing: don't hesitate to review a change even if you aren't an expert in the area, review your code before submitting it for wider review, use check-lists, use automation, etc. A nice but less commonly stressed point: use positive reinforcement and also comment on things that are done well.",
+      "title": "Yet Another Code Review Best Practices",
+      "topics": ["Software Engineering"],
+      "type": "Article",
+      "url": "https://www.future-processing.pl/blog/another-code-review-best-practices/"
+    },
+    {
       "date": "2016-04-05",
       "summary": "The CMMI process recommends to keep a short personal code review checklist that prompts the developer to code review their own code for common mistakes that they make pre submission for wider review. This list can be mined from peer review comments and should evolve over time.",
       "title": "Personal Code Reviews",
