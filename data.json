@@ -1,6 +1,14 @@
 {
   "content": [
     {
+      "date": "2016-04-09",
+      "summary": "A scikit-learn style library for feature selection. Contains lots of algorithms both for supervised an unsupervised feature selection. Nice touch: the documentation provides references to papers that explain how the algorithms work and when they should be used.",
+      "title": "An brief introduction on how to perform feature selection with scikit-feature",
+      "topics": ["Machine Learning"],
+      "type": "Article",
+      "url": "http://featureselection.asu.edu/tutorial.php"
+    },
+    {
       "date": "2016-04-06",
       "summary": "Mostly straight forward advice about code reviewing: don't hesitate to review a change even if you aren't an expert in the area, review your code before submitting it for wider review, use check-lists, use automation, etc. A nice but less commonly stressed point: use positive reinforcement and also comment on things that are done well.",
       "title": "Yet Another Code Review Best Practices",
