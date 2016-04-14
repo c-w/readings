@@ -1,6 +1,14 @@
 {
   "content": [
     {
+      "date": "2016-04-13",
+      "summary": "Great list of common warning signs in code that indicate the opportunity for a refactor. Covers smells in the implementation of a single class and in the interaction between classes.",
+      "title": "Code Smells",
+      "topics": ["Software Engineering"],
+      "type": "Article",
+      "url": "http://blog.codinghorror.com/code-smells/"
+    },
+    {
       "date": "2016-04-09",
       "summary": "A scikit-learn style library for feature selection. Contains lots of algorithms both for supervised an unsupervised feature selection. Nice touch: the documentation provides references to papers that explain how the algorithms work and when they should be used.",
       "title": "An brief introduction on how to perform feature selection with scikit-feature",
