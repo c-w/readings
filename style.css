@@ -1,5 +1,15 @@
+.modal-content.image-text-wrap::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+.image-text-wrap-left {
+  float: left;
+  margin-right: 10px;
+}
+
 .fullscreen {
-  position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
@@ -11,12 +21,14 @@
   opacity: .3 !important;
 }
 
+.modal-menu,
 .card-menu {
   position: absolute;
   color: black;
   cursor: pointer;
 }
 
+.modal-action .modal-menu,
 .card-action .card-menu,
 .card-reveal .card-menu {
   bottom: 20px;
@@ -26,6 +38,7 @@
   right: 25px;
 }
 
+.modal-action .modal-menu.icon.close,
 .card-action .card-menu.icon.more {
   right: 15px;
 }

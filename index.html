@@ -76,8 +76,31 @@
               <span class="brand-logo center"
                 v-if="meta.title">{{meta.title}}</span>
 
+              <ul class="right">
+                <li>
+                  <a class="valign-wrapper modal-trigger" href="#about"
+                     v-if="meta.about">
+                    <i class="icon info zmdi zmdi-info"></i>
+                  </a>
+                </li>
+              </ul>
             </div>
           </nav>
+        </div>
+
+        <div id="about" class="modal">
+          <div class="modal-content image-text-wrap">
+            <span v-if="meta.about.avatar">
+              <img class="image-text-wrap-left" alt="Avatar"
+                   v-bind:src="meta.about.avatar"></img>
+            </span>
+            <span v-if="meta.about.blurb">{{{*meta.about.blurb | marked}}}</span>
+          </div>
+          <div class="modal-footer">
+            <a class="modal-action modal-close" href="#!" role="button">
+              <i class="modal-menu icon close zmdi zmdi-close"></i>
+            </a>
+          </div>
         </div>
 
         <div id="posts" role="main">
@@ -131,6 +154,9 @@
       $(document).ready(function(){
         $('.dropdown-button').each(function() {
           $(this).dropdown();
+        });
+        $('.modal-trigger').each(function() {
+          $(this).leanModal();
         });
       });
     </script>
