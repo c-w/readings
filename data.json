@@ -1,6 +1,14 @@
 {
   "content": [
     {
+      "date": "2016-04-22",
+      "summary": "Cautionary tale of a failed software rewrite. The cause: classics. The rewrite did not add any customer benefits, maintenance and new features on the existing code caused deadlines to slip, opportunity cost, etc. The article also gives some recommendations for when a rewrite might be warranted that mostly focus around tight coupling and individual refactors touching too much code.",
+      "title": "When to Rewrite from Scratch - Autopsy of a Failed Software",
+      "topics": ["Software Engineering"],
+      "type": "Article",
+      "url": "http://codeahoy.com/2016/04/21/when-to-rewrite-from-scratch-autopsy-of-a-failed-software/"
+    },
+    {
       "date": "2016-04-13",
       "summary": "Great list of common warning signs in code that indicate the opportunity for a refactor. Covers smells in the implementation of a single class and in the interaction between classes.",
       "title": "Code Smells",
