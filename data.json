@@ -1,6 +1,14 @@
 {
   "content": [
     {
+      "date": "2016-04-23",
+      "summary": "The article contains a quite complete checklist of things to look out for in code reviews, covering design, testability and style. More interestingly, the article also provides some advice for how to establish a successful code review culture. The submitter should self-review their changes first. Reviewers should tag suggestions with a notion of importance for prioritization, explain the rationale behind suggestions for education and do their best to criticize the code, not the author. The article also makes a good point around creating a culture where code reviews don't only point out the bad but also compliment the good in order to create positive reinforcement and sharing of good practices.",
+      "title": "Code Review Best Practices",
+      "topics": ["Software Engineering"],
+      "type": "Article",
+      "url": "http://kevinlondon.com/2015/05/05/code-review-best-practices.html"
+    },
+    {
       "date": "2016-04-22",
       "summary": "Cautionary tale of a failed software rewrite. The cause: classics. The rewrite did not add any customer benefits, maintenance and new features on the existing code caused deadlines to slip, opportunity cost, etc. The article also gives some recommendations for when a rewrite might be warranted that mostly focus around tight coupling and individual refactors touching too much code.",
       "title": "When to Rewrite from Scratch - Autopsy of a Failed Software",
