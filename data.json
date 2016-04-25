@@ -1,6 +1,14 @@
 {
   "content": [
     {
+      "date": "2016-04-24",
+      "summary": "Surprisingly good overview of some of the most widely used patterns like decorator, factory, strategy, facade, observer, and so forth. Gives many different ways to understand the material in order to reinforce the learning; conversational style, pro-and-cons lists, diagrams, stories. Nothing overly deep, but definitely more digestible as a first introduction to patterns than the Gang of Four book.",
+      "title": "Head First Design Patterns",
+      "topics": ["Software Engineering"],
+      "type": "Book",
+      "url": "https://www.amazon.co.uk/dp/B00AA36RZY/"
+    },
+    {
       "date": "2016-04-23",
       "summary": "The article contains a quite complete checklist of things to look out for in code reviews, covering design, testability and style. More interestingly, the article also provides some advice for how to establish a successful code review culture. The submitter should self-review their changes first. Reviewers should tag suggestions with a notion of importance for prioritization, explain the rationale behind suggestions for education and do their best to criticize the code, not the author. The article also makes a good point around creating a culture where code reviews don't only point out the bad but also compliment the good in order to create positive reinforcement and sharing of good practices.",
       "title": "Code Review Best Practices",
