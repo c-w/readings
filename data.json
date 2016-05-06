@@ -1,6 +1,14 @@
 {
   "content": [
     {
+      "date": "2016-05-05",
+      "summary": "The paper proposes some ways to improve the Naive Bayes classifier for text data. They propose two heuristics to improve performance. Scaling word frequency counts using a log transform adjusts the multinomial distribution inferred by Naive Bayes to better match the power law distribution normally seen with text data. Scaling the frequency counts using inverse document frequency and using a document-length term increases performance further. They also propose two conceptual improvements to Naive Bayes. Normalizing weight vectors prevents non-independent classes from getting too much importance. Training Naive Bayes on the complement of the data-set for each class prevents over-represented classes from affecting the parameter estimate.",
+      "title": "Tackling the Poor Assumptions of Naive Bayes Text Classifiers",
+      "topics": ["Natural Language Processing"],
+      "type": "Paper",
+      "url": "http://people.csail.mit.edu/jrennie/papers/icml03-nb.pdf"
+    },
+    {
       "date": "2016-04-24",
       "summary": "Surprisingly good overview of some of the most widely used patterns like decorator, factory, strategy, facade, observer, and so forth. Gives many different ways to understand the material in order to reinforce the learning; conversational style, pro-and-cons lists, diagrams, stories. Nothing overly deep, but definitely more digestible as a first introduction to patterns than the Gang of Four book.",
       "title": "Head First Design Patterns",
