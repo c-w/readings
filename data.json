@@ -1,6 +1,14 @@
 {
   "content": [
     {
+      "date": "2016-05-07",
+      "summary": "This is a great book about writing software in general, the Java-specifics are few and far between and can easily be translated into other languages. The book covers many high-level concerns from process to style, from testability to culture, offering a fairly comprehensive overview of the things to look out for in a modern software project. A must-read for any fledgling software developer, especially due to its short length.",
+      "title": "Java for small teams",
+      "topics": ["Software Engineering"],
+      "type": "Book",
+      "url": "https://ncrcoe.gitbooks.io/java-for-small-teams/"
+    },
+    {
       "date": "2016-05-05",
       "summary": "The paper proposes some ways to improve the Naive Bayes classifier for text data. They propose two heuristics to improve performance. Scaling word frequency counts using a log transform adjusts the multinomial distribution inferred by Naive Bayes to better match the power law distribution normally seen with text data. Scaling the frequency counts using inverse document frequency and using a document-length term increases performance further. They also propose two conceptual improvements to Naive Bayes. Normalizing weight vectors prevents non-independent classes from getting too much importance. Training Naive Bayes on the complement of the data-set for each class prevents over-represented classes from affecting the parameter estimate.",
       "title": "Tackling the Poor Assumptions of Naive Bayes Text Classifiers",
