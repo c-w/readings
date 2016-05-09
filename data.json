@@ -1,6 +1,54 @@
 {
   "content": [
     {
+      "date": "2016-05-08",
+      "summary": "Based on a small study with students, the paper finds that pair programming is not significantly more expensive than individual contributors with code review.",
+      "title": "Are Reviews an Alternative to Pair Programming?",
+      "topics": ["Software Engineering"],
+      "type": "Paper",
+      "url": "http://www.ipd.uka.de/Tichy/uploads/publikationen/77/MllerPairReviewsESE2004.pdf"
+    },
+    {
+      "date": "2016-05-08",
+      "summary": "The authors run a small study with students. They find that pair programming with remote teams has similar effects than when the teams are collocated. They also find that remote pair programming is a significant contributor to team cohesion and communication.",
+      "title": "Exploring the efficacy of distributed pair programming",
+      "topics": ["Software Engineering"],
+      "type": "Paper",
+      "url": "http://webguide.cs.colorado.edu:3232/dlc-2004/uploads/154/XPU2002DXP.pdf"
+    },
+    {
+      "date": "2016-05-08",
+      "summary": "The paper draws from studies and anecdotes to formulate some ground rules for effective pair programming. Most of the suggestions focus around ego-less programming, collective ownership, taking a break from each other every now and then, and creating an atmosphere where the programming pair has mutual respect and mutual responsibility.",
+      "title": "All I Really Need to Know about Pair Programming I Learned In Kindergarten",
+      "topics": ["Software Engineering"],
+      "type": "Paper",
+      "url": "http://www2.york.psu.edu/~sg3/cmpbd205/assign/week01/ACMarticlePairProgramming.pdf"
+    },
+    {
+      "date": "2016-05-08",
+      "summary": "The authors conduct an experiment with students, comparing the effect of software methodology on various factors like code complexity, defect rate and time-to-completion. Their most interesting finding is that pair programming leads to the lowest standard deviation across participants in all metrics: pair programming is thus a step on the way towards predictable software delivery.",
+      "title": "Experimental Evaluation of Pair Programming",
+      "topics": ["Software Engineering"],
+      "type": "Paper",
+      "url": "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.19.1689&rep=rep1&type=pdf"
+    },
+    {
+      "date": "2016-05-08",
+      "summary": "The paper analyzes 18 studies on pair programming and finds that overall pairing is beneficial on complex tasks where defect rate is lowered and on simple tasks where time-to-completion is reduced. The study also finds that pair programming is a great way to make use of junior engineers as it raises their performance to near-senior level.",
+      "title": "The effectiveness of pair programming: A meta-analysis",
+      "topics": ["Software Engineering"],
+      "type": "Paper",
+      "url": "http://www.idi.ntnu.no/grupper/su/publ/ebse/R11-pairprog-hannay-ist09.pdf"
+    },
+    {
+      "date": "2016-05-08",
+      "summary": "The authors ran an experiment on pair programming using students. They find that pairing decreases the time-to-delivery of a feature by at least 40% but increases the total man-hours spent on the feature by up to 60%. They also observe that once the pairs get more acquainted and start to gel, this overhead drops to as low as 15%.",
+      "title": "Strengthening the Case for Pair-Programming",
+      "topics": ["Software Engineering"],
+      "type": "Paper",
+      "url": "http://www.cs.utah.edu/~lwilliam/Papers/ieeeSoftware.PDF"
+    },
+    {
       "date": "2016-05-07",
       "summary": "This is a great book about writing software in general, the Java-specifics are few and far between and can easily be translated into other languages. The book covers many high-level concerns from process to style, from testability to culture, offering a fairly comprehensive overview of the things to look out for in a modern software project. A must-read for any fledgling software developer, especially due to its short length.",
       "title": "Java for small teams",
