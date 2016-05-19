@@ -1,6 +1,14 @@
 {
   "content": [
     {
+      "date": "2016-05-18",
+      "summary": "The paper presents a small study where they find further backup for the hypothesis that pair programming leads to better code in terms of maintainability and defect rate. They then analyze when pair programming is more economically viable than solo programming, regardless of software quality. They find that pairing is efficient if the pair doesn't have experience with the task at hand. Efficiency rapidly drops as familiarity increases. This means that pair programming is more useful for junior engineers than senior engineers.",
+      "title": "Pair programming productivity: Novice-novice vs. expert-expert",
+      "topics": ["Software Engineering"],
+      "type": "Paper",
+      "url": "http://www.cs.utexas.edu/users/mckinley/305j/pair-hcs-2006.pdf"
+    },
+    {
       "date": "2016-05-08",
       "summary": "Based on a small study with students, the paper finds that pair programming is not significantly more expensive than individual contributors with code review.",
       "title": "Are Reviews an Alternative to Pair Programming?",
