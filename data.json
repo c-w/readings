@@ -1,6 +1,30 @@
 {
   "content": [
     {
+      "date": "2016-05-25",
+      "summary": "Good deconstruction of the issues with using NodeJS for larger projects. The ecosystem of libraries and tools moves too quickly without adding benefits. Error handling and concurrency are difficult. There is a general lack of stability and standards in the community.",
+      "title": "After a year of using nodejs in production",
+      "topics": ["Software Engineering"],
+      "type": "Article",
+      "url": "http://geekforbrains.com/post/after-a-year-of-nodejs-in-production"
+    },
+    {
+      "date": "2016-05-25",
+      "summary": "Great evaluation of the clustering algorithms in scikit-learn. K-Means, Mean Shift and Affinity Propagation have strong spherical assumptions so they are not great for most data-sets. Spectral clustering and agglomerative clustering need to assign all data points to clusters so the results tend to be too noisy. DbScan produces good clusters but has a low recall. H-DbScan improves the recall of DbScan, can be implemented really efficiently and should thus be the default choice for general-purpose clustering tasks.",
+      "title": "Comparing Python Clustering Algorithms",
+      "topics": ["Machine Learning"],
+      "type": "Article",
+      "url": "http://nbviewer.jupyter.org/github/lmcinnes/hdbscan/blob/master/notebooks/Comparing%20Clustering%20Algorithms.ipynb"
+    },
+    {
+      "date": "2016-05-25",
+      "summary": "A great primer on the ideals and practices behind extreme programming. Gives an especially good explanation of what puts the extreme into extreme programming: taking existing software development ideas and taking them to their logical conclusion.",
+      "title": "eXtreme Programming (XP) for beginners",
+      "topics": ["Software Engineering"],
+      "type": "Video",
+      "url": "https://www.youtube.com/watch?v=RUlsNnzFWy8"
+    },
+    {
       "date": "2016-05-18",
       "summary": "The paper presents a small study where they find further backup for the hypothesis that pair programming leads to better code in terms of maintainability and defect rate. They then analyze when pair programming is more economically viable than solo programming, regardless of software quality. They find that pairing is efficient if the pair doesn't have experience with the task at hand. Efficiency rapidly drops as familiarity increases. This means that pair programming is more useful for junior engineers than senior engineers.",
       "title": "Pair programming productivity: Novice-novice vs. expert-expert",
