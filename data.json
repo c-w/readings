@@ -1,6 +1,22 @@
 {
   "content": [
     {
+      "date": "2016-06-20",
+      "summary": "Real-world usage example of SQLite which confirms that it is a good choice for read-dense, write-sparse applications that don't have many concurrent writes.",
+      "title": "We're pretty happy with SQLite",
+      "topics": ["Software Engineering"],
+      "type": "Article",
+      "url": "http://beets.io/blog/sqlite-performance.html"
+    },
+    {
+      "date": "2016-06-20",
+      "summary": "Summary of some research on tree-based classifiers: boosted trees may outperform random forest for relatively low-dimensional problems but the increase in performance comes with the downside of having many more parameters to tune.",
+      "title": "What is better: gradient-boosted trees, or a random forest?",
+      "topics": ["Machine Learning"],
+      "type": "Article",
+      "url": "http://fastml.com/what-is-better-gradient-boosted-trees-or-random-forest/"
+    },
+    {
       "date": "2016-05-25",
       "summary": "Good deconstruction of the issues with using NodeJS for larger projects. The ecosystem of libraries and tools moves too quickly without adding benefits. Error handling and concurrency are difficult. There is a general lack of stability and standards in the community.",
       "title": "After a year of using nodejs in production",
