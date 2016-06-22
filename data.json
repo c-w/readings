@@ -1,6 +1,22 @@
 {
   "content": [
     {
+      "date": "2016-06-21",
+      "summary": "In order to come up with descriptive names, engineers often end up with very long variable names. The article claims that overly long names are bad because they harm the flow of the code and lead to misleading precision. Strategies to avoid long names include removing words that are obvious from the variable's type or from the class context and removing words that don't add to the disambiguation of the variable.",
+      "title": "Long Names Are Long",
+      "topics": ["Software Engineering"],
+      "type": "Article",
+      "url": "http://journal.stuffwithstuff.com/2016/06/16/long-names-are-long/"
+    },
+    {
+      "date": "2016-06-21",
+      "summary": "Concise summary of the key benefits of immutable objects: thread safe, validate-once, no need to reason about state, etc. Good reference article.",
+      "title": "Immutable objects",
+      "topics": ["Software Engineering"],
+      "type": "Article",
+      "url": "http://www.javapractices.com/topic/TopicAction.do?Id=29"
+    },
+    {
       "date": "2016-06-20",
       "summary": "Real-world usage example of SQLite which confirms that it is a good choice for read-dense, write-sparse applications that don't have many concurrent writes.",
       "title": "We're pretty happy with SQLite",
