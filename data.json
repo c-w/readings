@@ -1,6 +1,22 @@
 {
   "content": [
     {
+      "date": "2016-06-25",
+      "summary": "The article uses CQLinq to explore the 16-year-old SQLite code-base and infer some rules about how to write maintainable code: write short functions, use objects to group related parameters and minimize the number of function arguments, use immutability where possible, prefer early returns, prefer low-nested functions.",
+      "title": "SQLite: The art of keep it simple",
+      "topics": ["Software Engineering"],
+      "type": "Article",
+      "url": "http://www.codergears.com/Blog/?p=2392"
+    },
+    {
+      "date": "2016-06-25",
+      "summary": "A concise but non-toy example of why singletons make code hard to test: they are global state so they need to be initialized in tests and they are hidden dependencies so it's not possible to mock them easily. One way around this problem is to use dependency injection to replace direct references to the singletons.",
+      "title": "Singletons are Pathological Liars",
+      "topics": ["Software Engineering"],
+      "type": "Article",
+      "url": "http://misko.hevery.com/2008/08/17/singletons-are-pathological-liars/"
+    },
+    {
       "date": "2016-06-22",
       "summary": "Some language agnostic good practices from Google on how to make code long-lived. They talk about the usual suspects: consistency, style-guides focusing on code patterns, code reviews, encapsulating third-party dependencies, etc. Some of the less common advice includes setting up champion roles for domains like security or readability who have the explicit responsibility of mentoring others in their domain and therewith act as a force-multiplier for good.",
       "title": "Lessons in Sustainability: How to Maintain a C++ Codebase for Decades",
