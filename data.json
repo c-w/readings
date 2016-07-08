@@ -1,6 +1,22 @@
 {
   "content": [
     {
+      "date": "2016-07-07",
+      "summary": "Overview of some of the simplest effective feature pre-processing techniques out there. One-hot encoding should be used for categorical features instead of a numerical encoding to avoid meaningless distance computations. Feature bucketing can be used to meaningfully reduce the granularity of features: ages into ranges, timestamps into day-of-week and month-of-year, etc. Domain knowledge can be used to create semantically valid feature crossings to capture non-linear interactions.",
+      "title": "Non-Mathematical Feature Engineering techniques for Data Science",
+      "topics": ["Machine Learning"],
+      "type": "Article",
+      "url": "https://codesachin.wordpress.com/2016/06/25/non-mathematical-feature-engineering-techniques-for-data-science/"
+    },
+    {
+      "date": "2016-07-07",
+      "summary": "IntelliTest uses program inspection to automatically generate a set of unit tests for a system that capture the existing behaviour. The approach is related to QuickCheck but with less need to specify preconditions, invariants and postconditions. There are many potential applications for IntelliTest, especially when refactoring legacy code as IntelliTest lets us automatically generate a safety net of tests that capture the behaviour of the system before the refactor. The author of this article did a real-world evaluation of IntelliTest. Unfortunately, the conclusion for now is that IntelliTest is not ready for prime time yet as it has a hard time to generate tests for programs with non-trivial types.",
+      "title": "A Last Look at Smart Unit Test: Square Peg & Round Hole",
+      "topics": ["Software Engineering"],
+      "type": "Article",
+      "url": "http://jeremybytes.blogspot.ca/2014/11/a-last-look-at-smart-unit-test-preview.html"
+    },
+    {
       "date": "2016-06-25",
       "summary": "The article uses CQLinq to explore the 16-year-old SQLite code-base and infer some rules about how to write maintainable code: write short functions, use objects to group related parameters and minimize the number of function arguments, use immutability where possible, prefer early returns, prefer low-nested functions.",
       "title": "SQLite: The art of keep it simple",
