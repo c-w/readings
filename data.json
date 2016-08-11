@@ -1,6 +1,14 @@
 {
   "content": [
     {
+      "date": "2016-08-10",
+      "summary": "This was a great read. The book is a collection of essays, each of which introduces an open source project, describes its purpose, its implementation, its evolution over time and the key lessons learned from the project. The essays cover a wide variety of projects, ranging from famous to niche, from framework to web-app, to desktop application to operating system. Despite the variety of projects, the lessons learned are frequently similar and may therefore be generalizable across the industry. For example, test-driven development is often called out as a key for success for a long-running project with many contributors.",
+      "title": "The Architecture of Open Source Applications, Volume II",
+      "topics": ["Software Engineering"],
+      "type": "Book",
+      "url": "https://www.amazon.co.uk/dp/B008940UYK/"
+    },
+    {
       "date": "2016-07-07",
       "summary": "Overview of some of the simplest effective feature pre-processing techniques out there. One-hot encoding should be used for categorical features instead of a numerical encoding to avoid meaningless distance computations. Feature bucketing can be used to meaningfully reduce the granularity of features: ages into ranges, timestamps into day-of-week and month-of-year, etc. Domain knowledge can be used to create semantically valid feature crossings to capture non-linear interactions.",
       "title": "Non-Mathematical Feature Engineering techniques for Data Science",
