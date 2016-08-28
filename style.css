@@ -85,3 +85,7 @@ nav .active .icon {
 @-ms-viewport {
   width: device-width;
 }
+
+nav input[type="search"] {
+    height: 64px;
+}
