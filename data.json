@@ -1,6 +1,14 @@
 {
   "content": [
     {
+      "date": "2016-09-02",
+      "summary": "Nice comparison of different parallelism techniques in C#, Java, C++ and Rust. The article also offers some cautionary tales about when one shouldn't parallelize, e.g. applications where there is implicit parallelism such as server-side code where different cores handle different requests anyways, applications where the parallelized inner loop is too small to make up for the thread creation overhead, etc.",
+      "title": "Think Before You Parallelize",
+      "topics": ["Software Engineering"],
+      "type": "Article",
+      "url": "https://jackmott.github.io/programming/2016/08/30/think-before-you-parallelize.html"
+    },
+    {
       "date": "2016-08-10",
       "summary": "This was a great read. The book is a collection of essays, each of which introduces an open source project, describes its purpose, its implementation, its evolution over time and the key lessons learned from the project. The essays cover a wide variety of projects, ranging from famous to niche, from framework to web-app, to desktop application to operating system. Despite the variety of projects, the lessons learned are frequently similar and may therefore be generalizable across the industry. For example, test-driven development is often called out as a key for success for a long-running project with many contributors.",
       "title": "The Architecture of Open Source Applications, Volume II",
