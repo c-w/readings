@@ -1,19 +1,12 @@
-# DataMineMe
-
 ## What's this?
 
-The purpose of this repository is to keep track of stuff I read and watch. There
-are multiple expectations for this effort:
+This blog is a space for me to write about software things sometimes. The bulk
+of the content is made up of short summaries of books, articles, papers, etc.
+that relate to software engineering, data science, machine learning and so
+forth.
 
-* Eliminate that old problem of "hold on, I read an article on that once... [10
-  minutes later] but I can't find it anymore."
-
-* Make reading more active: stopping to record some key facts about an article
-  offers a small moment of reflection on the contents.
-
-* Data mining! Think of the possibilities: reading profiles, word clouds, track
-  interests over time, automatically generated monthly summaries, article
-  recommendations, etc. The possibilities are endless.
+The frontend for the blog is hosted on [gh-pages](http://c-w.github.io/blog/),
+the data is pulled from this repository.
 
 ## Data schema
 
