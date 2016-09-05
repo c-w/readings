@@ -5,8 +5,8 @@ of the content is made up of short summaries of books, articles, papers, etc.
 that relate to software engineering, data science, machine learning and so
 forth.
 
-The frontend for the blog is hosted on [gh-pages](http://c-w.github.io/blog/),
-the data is pulled from this repository.
+The frontend for the blog is hosted on [gh-pages](http://c-w.github.io/blog/).
+It's built using VueJS and MaterializeCSS and pulls data from this repository.
 
 ## Data schema
 
