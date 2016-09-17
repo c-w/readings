@@ -1,6 +1,14 @@
 {
   "content": [
     {
+      "date": "2016-09-16",
+      "summary": "Short introduction to the Connexion framework which is an implementation of the OpenAPI spec for Python. The framework looks very useful to reduce a lot of the boilerplate required to create REST APIs.",
+      "title": "Crafting effective Microservices in Python",
+      "topics": ["Software Engineering"],
+      "type": "Article",
+      "url": "http://caricio.com/2016/09/16/crafting-effective-microservices-in-python/"
+    },
+    {
       "date": "2016-09-02",
       "summary": "Nice comparison of different parallelism techniques in C#, Java, C++ and Rust. The article also offers some cautionary tales about when one shouldn't parallelize, e.g. applications where there is implicit parallelism such as server-side code where different cores handle different requests anyways, applications where the parallelized inner loop is too small to make up for the thread creation overhead, etc.",
       "title": "Think Before You Parallelize",
