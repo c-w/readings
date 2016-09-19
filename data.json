@@ -1,6 +1,30 @@
 {
   "content": [
     {
+      "date": "2016-09-18",
+      "summary": "This is a nice deconstruction of some of the main benefits that are commonly attributed to micro-services. For instance, micro-services are often considered more scalable than monoliths because we can scale different parts of the system independently, e.g. the rendering layer versus the storage layer... but we can achieve the same thing just by deploying the monolith in different fleets and only using part of the monolith in each of the fleets. Similarly, the readability and simplicity benefits of micro-services are somewhat incidental and can also be achieved in monolithic systems with some rigorous engineering discipline. Plus, the main disadvantage of micro-services is often downplayed: transactions are difficult in a distributed setting.",
+      "title": "Microservices - Please, don’t",
+      "topics": ["Software Engineering"],
+      "type": "Article",
+      "url": "http://basho.com/posts/technical/microservices-please-dont/"
+    },
+    {
+      "date": "2016-09-18",
+      "summary": "Fairly opinionated post about how to chose the right framework and architecture for a web-app. Some points seem a bit excessive, e.g. avoiding to talk to the database at all during unit tests even if it's an in-memory SQLite database. Other points are very salient, such as decomposing the application into multiple independently testable layers: model-layer for persistence, action-layer for business logic and view-layer for connection with the web framework.",
+      "title": "Large web apps in Python: A good architecture",
+      "topics": ["Software Engineering"],
+      "type": "Article",
+      "url": "http://nando.oui.com.br/2014/04/01/large_apps_with_sqlalchemy__architecture.html"
+    },
+    {
+      "date": "2016-09-18",
+      "summary": "Cautionary tale on the tension between DRY and KISS: premature abstraction or abstraction that is hard to understand may worsen a codebase more than having a bit of copy-pasted code. The old extreme programming adage applies: copy-paste once, twice, three times and then refactor to the proper level of abstraction.",
+      "title": "On DRY and the Cost of Wrongful Abstractions",
+      "topics": ["Software Engineering"],
+      "type": "Article",
+      "url": "http://thereignn.ghost.io/on-dry-and-the-cost-of-wrongful-abstractions/"
+    },
+    {
       "date": "2016-09-16",
       "summary": "Short introduction to the Connexion framework which is an implementation of the OpenAPI spec for Python. The framework looks very useful to reduce a lot of the boilerplate required to create REST APIs.",
       "title": "Crafting effective Microservices in Python",
