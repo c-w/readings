@@ -1,6 +1,22 @@
 {
   "content": [
     {
+      "date": "2016-09-27",
+      "summary": "This comes straight from the source so it's to be taken with a grain of salt... however, some of the suggested uses for SQLite are quite nice. For instance, as an alternative to CSV for distributing data-sets, as a per-user server-side database for extreme sharding or as a lightweight cache.",
+      "title": "Appropriate Uses For SQLite",
+      "topics": ["Software Engineering"],
+      "type": "Article",
+      "url": "https://sqlite.org/whentouse.html"
+    },
+    {
+      "date": "2016-09-27",
+      "summary": "Short comparison of GCE versus AWS: GCE's instances have a lower reboot rate but for everything else AWS is more mature as it has more functionality and fewer network issues.",
+      "title": "One year on Google Cloud - What's great, What's not",
+      "topics": ["Software Engineering"],
+      "type": "Article",
+      "url": "http://blog.dripstat.com/one-year-on-google-cloud-whats-great-whats-not/"
+    },
+    {
       "date": "2016-09-18",
       "summary": "This is a nice deconstruction of some of the main benefits that are commonly attributed to micro-services. For instance, micro-services are often considered more scalable than monoliths because we can scale different parts of the system independently, e.g. the rendering layer versus the storage layer... but we can achieve the same thing just by deploying the monolith in different fleets and only using part of the monolith in each of the fleets. Similarly, the readability and simplicity benefits of micro-services are somewhat incidental and can also be achieved in monolithic systems with some rigorous engineering discipline. Plus, the main disadvantage of micro-services is often downplayed: transactions are difficult in a distributed setting.",
       "title": "Microservices - Please, don’t",
