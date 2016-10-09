@@ -1,6 +1,22 @@
 {
   "content": [
     {
+      "date": "2016-10-08",
+      "summary": "Really good article on how to investigate common causes of database performance degradations like checking for index size, finding long-running queries and using explain analyze to check for bottle-necks.",
+      "title": "Debugging PostgreSQL performance, the hard way",
+      "topics": ["Software Engineering"],
+      "type": "Article",
+      "url": "https://www.justwatch.com/blog/post/debugging-postgresql-performance-the-hard-way/"
+    },
+    {
+      "date": "2016-10-08",
+      "summary": "The post introduces a framework called Connexion which is a library that sits on top of Flask and makes it really easy to bootstrap new services that adhere to the Swagger API specification. The library lets you write an API specification and then handles the routing and a fair bit of parameter validation.",
+      "title": "Crafting effective Microservices in Python",
+      "topics": ["Libraries"],
+      "type": "Article",
+      "url": "http://caricio.com/2016/09/16/crafting-effective-microservices-in-python/"
+    },
+    {
       "date": "2016-09-27",
       "summary": "This comes straight from the source so it's to be taken with a grain of salt... however, some of the suggested uses for SQLite are quite nice. For instance, as an alternative to CSV for distributing data-sets, as a per-user server-side database for extreme sharding or as a lightweight cache.",
       "title": "Appropriate Uses For SQLite",
