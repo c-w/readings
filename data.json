@@ -1186,7 +1186,7 @@
     },
     {
       "date": "2014-08-19",
-      "summary": "Entertaining rant on lots of things. Very good Q&A at the end. Main topics: code complexity, bad management targets, programming mono-culture, etc. ``Write code that is easy to replace, not easy to extend.'' Programming as a means to an end, not a skill in isolation.",
+      "summary": "Entertaining rant on lots of things. Very good Q&A at the end. Main topics: code complexity, bad management targets, programming mono-culture, etc. 'Write code that is easy to replace, not easy to extend.' Programming as a means to an end, not a skill in isolation.",
       "title": "Programming is terrible - Lessons learned from a life wasted",
       "topics": ["Software Engineering"],
       "type": "Video",
@@ -1194,7 +1194,7 @@
     },
     {
       "date": "2014-08-19",
-      "summary": "5-day design sprint: shorter than lean approach, less investment so easier to cut losses and throw a bad idea away. Tight deadline to get things done. Day 1: find 5 users in for user testing of idea at the end of the week, get right people for project on board. Day 2: find more than one idea, no group brainstorming but individual sketching full flows. Day 3: make good decisions using weighted voting (put stickers on parts of design people like) where core stakeholders have higher power. Day 4: battle royal between most voted ideas - mock all of them up and ready them for user testing. Day 5: run user study (data without launching). ``Learn early, learn often'' instead of ``ship early, ship often'' - ``rent before you buy.'' If there are different long-term and short-term stakeholders, use multiple design-sprint teams for different time-lines: requirements for 2 years from now or 4 years from now.",
+      "summary": "5-day design sprint: shorter than lean approach, less investment so easier to cut losses and throw a bad idea away. Tight deadline to get things done. Day 1: find 5 users in for user testing of idea at the end of the week, get right people for project on board. Day 2: find more than one idea, no group brainstorming but individual sketching full flows. Day 3: make good decisions using weighted voting (put stickers on parts of design people like) where core stakeholders have higher power. Day 4: battle royal between most voted ideas - mock all of them up and ready them for user testing. Day 5: run user study (data without launching). 'Learn early, learn often' instead of 'ship early, ship often' - 'rent before you buy.' If there are different long-term and short-term stakeholders, use multiple design-sprint teams for different time-lines: requirements for 2 years from now or 4 years from now.",
       "title": "The design sprint: from Google Ventures to Google[X]",
       "topics": ["Software Engineering"],
       "type": "Video",
@@ -1202,7 +1202,7 @@
     },
     {
       "date": "2014-08-19",
-      "summary": "Tests should tell a story, project source should be re-constructable just from the tests. Writing tests (executable specs) before code leads to simpler implementation. Easy to test code splits construction of objects and wiring up from logic (if-statements) - easier to mock. Dev-environment should facilitate testing - need to invest in tooling to make writing and running tests easy. Three kings of bugs: thinking bugs (unit testing), wiring bugs (end-to-end tests), ``looks funny'' (humans). All relatively easy to fix. Super bugs appear when concerns are mixed.",
+      "summary": "Tests should tell a story, project source should be re-constructable just from the tests. Writing tests (executable specs) before code leads to simpler implementation. Easy to test code splits construction of objects and wiring up from logic (if-statements) - easier to mock. Dev-environment should facilitate testing - need to invest in tooling to make writing and running tests easy. Three kings of bugs: thinking bugs (unit testing), wiring bugs (end-to-end tests), 'looks funny' (humans). All relatively easy to fix. Super bugs appear when concerns are mixed.",
       "title": "How to Write Clean, Testable Code",
       "topics": ["Software Engineering"],
       "type": "Video",
@@ -1234,7 +1234,7 @@
     },
     {
       "date": "2014-08-18",
-      "summary": "Covers some of the same things as ``Effective Java''. New things include the following. API process. Start with 1-page spec, keep it agile and bounce the spec off other people and then implement towards this spec to test the API proposal (not a waste of time: can use as examples in documentation). Functionality should be easy to explain - if it's hard to name it probably does too much. ``When in doubt, leave it out.'' Easier to add things to an API than to remove. What to document: side-effects, who owns objects passed into methods, preconditions/postconditions. ``Don't make the client do anything the module could do.'' Principle of least astonishment.",
+      "summary": "Covers some of the same things as 'Effective Java'. New things include the following. API process. Start with 1-page spec, keep it agile and bounce the spec off other people and then implement towards this spec to test the API proposal (not a waste of time: can use as examples in documentation). Functionality should be easy to explain - if it's hard to name it probably does too much. 'When in doubt, leave it out.' Easier to add things to an API than to remove. What to document: side-effects, who owns objects passed into methods, preconditions/postconditions. 'Don't make the client do anything the module could do.' Principle of least astonishment.",
       "title": "How To Design A Good API and Why it Matters",
       "topics": ["Software Engineering"],
       "type": "Video",
