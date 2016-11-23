@@ -1,6 +1,14 @@
 {
   "content": [
     {
+      "date": "2016-10-22",
+      "summary": "Not as good as the AOSA book. Some of the chapters are a bit dry. Still worth reading to get an insight into optimizations that work in the wild though. Covers lots of techniques like pre-computation, parallelism, data locality, etc.",
+      "title": "The Performance of Open Source Applications",
+      "topics": ["Software Engineering"],
+      "type": "Book",
+      "url": "http://aosabook.org/en/posa/introduction.html"
+    },
+    {
       "date": "2016-10-08",
       "summary": "Really good article on how to investigate common causes of database performance degradations like checking for index size, finding long-running queries and using explain analyze to check for bottle-necks.",
       "title": "Debugging PostgreSQL performance, the hard way",
