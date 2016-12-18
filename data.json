@@ -1,6 +1,30 @@
 {
   "content": [
     {
+      "date": "2016-12-17",
+      "summary": "Quick real-world experience report on a few of the Azure services. Most notable are the caveats around Redis (frequent outages requiring in-memory wrapper), Service Bus (harder to use than Storage Queues for not much upside) and Azure SQL (expensive and connection issues).",
+      "title": "Azure: What to use, what to avoid",
+      "topics": ["Software Engineering"],
+      "type": "Article",
+      "url": "http://blog.wouldbetheologian.com/2014/10/azure-what-to-use-what-to-avoid.html"
+    },
+    {
+      "date": "2016-12-17",
+      "summary": "The article shines light on some surprising behaviour in C# where we may suffer huge performance penalties just by accessing a variable by its interface instead of its concrete type. For example, iterating through a dictionary that's declared as IDictionary is orders of magnitude slower and more garbage-collection heavy than iterating through the same variable declared as Dictionary. This is because the former approach always has to create a new iterator on KeyValuePair which creates lots of new object allocations. The latter approach, on the other hand, uses a more specific iterator which avoids the intermediate object creation. Other collections like IList behave similarly. Yet another reason to just use var.",
+      "title": "Beware of the IDictionary<TKey, TValue>",
+      "topics": ["Software Engineering"],
+      "type": "Article",
+      "url": "http://www.nimaara.com/2016/03/06/beware-of-the-idictionary-tkey-tvalue/"
+    },
+    {
+      "date": "2016-12-17",
+      "summary": "Turbolinks is a really interesting library. Essentially, it speeds up page renders by avoiding to re-load the entire page on navigation. Instead, it uses AJAX to fetch the contents of the next page and replaces the contents of the current page. This is an easy-to-implement alternative to building a single-page app for many use-cases.",
+      "title": "Why We Chose Turbolinks",
+      "topics": ["Libraries"],
+      "type": "Article",
+      "url": "https://changelog.com/posts/why-we-chose-turbolinks"
+    },
+    {
       "date": "2016-10-22",
       "summary": "Not as good as the AOSA book. Some of the chapters are a bit dry. Still worth reading to get an insight into optimizations that work in the wild though. Covers lots of techniques like pre-computation, parallelism, data locality, etc.",
       "title": "The Performance of Open Source Applications",
