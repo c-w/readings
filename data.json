@@ -1,6 +1,14 @@
 {
   "content": [
     {
+      "date": "2016-12-18",
+      "summary": "Great read. One of the few Python books that goes beyond basic topics and covers some more advanced concepts like concurrency, parallelism and meta-programming. The earlier chapters in the book cover a lot of more basic concepts from a pythonic point of view so there's something here for everyone.",
+      "title": "Fluent Python",
+      "topics": ["Software Engineering"],
+      "type": "Book",
+      "url": "https://www.amazon.co.uk/dp/B0131L3PW4/"
+    },
+    {
       "date": "2016-12-17",
       "summary": "Quick real-world experience report on a few of the Azure services. Most notable are the caveats around Redis (frequent outages requiring in-memory wrapper), Service Bus (harder to use than Storage Queues for not much upside) and Azure SQL (expensive and connection issues).",
       "title": "Azure: What to use, what to avoid",
