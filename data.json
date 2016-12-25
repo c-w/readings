@@ -1467,7 +1467,7 @@
     {
       "date": "2014-08-13",
       "summary": "Winning a Kaggle learning-to-rank challenge. Interesting parts: using collaborative filtering for search re-ranking, quality of search snippet as a feature, trying to break the class-labels in the dataset up further. Hyper-parameter tuning was important.",
-      "title": "Dataiku\u2019s Solution to Yandex\u2019s Personalized Web Search Challenge",
+      "title": "Dataiku's Solution to Yandex's Personalized Web Search Challenge",
       "topics": ["Data Science"],
       "type": "Paper",
       "url": "http://research.microsoft.com/en-us/um/people/nickcr/wscd2014/papers/wscdchallenge2014dataiku.pdf"
@@ -1483,7 +1483,7 @@
     {
       "date": "2014-08-13",
       "summary": "Beyond collisions for hash-function evaluation: avalanche property. Good avalanche characterisitcs: if we flip bit i in the original string there should be ~50% chance that we flip bit j in the hashed string for all i and j.",
-      "title": "You Don\u2019t Know Jack about Hashing",
+      "title": "You Don't Know Jack about Hashing",
       "topics": ["Computer Science"],
       "type": "Article",
       "url": "http://engineering.chartbeat.com/2014/08/13/you-dont-know-jack-about-hashing/"
@@ -1707,7 +1707,7 @@
     {
       "date": "2014-08-07",
       "summary": "API mashup and some very, very basic NLP analysis (stemmed ngram frequencies).",
-      "title": "Sex and drugs and Rock\u2019n\u2019roll: Analysing the lyrics of the Rolling Stone 500 greatest songs of all time",
+      "title": "Sex and drugs and Rock'n'roll: Analysing the lyrics of the Rolling Stone 500 greatest songs of all time",
       "topics": ["Data Science"],
       "type": "Article",
       "url": "http://apassant.net/2014/05/09/sex-and-drugs-and-rocknroll-analysing-the-lyrics-of-the-rolling-stone-500-greatest-songs-of-all-time/"
