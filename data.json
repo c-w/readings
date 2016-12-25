@@ -4,7 +4,7 @@
       "date": "2016-12-25",
       "summary": "Some really interesting libraries in here, especially Zappa to trivially run web applications in a server-less context and hug to make it simple to add a command-line interface or REST endpoints for a library.",
       "title": "Top 10 Python libraries of 2016",
-      "topics": ["Libraries"],
+      "topics": ["Libraries", "Python"],
       "type": "Article",
       "url": "https://tryolabs.com/blog/2016/12/20/top-10-python-libraries-of-2016/"
     },
@@ -12,7 +12,7 @@
       "date": "2016-12-25",
       "summary": "The author makes the case that it's really easy to write slow websites without even trying to do so. One reason is that development environments are much more powerful than consumer devices. Solution: always develop with at least 10x CPU throttling and network speed limitation. We should also benchmark the effect of third-party libraries on our applications, e.g. switching from React to pReact can lead to a significant performance improvement. CSS should be inlined to save the network request for the CSS file if the HTML and CSS payload is small enough, e.g. less than 14KB.",
       "title": "10 things I learned making the fastest site in the world",
-      "topics": ["Software Engineering"],
+      "topics": ["Front-end"],
       "type": "Article",
       "url": "https://hackernoon.com/10-things-i-learned-making-the-fastest-site-in-the-world-18a0e1cdf4a7"
     },
@@ -28,7 +28,7 @@
       "date": "2016-12-18",
       "summary": "Great read. One of the few Python books that goes beyond basic topics and covers some more advanced concepts like concurrency, parallelism and meta-programming. The earlier chapters in the book cover a lot of more basic concepts from a pythonic point of view so there's something here for everyone.",
       "title": "Fluent Python",
-      "topics": ["Software Engineering"],
+      "topics": ["Python"],
       "type": "Book",
       "url": "https://www.amazon.co.uk/dp/B0131L3PW4/"
     },
@@ -36,7 +36,7 @@
       "date": "2016-12-17",
       "summary": "Quick real-world experience report on a few of the Azure services. Most notable are the caveats around Redis (frequent outages requiring in-memory wrapper), Service Bus (harder to use than Storage Queues for not much upside) and Azure SQL (expensive and connection issues).",
       "title": "Azure: What to use, what to avoid",
-      "topics": ["Software Engineering"],
+      "topics": ["Libraries"],
       "type": "Article",
       "url": "http://blog.wouldbetheologian.com/2014/10/azure-what-to-use-what-to-avoid.html"
     },
@@ -44,7 +44,7 @@
       "date": "2016-12-17",
       "summary": "The article shines light on some surprising behaviour in C# where we may suffer huge performance penalties just by accessing a variable by its interface instead of its concrete type. For example, iterating through a dictionary that's declared as IDictionary is orders of magnitude slower and more garbage-collection heavy than iterating through the same variable declared as Dictionary. This is because the former approach always has to create a new iterator on KeyValuePair which creates lots of new object allocations. The latter approach, on the other hand, uses a more specific iterator which avoids the intermediate object creation. Other collections like IList behave similarly. Yet another reason to just use var.",
       "title": "Beware of the IDictionary<TKey, TValue>",
-      "topics": ["Software Engineering"],
+      "topics": ["C#"],
       "type": "Article",
       "url": "http://www.nimaara.com/2016/03/06/beware-of-the-idictionary-tkey-tvalue/"
     },
@@ -52,7 +52,7 @@
       "date": "2016-12-17",
       "summary": "Turbolinks is a really interesting library. Essentially, it speeds up page renders by avoiding to re-load the entire page on navigation. Instead, it uses AJAX to fetch the contents of the next page and replaces the contents of the current page. This is an easy-to-implement alternative to building a single-page app for many use-cases.",
       "title": "Why We Chose Turbolinks",
-      "topics": ["Libraries"],
+      "topics": ["Front-end", "Libraries"],
       "type": "Article",
       "url": "https://changelog.com/posts/why-we-chose-turbolinks"
     },
@@ -68,7 +68,7 @@
       "date": "2016-10-08",
       "summary": "Really good article on how to investigate common causes of database performance degradations like checking for index size, finding long-running queries and using explain analyze to check for bottle-necks.",
       "title": "Debugging PostgreSQL performance, the hard way",
-      "topics": ["Software Engineering"],
+      "topics": ["Databases"],
       "type": "Article",
       "url": "https://www.justwatch.com/blog/post/debugging-postgresql-performance-the-hard-way/"
     },
@@ -76,7 +76,7 @@
       "date": "2016-10-08",
       "summary": "The post introduces a framework called Connexion which is a library that sits on top of Flask and makes it really easy to bootstrap new services that adhere to the Swagger API specification. The library lets you write an API specification and then handles the routing and a fair bit of parameter validation.",
       "title": "Crafting effective Microservices in Python",
-      "topics": ["Libraries"],
+      "topics": ["Libraries", "Python"],
       "type": "Article",
       "url": "http://caricio.com/2016/09/16/crafting-effective-microservices-in-python/"
     },
@@ -84,7 +84,7 @@
       "date": "2016-09-27",
       "summary": "This comes straight from the source so it's to be taken with a grain of salt... however, some of the suggested uses for SQLite are quite nice. For instance, as an alternative to CSV for distributing data-sets, as a per-user server-side database for extreme sharding or as a lightweight cache.",
       "title": "Appropriate Uses For SQLite",
-      "topics": ["Software Engineering"],
+      "topics": ["Databases"],
       "type": "Article",
       "url": "https://sqlite.org/whentouse.html"
     },
@@ -92,7 +92,7 @@
       "date": "2016-09-27",
       "summary": "Short comparison of GCE versus AWS: GCE's instances have a lower reboot rate but for everything else AWS is more mature as it has more functionality and fewer network issues.",
       "title": "One year on Google Cloud - What's great, What's not",
-      "topics": ["Software Engineering"],
+      "topics": ["Libraries"],
       "type": "Article",
       "url": "http://blog.dripstat.com/one-year-on-google-cloud-whats-great-whats-not/"
     },
@@ -108,7 +108,7 @@
       "date": "2016-09-18",
       "summary": "Fairly opinionated post about how to chose the right framework and architecture for a web-app. Some points seem a bit excessive, e.g. avoiding to talk to the database at all during unit tests even if it's an in-memory SQLite database. Other points are very salient, such as decomposing the application into multiple independently testable layers: model-layer for persistence, action-layer for business logic and view-layer for connection with the web framework.",
       "title": "Large web apps in Python: A good architecture",
-      "topics": ["Software Engineering"],
+      "topics": ["Software Engineering", "Python"],
       "type": "Article",
       "url": "http://nando.oui.com.br/2014/04/01/large_apps_with_sqlalchemy__architecture.html"
     },
@@ -124,7 +124,7 @@
       "date": "2016-09-16",
       "summary": "Short introduction to the Connexion framework which is an implementation of the OpenAPI spec for Python. The framework looks very useful to reduce a lot of the boilerplate required to create REST APIs.",
       "title": "Crafting effective Microservices in Python",
-      "topics": ["Software Engineering"],
+      "topics": ["Libraries", "Python"],
       "type": "Article",
       "url": "http://caricio.com/2016/09/16/crafting-effective-microservices-in-python/"
     },
@@ -140,7 +140,7 @@
       "date": "2016-08-10",
       "summary": "This was a great read. The book is a collection of essays, each of which introduces an open source project, describes its purpose, its implementation, its evolution over time and the key lessons learned from the project. The essays cover a wide variety of projects, ranging from famous to niche, from framework to web-app, to desktop application to operating system. Despite the variety of projects, the lessons learned are frequently similar and may therefore be generalizable across the industry. For example, test-driven development is often called out as a key for success for a long-running project with many contributors.",
       "title": "The Architecture of Open Source Applications, Volume II",
-      "topics": ["Software Engineering"],
+      "topics": ["Software Engineering", "Management"],
       "type": "Book",
       "url": "https://www.amazon.co.uk/dp/B008940UYK/"
     },
@@ -204,7 +204,7 @@
       "date": "2016-06-20",
       "summary": "Real-world usage example of SQLite which confirms that it is a good choice for read-dense, write-sparse applications that don't have many concurrent writes.",
       "title": "We're pretty happy with SQLite",
-      "topics": ["Software Engineering"],
+      "topics": ["Databases"],
       "type": "Article",
       "url": "http://beets.io/blog/sqlite-performance.html"
     },
@@ -220,7 +220,7 @@
       "date": "2016-05-25",
       "summary": "Good deconstruction of the issues with using NodeJS for larger projects. The ecosystem of libraries and tools moves too quickly without adding benefits. Error handling and concurrency are difficult. There is a general lack of stability and standards in the community.",
       "title": "After a year of using nodejs in production",
-      "topics": ["Software Engineering"],
+      "topics": ["Javascript"],
       "type": "Article",
       "url": "http://geekforbrains.com/post/after-a-year-of-nodejs-in-production"
     },
@@ -228,7 +228,7 @@
       "date": "2016-05-25",
       "summary": "Great evaluation of the clustering algorithms in scikit-learn. K-Means, Mean Shift and Affinity Propagation have strong spherical assumptions so they are not great for most data-sets. Spectral clustering and agglomerative clustering need to assign all data points to clusters so the results tend to be too noisy. DbScan produces good clusters but has a low recall. H-DbScan improves the recall of DbScan, can be implemented really efficiently and should thus be the default choice for general-purpose clustering tasks.",
       "title": "Comparing Python Clustering Algorithms",
-      "topics": ["Machine Learning"],
+      "topics": ["Machine Learning", "Python"],
       "type": "Article",
       "url": "http://nbviewer.jupyter.org/github/lmcinnes/hdbscan/blob/master/notebooks/Comparing%20Clustering%20Algorithms.ipynb"
     },
@@ -236,7 +236,7 @@
       "date": "2016-05-25",
       "summary": "A great primer on the ideals and practices behind extreme programming. Gives an especially good explanation of what puts the extreme into extreme programming: taking existing software development ideas and taking them to their logical conclusion.",
       "title": "eXtreme Programming (XP) for beginners",
-      "topics": ["Software Engineering"],
+      "topics": ["Management"],
       "type": "Video",
       "url": "https://www.youtube.com/watch?v=RUlsNnzFWy8"
     },
@@ -244,7 +244,7 @@
       "date": "2016-05-18",
       "summary": "The paper presents a small study where they find further backup for the hypothesis that pair programming leads to better code in terms of maintainability and defect rate. They then analyze when pair programming is more economically viable than solo programming, regardless of software quality. They find that pairing is efficient if the pair doesn't have experience with the task at hand. Efficiency rapidly drops as familiarity increases. This means that pair programming is more useful for junior engineers than senior engineers.",
       "title": "Pair programming productivity: Novice-novice vs. expert-expert",
-      "topics": ["Software Engineering"],
+      "topics": ["Management"],
       "type": "Paper",
       "url": "http://www.cs.utexas.edu/users/mckinley/305j/pair-hcs-2006.pdf"
     },
@@ -252,7 +252,7 @@
       "date": "2016-05-08",
       "summary": "Based on a small study with students, the paper finds that pair programming is not significantly more expensive than individual contributors with code review.",
       "title": "Are Reviews an Alternative to Pair Programming?",
-      "topics": ["Software Engineering"],
+      "topics": ["Management"],
       "type": "Paper",
       "url": "http://www.ipd.uka.de/Tichy/uploads/publikationen/77/MllerPairReviewsESE2004.pdf"
     },
@@ -260,7 +260,7 @@
       "date": "2016-05-08",
       "summary": "The authors run a small study with students. They find that pair programming with remote teams has similar effects than when the teams are collocated. They also find that remote pair programming is a significant contributor to team cohesion and communication.",
       "title": "Exploring the efficacy of distributed pair programming",
-      "topics": ["Software Engineering"],
+      "topics": ["Management"],
       "type": "Paper",
       "url": "http://webguide.cs.colorado.edu:3232/dlc-2004/uploads/154/XPU2002DXP.pdf"
     },
@@ -268,7 +268,7 @@
       "date": "2016-05-08",
       "summary": "The paper draws from studies and anecdotes to formulate some ground rules for effective pair programming. Most of the suggestions focus around ego-less programming, collective ownership, taking a break from each other every now and then, and creating an atmosphere where the programming pair has mutual respect and mutual responsibility.",
       "title": "All I Really Need to Know about Pair Programming I Learned In Kindergarten",
-      "topics": ["Software Engineering"],
+      "topics": ["Management"],
       "type": "Paper",
       "url": "http://www2.york.psu.edu/~sg3/cmpbd205/assign/week01/ACMarticlePairProgramming.pdf"
     },
@@ -276,7 +276,7 @@
       "date": "2016-05-08",
       "summary": "The authors conduct an experiment with students, comparing the effect of software methodology on various factors like code complexity, defect rate and time-to-completion. Their most interesting finding is that pair programming leads to the lowest standard deviation across participants in all metrics: pair programming is thus a step on the way towards predictable software delivery.",
       "title": "Experimental Evaluation of Pair Programming",
-      "topics": ["Software Engineering"],
+      "topics": ["Management"],
       "type": "Paper",
       "url": "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.19.1689&rep=rep1&type=pdf"
     },
@@ -284,7 +284,7 @@
       "date": "2016-05-08",
       "summary": "The paper analyzes 18 studies on pair programming and finds that overall pairing is beneficial on complex tasks where defect rate is lowered and on simple tasks where time-to-completion is reduced. The study also finds that pair programming is a great way to make use of junior engineers as it raises their performance to near-senior level.",
       "title": "The effectiveness of pair programming: A meta-analysis",
-      "topics": ["Software Engineering"],
+      "topics": ["Management"],
       "type": "Paper",
       "url": "http://www.idi.ntnu.no/grupper/su/publ/ebse/R11-pairprog-hannay-ist09.pdf"
     },
@@ -292,7 +292,7 @@
       "date": "2016-05-08",
       "summary": "The authors ran an experiment on pair programming using students. They find that pairing decreases the time-to-delivery of a feature by at least 40% but increases the total man-hours spent on the feature by up to 60%. They also observe that once the pairs get more acquainted and start to gel, this overhead drops to as low as 15%.",
       "title": "Strengthening the Case for Pair-Programming",
-      "topics": ["Software Engineering"],
+      "topics": ["Management"],
       "type": "Paper",
       "url": "http://www.cs.utah.edu/~lwilliam/Papers/ieeeSoftware.PDF"
     },
@@ -300,7 +300,7 @@
       "date": "2016-05-07",
       "summary": "This is a great book about writing software in general, the Java-specifics are few and far between and can easily be translated into other languages. The book covers many high-level concerns from process to style, from testability to culture, offering a fairly comprehensive overview of the things to look out for in a modern software project. A must-read for any fledgling software developer, especially due to its short length.",
       "title": "Java for small teams",
-      "topics": ["Software Engineering"],
+      "topics": ["Software Engineering", "Java"],
       "type": "Book",
       "url": "https://ncrcoe.gitbooks.io/java-for-small-teams/"
     },
@@ -324,7 +324,7 @@
       "date": "2016-04-23",
       "summary": "The article contains a quite complete checklist of things to look out for in code reviews, covering design, testability and style. More interestingly, the article also provides some advice for how to establish a successful code review culture. The submitter should self-review their changes first. Reviewers should tag suggestions with a notion of importance for prioritization, explain the rationale behind suggestions for education and do their best to criticize the code, not the author. The article also makes a good point around creating a culture where code reviews don't only point out the bad but also compliment the good in order to create positive reinforcement and sharing of good practices.",
       "title": "Code Review Best Practices",
-      "topics": ["Software Engineering"],
+      "topics": ["Management"],
       "type": "Article",
       "url": "http://kevinlondon.com/2015/05/05/code-review-best-practices.html"
     },
@@ -348,7 +348,7 @@
       "date": "2016-04-09",
       "summary": "A scikit-learn style library for feature selection. Contains lots of algorithms both for supervised an unsupervised feature selection. Nice touch: the documentation provides references to papers that explain how the algorithms work and when they should be used.",
       "title": "An brief introduction on how to perform feature selection with scikit-feature",
-      "topics": ["Machine Learning"],
+      "topics": ["Machine Learning", "Libraries", "Python"],
       "type": "Article",
       "url": "http://featureselection.asu.edu/tutorial.php"
     },
@@ -356,7 +356,7 @@
       "date": "2016-04-06",
       "summary": "Mostly straight forward advice about code reviewing: don't hesitate to review a change even if you aren't an expert in the area, review your code before submitting it for wider review, use check-lists, use automation, etc. A nice but less commonly stressed point: use positive reinforcement and also comment on things that are done well.",
       "title": "Yet Another Code Review Best Practices",
-      "topics": ["Software Engineering"],
+      "topics": ["Management"],
       "type": "Article",
       "url": "https://www.future-processing.pl/blog/another-code-review-best-practices/"
     },
@@ -364,7 +364,7 @@
       "date": "2016-04-05",
       "summary": "The CMMI process recommends to keep a short personal code review checklist that prompts the developer to code review their own code for common mistakes that they make pre submission for wider review. This list can be mined from peer review comments and should evolve over time.",
       "title": "Personal Code Reviews",
-      "topics": ["Software Engineering"],
+      "topics": ["Management"],
       "type": "Article",
       "url": "https://helloscriptkitty.wordpress.com/2010/03/03/personal-code-reviews/"
     },
@@ -372,7 +372,7 @@
       "date": "2016-04-03",
       "summary": "Demonstration of how easy it is to combine Spark and Scikit for simple parallelization of the more advanced algorithms that Scikit provides but that don't exist in ML-Lib.",
       "title": "Integrating Spark with Scikit-Learn",
-      "topics": ["Machine Learning"],
+      "topics": ["Machine Learning", "Libraries", "Python"],
       "type": "Article",
       "url": "https://adventuresindatascience.wordpress.com/2016/04/02/integrating-spark-with-scikit-learn-visualizing-eigenvectors-and-fun/"
     },
@@ -380,7 +380,7 @@
       "date": "2016-03-30",
           "summary": "A short piece that focuses on how to implement one of the main things that makes an engineer senior: teaching others. Unsurprisingly, pair programming gets a mention. On a more subtle note, the article also mentions that great mentors should be on the look-out for systemic issues and people with problems to proactively offer help.",
       "title": "On Engineering Mentorship",
-      "topics": ["Software Engineering"],
+      "topics": ["Management"],
       "type": "Article",
       "url": "https://medium.com/@justinbean/on-engineering-mentorship-7fddd187cf3e"
     },
@@ -404,7 +404,7 @@
       "date": "2016-03-28",
       "summary": "A bit self-help oriented and somewhat short on practical content. The writing is straight-forward and somewhat entertaining to read, making at least the first section on career development worth a browse.",
       "title": "Soft Skills: The Software Developer's Life Manual",
-      "topics": ["Software Engineering"],
+      "topics": ["Management"],
       "type": "Book",
       "url": "http://www.amazon.co.uk/dp/1617292397/"
     },
@@ -412,7 +412,7 @@
       "date": "2016-03-28",
       "summary": "The author criticizes three aspects of the scrum methodology. Planning poker too easily devolves into the opinion of the highest importance person with little to no discussion to find a consensus estimate. Velocity is too easily abused for micro management and for setting delivery targets. Standups get out of hand and are an unproductive use of face to face time. These points all ring true but are more criticisms of a scrum implementation rather than attacking the methodology at its core and could easily be mitigated, for instance by openly encouraging discord during planning poker, avoiding to use velocity as anything but a sprint-size estimation tool and by holding standups asynchronously.",
       "title": "Why Scrum Should Basically Just Die In A Fire",
-      "topics": ["Software Engineering"],
+      "topics": ["Management"],
       "type": "Article",
       "url": "http://gilesbowkett.blogspot.ca/2014/09/why-scrum-should-basically-just-die-in.html"
     },
@@ -436,7 +436,7 @@
       "date": "2016-02-23",
       "summary": "Short overview of the code review process of one of the Mozilla core developers. Great to see a strong focus on reviewing the commit message and the high-level changes such as public method signatures instead of focusing only on the implementation itself.",
       "title": "How I Do Code Reviews at Mozilla",
-      "topics": ["Software Engineering"],
+      "topics": ["Management"],
       "type": "Article",
       "url": "http://benjamin.smedbergs.us/blog/2014-10-22/how-i-do-code-reviews-at-mozilla"
     },
@@ -444,7 +444,7 @@
       "date": "2016-02-23",
       "summary": "Interesting article that summarizes a number papers on quantitative analysis of software development methodologies published by Microsoft Research and thus provides data to back up some best practices in the industry. For example they provide evidence for using TDD and assertion-dense code: they found that TDD reduces the number of bugs by 60-90% and that assertion density has a significant correlation with fewer bugs. The cost: TDD increases development time by 15-35%. They also provide evidence for distributed teams: they didn't find a significant correlation between a team's geographic dispersal and increased software defects.",
       "title": "Exploding Software-Engineering Myths",
-      "topics": ["Software Engineering"],
+      "topics": ["Management"],
       "type": "Article",
       "url": "http://research.microsoft.com/en-us/news/features/nagappan-100609.aspx"
     },
@@ -508,7 +508,7 @@
       "date": "2016-01-18",
       "summary": "When Steve Yegge writes, it's usually worth a read. On the surface, this blog post is an entertaining rant comparing the big tech companies: Google vs Microsoft vs Amazon vs Facebook. On a second level, the post is a critique of service-oriented-architecture and full-ownership engineering teams. But in essence, the post makes the point that for successful products, one needs to have a platform; although owning a platform is hard and difficult to retro-fit.",
       "title": "Stevey's Google Platforms Rant",
-      "topics": ["Software Engineering"],
+      "topics": ["Management"],
       "type": "Article",
       "url": "https://plus.google.com/+RipRowan/posts/eVeouesvaVX"
     },
@@ -516,7 +516,7 @@
       "date": "2016-01-17",
       "summary": "The Marisa trie is a highly space-efficient read-only dictionary. Their benchmarks claim that it is about an order of magnitude more space-efficient than other deterministic dictionary implementations. Hashing-based dictionaries like bloom filters are even smaller but come with the cost of false-positives. The library is implemented in C++ with bindings for many high-level languages including Python.",
       "title": "MARISA: Matching Algorithm with Recursively Implemented StorAge",
-      "topics": ["Libraries"],
+      "topics": ["Libraries", "Computer Science"],
       "type": "Article",
       "url": "http://marisa-trie.googlecode.com/svn/trunk/docs/readme.en.html"
     },
@@ -532,7 +532,7 @@
       "date": "2015-12-24",
       "summary": "Great overview of the software development process of the Chromium project, one of the biggest and most successful open source projects out there. The article claims that the main ingredient to their rapid ship cycle is that every developer always works off of head (to avoid costly integrations) which is enabled by high test coverage (to avoid breaking things) and feature flags (to hide partial features until they ship). They also talk about relentless refactoring but fail to mention how large-scale refactors fit in with constantly working off of head: how does one check in a partially completed refactor?",
       "title": "How Chromium Works",
-      "topics": ["Software Engineering"],
+      "topics": ["Management"],
       "type": "Article",
       "url": "https://medium.com/@aboodman/in-march-2011-i-drafted-an-article-explaining-how-the-team-responsible-for-google-chrome-ships-c479ba623a1b"
     },
@@ -556,7 +556,7 @@
       "date": "2015-10-15",
       "summary": "An interesting classic: thirty years old and yet it contains a lot of wisdom that is only slowly and gradually being accepted and applied (and where it is applied, usually to universal success) -- however, the book is also quite dated in many ways, relatively low on information density and therefore ultimately not an enjoyable-or-commendable read to anyone but the 'Agile historian'; more modern texts simply offer more to the practitioner.",
       "title": "The Psychology of Computer Programming",
-      "topics": ["Software Engineering"],
+      "topics": ["Management"],
       "type": "Book",
       "url": "http://www.amazon.co.uk/dp/B004R9QACC/"
     },
@@ -612,7 +612,7 @@
       "date": "2015-06-06",
       "summary": "The first few chapters of this book were quite interesting, likening the origins of the lean software movement to its roots in lean manufacturing: which practices made sense to port over, which were inappropriate, what ideas should we still adopt, etc. I especially liked the rather critical view taken on the dogmatic appropriation of Agile techniques - a breath of fresh air. The later parts of the book strayed into a lot heavier management territory and thus were less useful from an software engineer's point of view: team building, motivation, contracts, etc. Summary: the first half well worth reading, the latter half only for aspiring managers.",
       "title": "Lean Software Development: An Agile Toolkit",
-      "topics": ["Software Engineering"],
+      "topics": ["Management"],
       "type": "Book",
       "url": "http://www.amazon.co.uk/dp/B00HEL13HW/"
     },
@@ -620,7 +620,7 @@
       "date": "2015-05-21",
       "summary": "Wrapper around Matplotlib that renders graphs to interactive Javascript. Very cool.",
       "title": "MPLD3",
-      "topics": ["Libraries"],
+      "topics": ["Libraries", "Python", "Data Science"],
       "type": "Article",
       "url": "https://mpld3.github.io/index.html"
     },
@@ -628,7 +628,7 @@
       "date": "2015-05-21",
       "summary": "SciKit-Learn style wrapper for some genetic algorithm libraries... more fancy stuff made easier.",
       "title": "gplearn",
-      "topics": ["Libraries"],
+      "topics": ["Libraries", "Python", "Machine Learning"],
       "type": "Article",
       "url": "https://github.com/trevorstephens/gplearn"
     },
@@ -636,7 +636,7 @@
       "date": "2015-05-21",
       "summary": "SciKit-Learn style wrapper around a bunch of standard neural network libraries... reduces the barrier to entry.",
       "title": "scikit-neuralnetwork",
-      "topics": ["Libraries"],
+      "topics": ["Libraries", "Python", "Machine Learning"],
       "type": "Article",
       "url": "https://github.com/aigamedev/scikit-neuralnetwork"
     },
@@ -660,7 +660,7 @@
       "date": "2015-04-26",
       "summary": "The paper makes a case for using color histograms for image representation: invariant under scale, rotation, translation, easy to compute. They use linear SVMs and SVMs with fancy kernels on top of the color histogram representation. They find that exponentiating the histogram bins (x_i := x_i^a for 0 <= a <= 1) makes linear SVMs perform almost as well as fancy SVMs.",
       "title": "SVMs for Histogram-Based Image Classification",
-      "topics": ["Computer Vision"],
+      "topics": ["Machine Learning"],
       "type": "Paper",
       "url": "http://olivier.chapelle.cc/pub/tnn99.pdf"
     },
@@ -700,7 +700,7 @@
       "date": "2015-03-29",
       "summary": "Interesting take on using experiments and computational methods like randomized permutations or boostrapping to understand statistical phenomena instead of relying on difficult to understand formulae.",
       "title": "Statistics Without the Agonizing Pain",
-      "topics": ["Statistics"],
+      "topics": ["Machine Learning"],
       "type": "Video",
       "url": "https://www.youtube.com/watch?v=5Dnw46eC-0o"
     },
@@ -716,7 +716,7 @@
       "date": "2015-03-22",
       "summary": "Regression algorithm that can was designed to deal with lots of outliers; the algorithm can handle more than half of the data-set being outliers. First, we create random minimal sample sets from the data. The size of these sets should be just big enough to fit our regression e.g., two elements for a two-dimensional feature space. We then fit a regression to the minimal sample sets and check how many points in the full data-set are consistent with this regression up to some delta of error. Iterate a fixed number of times or until the consensus set is large enough. Problems: how do we determine the error threshold and minimal acceptable consensus set size?",
       "title": "RANSAC for dummies",
-      "topics": ["Statistics"],
+      "topics": ["Machine Learning"],
       "type": "Paper",
       "url": "http://vision.ece.ucsb.edu/~zuliani/Research/RANSAC/docs/RANSAC4Dummies.pdf"
     },
@@ -748,7 +748,7 @@
       "date": "2015-03-21",
       "summary": "The article compares using R over Python for exploratory data analysis and gives some compelling arguments in favour of R. Most interestingly, R is able to plot categorical versus numeric data out of the box!",
       "title": "The Grammar of Data Science",
-      "topics": ["Data Visualization"],
+      "topics": ["Data Science"],
       "type": "Article",
       "url": "http://technology.stitchfix.com/blog/2015/03/17/grammar-of-data-science"
     },
@@ -788,7 +788,7 @@
       "date": "2015-02-20",
       "summary": "Much more language specific than 'Effective Java'. Most of the stuff in here would probably be of most use to advanced beginners and should be obvious to anyone with some experience (Pythonic Thinking, Functions, Classes and Inheritance, Built-in Modules, Collaboration, Production). Some of the contents I found useful (descriptors, metaclasses, concurrency),",
       "title": "Effective Python: 59 Specific Ways to Write Better Python",
-      "topics": ["Software Engineering"],
+      "topics": ["Python"],
       "type": "Book",
       "url": "http://www.amazon.co.uk/dp/B00TKGY0GU/"
     },
@@ -836,7 +836,7 @@
       "date": "2015-02-13",
       "summary": "Explanation of the underlying assumptions in some of the classic bandit algorithms and how frequent real-world experiment settings violate these (leading to worse performance than standard A/B tests). E.g. bandits assume no delay between impulse and response (real world conversion can take days). E.g. bandits assume uniform response rate (real world conversion and levers can be correlated).",
       "title": "Don't use Bandit Algorithms - they probably won't work for you",
-      "topics": ["Statistics"],
+      "topics": ["Machine Learning"],
       "type": "Article",
       "url": "https://www.chrisstucchio.com/blog/2015/dont_use_bandits.html"
     },
@@ -844,7 +844,7 @@
       "date": "2015-02-13",
       "summary": "Some stats tricks relevant to machine learning. E.g. time-series data should be smoothed for better results. E.g. explicitly address confounding factors like inter-class variance over time.",
       "title": "10 things statistics taught us about big data analysis",
-      "topics": ["Statistics"],
+      "topics": ["Machine Learning"],
       "type": "Article",
       "url": "http://www.kdnuggets.com/2015/02/10-things-statistics-big-data-analysis.html"
     },
@@ -852,7 +852,7 @@
       "date": "2015-02-13",
       "summary": "The article argues that a low R^2 statistic for a regression model is not a bad thing for a model if the model attributes have good p-values -- low R^2 might simply mean that there are other attributes outside of our model that explain some of the variance in the data, not that the model we have is bad. We shouldn't indiscriminately add attributes to a model just to increase R^2 (as a matter of fact, the more attributes we add the higher R^2 is likely to be) but be judicious in choosing which attributes to add in adding more attributes (domain knowledge, p-values).",
       "title": "Is A Low R-Squared Statistic A Bad Thing?",
-      "topics": ["Statistics"],
+      "topics": ["Machine Learning"],
       "type": "Article",
       "url": "http://www.firstclassanalytics.com/is-a-low-r-squared-statistic-a-bad-thing.html"
     },
@@ -876,7 +876,7 @@
       "date": "2015-02-04",
       "summary": "Cautionary tale about how trends in time series data can lead to strong correlations in unrelated data: if the trend is large compared to the actual data, the correlation between trends will overwhelm the non-correlation between the data. Work around: model the trend explicitly e.g. using linear regression and subtracting the fit or use differences between data points instead of raw data.",
       "title": "Avoiding a common mistake with time series",
-      "topics": ["Statistics"],
+      "topics": ["Machine Learning"],
       "type": "Article",
       "url": "http://svds.com/post/avoiding-common-mistake-time-series"
     },
@@ -908,7 +908,7 @@
       "date": "2015-01-19",
       "summary": "Lessons from real-world machine learning at Google. The paper mentions several anti-patterns to avoid and how to address them. E.g. entanglement/tight coupling/changing anything changes everything. It's easy to build v1 of a machine learning system, very complicated to make changes without changing the behavior of the entire model. Mitigation: metrics for all the dimensions, ensembling, better regularization. E.g. hidden feedback loops. Behavior of system affects future training data. Mitigation: ... un-solved problem. E.g. unstable data dependencies. Changes in input data sources can affect behavior of model. Mitigation: data versioning, but this is expensive in terms of engineering. E.g. underutilized features. Features with small improvement in model performance carry high cost and risk (see unstable data dependencies). Mitigation: regularly evaluate features and prune mercilessly. E.g. correction cascades. Models that use other models as features lead to coupling and make it more difficult to improve the models because of complex effects on the down-stream models. Mitigation: add the extra features of the down-stream model directly to the upstream-model. E.g. glue code. Interfacing with machine learning systems lead to glue code to adapt to the interface. Usually this means tight-coupling with particular versions. Mitigation: re-write the algorithms in the system language. E.g. monitoring. Difficult to know the correct behavior of a constantly adapting system. Mitigation: assert that observed and predicted priors are similar and threshold model confidence before taking action.",
       "title": "Machine Learning: The High-Interest Credit Card of Technical Debt",
-      "topics": ["Software Engineering"],
+      "topics": ["Machine Learning", "Software Engineering"],
       "type": "Paper",
       "url": "http://static.googleusercontent.com/media/research.google.com/en//pubs/archive/43146.pdf"
     },
@@ -956,7 +956,7 @@
       "date": "2014-11-30",
       "summary": "This book was a real mixed bag. On one hand, a lot of the advice in the book seemed quite technology specific and will probably be out-of-date sooner rather than later. On the other hand, there was a lot of good stuff in here about how to build robust and failure-tolerant systems and architecture. Just being aware of the patterns and failure-modes that the book talks about made me think differently about my day-to-day work. This is one to be re-visited further down the road of the software developer journey.",
       "title": "Release It!: Design and Deploy Production-Ready Software",
-      "topics": ["Software Engineering"],
+      "topics": ["Software Engineering", "Management"],
       "type": "Book",
       "url": "http://www.amazon.co.uk/dp/0978739213/"
     },
@@ -972,7 +972,7 @@
       "date": "2014-11-25",
       "summary": "Wrapper around Matplotlib to make simple plot creation easier.",
       "title": "Seaborn: statistical data visualization",
-      "topics": ["Libraries"],
+      "topics": ["Libraries", "Python", "Data Science"],
       "type": "Article",
       "url": "http://web.stanford.edu/~mwaskom/software/seaborn"
     },
@@ -988,7 +988,7 @@
       "date": "2014-11-25",
       "summary": "Comparison of discriminative sequence tagging libraries based Conditional Random Fields (allows for any state in the sequence to be considered when making the tagging decision - prone to overfitting and slow) and MaxEnt Markov Models (only considers local context when making the tagging decision - fast and less likely to overfit but weaker features). Stanford Tagger, Mallet, CRF++ and SVM tool are too slow. OpenNLP only has MEMM, CRF Suite only has CRF. OpenNLP has no multi-core support. Wapiti is the best compromise between completeness, efficiency, documentation and accuracy.",
       "title": "A review of sparse sequence taggers",
-      "topics": ["Libraries"],
+      "topics": ["Libraries", "Machine Learning"],
       "type": "Article",
       "url": "http://fnl.es/a-review-of-sparse-sequence-taggers.html"
     },
@@ -1020,7 +1020,7 @@
       "date": "2014-09-29",
       "summary": "Lots of information retrieval functionality is built into Postgres by default: stemming, spell-checking, TF-IDF vectorization, query ranking, multi-language support, stop-wording, etc. This means we don't need to break out ElasticSearch for smaller scale full-text search.",
       "title": "Postgres full-text search is Good Enough!",
-      "topics": ["Natural Language Processing"],
+      "topics": ["Natural Language Processing", "Databases"],
       "type": "Article",
       "url": "http://blog.lostpropertyhq.com/postgres-full-text-search-is-good-enough/"
     },
@@ -1052,7 +1052,7 @@
       "date": "2014-08-29",
       "summary": "Not as mind-blowing as on its first read through, but still lots of good stuff. The first few chapters are a good general read and reminder of some of the important things when writing software. The later chapters (concurrency, serialization, etc.) make for good reference material.",
       "title": "Effective Java: Second Edition",
-      "topics": ["Software Engineering"],
+      "topics": ["Software Engineering", "Java"],
       "type": "Book",
       "url": "http://www.amazon.co.uk/dp/B00B8V09HY/"
     },
@@ -1076,7 +1076,7 @@
       "date": "2014-08-28",
       "summary": "Nuisance parameter: something that we have to estimate in order to measure the quantity we are interested in but that isn't directly relevant to the question at hand. Bayesian approach marginalizes them out, frequentist approach uses a single maximum likelihood estimate (which is probably going to be wrong - there are ways to fix this, but Bayesian formulation does it for free). Bayesian approach also better deals with outliers by accounting for them using a nuisance parameter and integrating their effect out.",
       "title": "Frequentism and Bayesianism II: When Results Differ",
-      "topics": ["Statistics"],
+      "topics": ["Machine Learning"],
       "type": "Article",
       "url": "http://jakevdp.github.io/blog/2014/06/06/frequentism-and-bayesianism-2-when-results-differ/"
     },
@@ -1084,7 +1084,7 @@
       "date": "2014-08-28",
       "summary": "Frequentist approach treats probabilities as frequencies of events. Bayesian approach treats probabilities as notion of certainty of an event (prior knowledge + knowledge given observations). Advantage of Bayesian approach is that there is little need to change the model for more complicated problems (e.g. multi-dimensional or correlated data). Also doesn't make an implicit Gaussian assumption about the data or residuals. Drawback: overkill for simple problems.",
       "title": "Frequentism and Bayesianism: A Practical Introduction",
-      "topics": ["Statistics"],
+      "topics": ["Machine Learning"],
       "type": "Article",
       "url": "http://jakevdp.github.io/blog/2014/03/11/frequentism-and-bayesianism-a-practical-intro/"
     },
@@ -1188,7 +1188,7 @@
       "date": "2014-08-22",
       "summary": "Problems with JavaScript for large applications: no type checking, no namespaces, no access modifiers, difficult to modularize, managing dependencies. Unified set of tools to help: Closure (library, templates and compiler). Closure compiler can strip out unneeded parts of libraries so need to track minimal set of dependencies by hand. Removes whitespace, uglifies, rewrites/optimizes code to only have minimal code needed to cover all paths that are actually optimized. Can also eliminate platform-specific code. Also does type-checking using annotations.",
       "title": "JavaScript Programming in the Large with Closure Tools",
-      "topics": ["Libraries"],
+      "topics": ["Libraries", "Javascript"],
       "type": "Video",
       "url": "https://www.youtube.com/watch?v=M3uWx-fhjUc"
     },
@@ -1196,7 +1196,7 @@
       "date": "2014-08-22",
       "summary": "Task: automatically finding all the influences on some painter. Unsupervised knowledge discovery task. Difficult. Solve correlated supervised task instead: style classification. Unsurprisingly, custom made high-level semantic features work better than generic low level features like SIFT.",
       "title": "Toward Automated Discovery of Artistic Influence",
-      "topics": ["Computer Vision"],
+      "topics": ["Machine Learning"],
       "type": "Paper",
       "url": "http://arxiv.org/pdf/1408.3218v1.pdf"
     },
@@ -1236,7 +1236,7 @@
       "date": "2014-08-21",
       "summary": "Overview of some of the tools that ship with a default Java JDK install. Most interesting: javap (disassembler), jjs (JavaScript console), jhat (heap analysis).",
       "title": "The 6 built-in JDK tools the average developer should learn to use more",
-      "topics": ["Libraries"],
+      "topics": ["Libraries", "Java"],
       "type": "Article",
       "url": "http://zeroturnaround.com/rebellabs/the-6-built-in-jdk-tools-the-average-developer-should-learn-to-use-more/"
     },
@@ -1260,7 +1260,7 @@
       "date": "2014-08-19",
       "summary": "5-day design sprint: shorter than lean approach, less investment so easier to cut losses and throw a bad idea away. Tight deadline to get things done. Day 1: find 5 users in for user testing of idea at the end of the week, get right people for project on board. Day 2: find more than one idea, no group brainstorming but individual sketching full flows. Day 3: make good decisions using weighted voting (put stickers on parts of design people like) where core stakeholders have higher power. Day 4: battle royal between most voted ideas - mock all of them up and ready them for user testing. Day 5: run user study (data without launching). 'Learn early, learn often' instead of 'ship early, ship often' - 'rent before you buy.' If there are different long-term and short-term stakeholders, use multiple design-sprint teams for different time-lines: requirements for 2 years from now or 4 years from now.",
       "title": "The design sprint: from Google Ventures to Google[X]",
-      "topics": ["Software Engineering"],
+      "topics": ["Management"],
       "type": "Video",
       "url": "https://www.youtube.com/watch?v=aWQUSiOZ0x8"
     },
@@ -1308,7 +1308,7 @@
       "date": "2014-08-18",
       "summary": "Voronoi tessellations to maximise hit-area for UI elements: a lot faster than computing closest points on mouse-move as only have to have a handler on Voronoi-cell enter and exit. Consider triangles to make menu dialog disappearing less annoying: the closer a user moves to a menu item, the more resistance there is to close the menu dialog. As long as the mouse moves more right than down, keep the menu open.",
       "title": "User Interface Algorithms",
-      "topics": ["Computer Science"],
+      "topics": ["Design"],
       "type": "Video",
       "url": "https://www.youtube.com/watch?v=90NsjKvz9Ns"
     },
@@ -1316,7 +1316,7 @@
       "date": "2014-08-18",
       "summary": "Using same methods and naming conventions on all objects. Fewer methods and less code is better: easier to learn, more maintainable. Generate test-case permutations. Structured format for documentation allows for custom documentation browsers - different people want to visualise documentation in different ways. Maintain library focus - opinionated. Lots of Javascript-specific stuff. Checking user-agent for quirks most reliable and easiest.",
       "title": "Best Practices in Javascript Library Design",
-      "topics": ["Software Engineering"],
+      "topics": ["Software Engineering", "Javascript"],
       "type": "Video",
       "url": "https://www.youtube.com/watch?v=012mt05yzjc"
     },
@@ -1348,7 +1348,7 @@
       "date": "2014-08-17",
       "summary": "Multi-treatment A/B tests: ways to compute sample size and significance (ANOVA + Tukey Test). But why would we do something complicated like this if we could just use bandit algorithms?",
       "title": "Multiple A/B/n Tests in Marketing with ANOVA and R",
-      "topics": ["Statistics"],
+      "topics": ["Machine Learning"],
       "type": "Article",
       "url": "http://www.marketingdistillery.com/2014/08/10/multiple-abn-tests-in-marketing-with-anova-and-r/"
     },
@@ -1364,7 +1364,7 @@
       "date": "2014-08-16",
       "summary": "Diachronic interpretation of Bayes' Theorem (belief update): P(H_{t+1}|E) = P(H_t) * P(E|H_t)/P(E).",
       "title": "Bayesian statistics made (as) simple (as possible)",
-      "topics": ["Statistics"],
+      "topics": ["Machine Learning"],
       "type": "Video",
       "url": "https://www.youtube.com/watch?v=bobeo5kFz1g"
     },
@@ -1380,7 +1380,7 @@
       "date": "2014-08-16",
       "summary": "Effectiveness (doing the right things) vs efficiency (doing the thing right), single tasking.",
       "title": "It's not what you read, it's what you ignore",
-      "topics": ["Software Engineering"],
+      "topics": ["Management"],
       "type": "Video",
       "url": "https://www.youtube.com/watch?v=IWPgUn8tL8s"
     },
@@ -1396,7 +1396,7 @@
       "date": "2014-08-15",
       "summary": "Importance of coding standards, programming principles and automation for readable and easily understandable code.",
       "title": "Maintainable JavaScript",
-      "topics": ["Software Engineering"],
+      "topics": ["Software Engineering", "Javascript"],
       "type": "Video",
       "url": "https://www.youtube.com/watch?v=c-kav7Tf834"
     },
@@ -1404,7 +1404,7 @@
       "date": "2014-08-15",
       "summary": "Isometric JavaScript game engine (not canvas based).",
       "title": "Building a JavaScript-Based Game Engine for the Web",
-      "topics": ["Libraries"],
+      "topics": ["Libraries", "Javascript"],
       "type": "Video",
       "url": "https://www.youtube.com/watch?v=_RRnyChxijA"
     },
@@ -1412,7 +1412,7 @@
       "date": "2014-08-15",
       "summary": "Stuff to make development in JavaScript less painful: linters, unit testing libraries, testing of rendered pages using headless browsers like Zombie, avoid object orientation, amd for packaging.",
       "title": "Javascript sucks and it doesn't matter",
-      "topics": ["Libraries"],
+      "topics": ["Libraries", "Javascript"],
       "type": "Video",
       "url": "https://www.youtube.com/watch?v=PV_cFx29Xz0"
     },
@@ -1428,7 +1428,7 @@
       "date": "2014-08-15",
       "summary": "Comparison of Unreal 4 engine and Unity.",
       "title": "An Unreal Decision",
-      "topics": ["Computer Graphics"],
+      "topics": ["Libraries"],
       "type": "Article",
       "url": "http://martiancraft.com/blog/2014/08/an-unreal-decision/"
     },
@@ -1444,7 +1444,7 @@
       "date": "2014-08-14",
       "summary": "Bokeh library: like D3 but without having to use JavaScript.",
       "title": "How to Create Interactive Browser Visualizations from Python with Bokeh",
-      "topics": ["Data Science"],
+      "topics": ["Data Science", "Python", "Libraries"],
       "type": "Video",
       "url": "https://www.youtube.com/watch?v=hjW4gL9hioY"
     },
@@ -1452,7 +1452,7 @@
       "date": "2014-08-14",
       "summary": "Interesting Python stuff: PyWeek (week-long game jam), Kivy (mobile apps library).",
       "title": "The Future of Python - A Choose Your Own Adventure",
-      "topics": ["Software Engineering"],
+      "topics": ["Software Engineering", "Python"],
       "type": "Video",
       "url": "https://www.youtube.com/watch?v=d1a4Jbjc-vU"
     },
@@ -1596,7 +1596,7 @@
       "date": "2014-08-10",
       "summary": "Faster one-to-many edit distance algorithm.",
       "title": "Fast and Easy Levenshtein distance using a Trie",
-      "topics": ["Computer Science"],
+      "topics": ["Natural Language Processing"],
       "type": "Article",
       "url": "http://stevehanov.ca/blog/index.php?id=114"
     },
@@ -1612,7 +1612,7 @@
       "date": "2014-08-09",
       "summary": "Media Lovin' Toolkit = good video processing library for Python. Action recognition = optical flow + Harris corner detection + clustering.",
       "title": "An introduction to video action recognition",
-      "topics": ["Computer Vision"],
+      "topics": ["Machine Learning"],
       "type": "Video",
       "url": "https://www.youtube.com/watch?v=fRN3nrrwngs"
     },
@@ -1628,7 +1628,7 @@
       "date": "2014-08-09",
       "summary": "Graphs are not random. E.g. node-degree is Zipfian, can estimate number of three-way connections via eigenvalues. Can find similar laws for other quantities e.g. number of edges related to number of nodes over time, etc.",
       "title": "How to find patterns in large graphs",
-      "topics": ["Computer Science"],
+      "topics": ["Machine Learning"],
       "type": "Video",
       "url": "https://www.youtube.com/watch?v=GBzoNgqF-gQ"
     },
@@ -1636,7 +1636,7 @@
       "date": "2014-08-09",
       "summary": "SimHash for images.",
       "title": "Perceptual Hashing",
-      "topics": ["Computer Vision"],
+      "topics": ["Machine Learning"],
       "type": "Article",
       "url": "http://bertolami.com/index.php?engine=blog&content=posts&detail=perceptual-hashing"
     },
@@ -1644,7 +1644,7 @@
       "date": "2014-08-08",
       "summary": "Sci-kit feature: pipeline to make working with feature extraction, transformation and model training easier.",
       "title": "Using scikit-learn Pipelines and FeatureUnions",
-      "topics": ["Libraries"],
+      "topics": ["Libraries", "Python", "Machine Learning"],
       "type": "Article",
       "url": "http://zacstewart.com/2014/08/05/pipelines-of-featureunions-of-pipelines.html"
     },
@@ -1764,7 +1764,7 @@
       "date": "2014-08-06",
       "summary": "Databases/repositories for real-time data synchronization.",
       "title": "Introducing Dat: If Git Were Designed For Big Data",
-      "topics": ["Computer Science"],
+      "topics": ["Data Science"],
       "type": "Video",
       "url": "https://www.youtube.com/watch?v=FX7qSwz3SCk"
     },
@@ -1780,7 +1780,7 @@
       "date": "2014-08-06",
       "summary": "Naively written-up API soup to perform and visualize sentiment analysis on Twitter.",
       "title": "Mapping Happiness With Twitter Natural Language Processing",
-      "topics": ["Data Science"],
+      "topics": ["Data Science", "Natural Language Processing"],
       "type": "Article",
       "url": "https://medium.com/@JBramVB/mapping-happiness-with-twitter-natural-language-processing-ac231e70fe7"
     },
@@ -1820,7 +1820,7 @@
       "date": "2014-08-05",
       "summary": "Better search using real-time engagement metrics and content overlap.",
       "title": "Search is not a solved problem",
-      "topics": ["Computer Science"],
+      "topics": ["Machine Learning"],
       "type": "Video",
       "url": "https://www.youtube.com/watch?v=jVMWT7I3ATM"
     },
@@ -1868,7 +1868,7 @@
       "date": "2014-08-05",
       "summary": "Problems with ORMs: too wide tables/too many attributes in class -> select * performance problems, links between classes -> foreign key join performance problems, information about object schema is replicated in database and code.",
       "title": "What ORMs have taught me: just learn SQL",
-      "topics": ["Computer Science"],
+      "topics": ["Databases"],
       "type": "Article",
       "url": "http://wozniak.ca/what-orms-have-taught-me-just-learn-sql"
     },
@@ -1900,7 +1900,7 @@
       "date": "2014-08-04",
       "summary": "Great list of A/B testing gotchas.",
       "title": "Most Winning A/B Test Results are Illusory",
-      "topics": ["Statistics"],
+      "topics": ["Machine Learning"],
       "type": "Video",
       "url": "https://www.youtube.com/watch?v=MdkHLS0FPMk"
     },
