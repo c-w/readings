@@ -1,6 +1,22 @@
 {
   "content": [
     {
+      "date": "2016-12-25",
+      "summary": "Some really interesting libraries in here, especially Zappa to trivially run web applications in a server-less context and hug to make it simple to add a command-line interface or REST endpoints for a library.",
+      "title": "Top 10 Python libraries of 2016",
+      "topics": ["Libraries"],
+      "type": "Article",
+      "url": "https://tryolabs.com/blog/2016/12/20/top-10-python-libraries-of-2016/"
+    },
+    {
+      "date": "2016-12-25",
+      "summary": "The author makes the case that it's really easy to write slow websites without even trying to do so. One reason is that development environments are much more powerful than consumer devices. Solution: always develop with at least 10x CPU throttling and network speed limitation. We should also benchmark the effect of third-party libraries on our applications, e.g. switching from React to pReact can lead to a significant performance improvement. CSS should be inlined to save the network request for the CSS file if the HTML and CSS payload is small enough, e.g. less than 14KB.",
+      "title": "10 things I learned making the fastest site in the world",
+      "topics": ["Software Engineering"],
+      "type": "Article",
+      "url": "https://hackernoon.com/10-things-i-learned-making-the-fastest-site-in-the-world-18a0e1cdf4a7"
+    },
+    {
       "date": "2016-12-24",
       "summary": "Overall quite light. Some nuggets, e.g. around communication (prefer different tools for different types of communication instead of email for everything, minimize amount of synchronous meetings) and evaluation (should happen much more often than in-office to combat anxiety resulting from lack of daily inter-personal performance-related cues).",
       "title": "The Ultimate Guide to Remote Work",
