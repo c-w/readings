@@ -1,6 +1,14 @@
 {
   "content": [
     {
+      "date": "2016-12-27",
+      "summary": "This is a pretty good introduction to TypeScript for people who already know Javascript. The last part of the book on the compiler internals is a bit academic, but the rest is mostly useful, giving basics on how the type checker works (e.g. structural typing), useful syntax tips (e.g. for-of iteration, const, spread operator, string enums, etc.) and some guidelines around code-style (e.g. avoid null, use modules, prefer lambdas over bind, etc.)",
+      "title": "TypeScript Deep Dive",
+      "topics": ["Javascript"],
+      "type": "Book",
+      "url": "https://basarat.gitbooks.io/typescript/content/"
+    },
+    {
       "date": "2016-12-25",
       "summary": "Some really interesting libraries in here, especially Zappa to trivially run web applications in a server-less context and hug to make it simple to add a command-line interface or REST endpoints for a library.",
       "title": "Top 10 Python libraries of 2016",
