@@ -1,6 +1,14 @@
 {
   "content": [
     {
+      "date": "2017-01-01",
+      "summary": "The article talks about some easily-made mistakes when caching data, for example hiding performance problems by caching too eagerly, not building in a control to clear the caches, caching data redundantly or violating the single-responsibility principle by coupling caches too tightly with the application. The article concludes that it's best to just not cache any data which may be a too sweeping conclusion.",
+      "title": "The Caching Antipattern",
+      "topics": ["Software Engineering"],
+      "type": "Article",
+      "url": "https://www.hidefsoftware.co.uk/2016/12/25/the-caching-antipattern/"
+    },
+    {
       "date": "2016-12-27",
       "summary": "This is a pretty good introduction to TypeScript for people who already know Javascript. The last part of the book on the compiler internals is a bit academic, but the rest is mostly useful, giving basics on how the type checker works (e.g. structural typing), useful syntax tips (e.g. for-of iteration, const, spread operator, string enums, etc.) and some guidelines around code-style (e.g. avoid null, use modules, prefer lambdas over bind, etc.)",
       "title": "TypeScript Deep Dive",
