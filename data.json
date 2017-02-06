@@ -1,6 +1,14 @@
 {
   "content": [
     {
+      "date": "2017-02-05",
+      "summary": "This was a bit of a disappointment. Much less approachable, concrete and usable than the Steve Krug book. Lots of emphasis placed on the design process, philosophy, design thinking, etc. which makes the content interesting for aspiring designers, but not so much for people who just have to interact with designers and deal with design questions in a practical way. The book's old title, 'The psychology of everyday things' is more apt at describing its contents.",
+      "title": "The Design of Everyday Things",
+      "topics": ["Design"],
+      "type": "Book",
+      "url": "https://www.amazon.co.uk/dp/B00E257T6C/"
+    },
+    {
       "date": "2017-01-01",
       "summary": "The article talks about some easily-made mistakes when caching data, for example hiding performance problems by caching too eagerly, not building in a control to clear the caches, caching data redundantly or violating the single-responsibility principle by coupling caches too tightly with the application. The article concludes that it's best to just not cache any data which may be a too sweeping conclusion.",
       "title": "The Caching Antipattern",
