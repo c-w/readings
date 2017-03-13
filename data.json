@@ -1,6 +1,22 @@
 {
   "content": [
     {
+      "date": "2017-03-12",
+      "summary": "Review of some of the software engineering rules of thumb and the studies that back them up. For example, the 10x programmer idea comes from just two studies with very few participants and very limited duration and was never reproduced. For example, none of the code-quality metrics like coupling, cohesion and cylomatic complexity correlate with post-release defect rate if corrected for program size. For example, code review effectiveness reduces drastically after the first reviewer and after the first hour of review. For example, physical closeness of the development team is less important than the organizational distance.",
+      "title": "What We Actually Know About Software Development, and Why We Believe It's True",
+      "topics": ["Software Engineering"],
+      "type": "Video",
+      "url": "https://vimeo.com/9270320"
+    },
+    {
+      "date": "2017-03-12",
+      "summary": "The article highlights some of the low-hanging fruit for web scalability. For example, use a queue for any actions that don't need to happen straight away such as sending email or fetching data from a third-party API: this allows the front-end to not block on the expensive operation and lets us scale up the amount of workers performing the operations independently of the amount of resources used to serve the front-end. For example, use aggregation in the database or data sub-selection to speed up retrieval times. For example, use caching and have a background job to re-cache values before they got stale to avoid slow responses when the cache expires.",
+      "title": "Practical scaling techniques for web sites",
+      "topics": ["Software Engineering"],
+      "type": "Article",
+      "url": "https://hackernoon.com/practical-scaling-techniques-for-web-sites-554a38dbd492"
+    },
+    {
       "date": "2017-02-05",
       "summary": "This was a bit of a disappointment. Much less approachable, concrete and usable than the Steve Krug book. Lots of emphasis placed on the design process, philosophy, design thinking, etc. which makes the content interesting for aspiring designers, but not so much for people who just have to interact with designers and deal with design questions in a practical way. The book's old title, 'The psychology of everyday things' is more apt at describing its contents.",
       "title": "The Design of Everyday Things",
