@@ -1,6 +1,22 @@
 {
   "content": [
     {
+      "date": "2017-03-13",
+      "summary": "Debunking of the common 'developers need to read code' trope: unlike literature, code is not read, it is decoded. Understanding other developer's projects is valuable, but linear reading is probably not the most effective way to assimilate new code-bases.",
+      "title": "Code is not literature",
+      "topics": ["Software Engineering"],
+      "type": "Article",
+      "url": "http://www.gigamonkeys.com/code-reading/"
+    },
+    {
+      "date": "2017-03-13",
+      "summary": "Great idea for a book: tell others about your mistakes so that they don't have to repeat them. On the content side, the book itself is short and quite superficial, containing mostly information that folks should already know from other sources like style-guides, linters, common gotchas, etc.",
+      "title": "How to Make Mistakes in Python",
+      "topics": ["Software Engineering"],
+      "type": "Book",
+      "url": "http://www.oreilly.com/programming/free/how-to-make-mistakes-in-python.csp"
+    },
+    {
       "date": "2017-03-12",
       "summary": "Review of some of the software engineering rules of thumb and the studies that back them up. For example, the 10x programmer idea comes from just two studies with very few participants and very limited duration and was never reproduced. For example, none of the code-quality metrics like coupling, cohesion and cylomatic complexity correlate with post-release defect rate if corrected for program size. For example, code review effectiveness reduces drastically after the first reviewer and after the first hour of review. For example, physical closeness of the development team is less important than the organizational distance.",
       "title": "What We Actually Know About Software Development, and Why We Believe It's True",
