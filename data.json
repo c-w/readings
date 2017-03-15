@@ -1,6 +1,14 @@
 {
   "content": [
     {
+      "date": "2017-03-14",
+      "summary": "Great reference and introduction to the modern shell scripting ecosystem, how to write readable code using bash, etc. The article covers the usual suspects that people don't know about like default values, variable modifiers, strict mode, trap, shellcheck, ...",
+      "title": "Shell Scripts Matter",
+      "topics": ["Software Engineering", "Bash"],
+      "type": "Article",
+      "url": "https://dev.to/thiht/shell-scripts-matter"
+    },
+    {
       "date": "2017-03-13",
       "summary": "Debunking of the common 'developers need to read code' trope: unlike literature, code is not read, it is decoded. Understanding other developer's projects is valuable, but linear reading is probably not the most effective way to assimilate new code-bases.",
       "title": "Code is not literature",
