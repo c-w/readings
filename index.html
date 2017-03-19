@@ -85,7 +85,7 @@
               <ul class="right">
                 <li>
                   <a class="valign-wrapper modal-trigger" href="#about"
-                     v-if="meta.about">
+                     v-show="meta.about">
                     <i class="icon info zmdi zmdi-info"></i>
                   </a>
                 </li>
@@ -155,16 +155,5 @@
     </div>
 
     <script src="./page.js"></script>
-
-    <script>
-      $(document).ready(function(){
-        $('.dropdown-button').each(function() {
-          $(this).dropdown();
-        });
-        $('.modal-trigger').each(function() {
-          $(this).leanModal();
-        });
-      });
-    </script>
   </body>
 </html>

@@ -57,6 +57,7 @@ new Vue({
         vue.$set('styling', data.styling);
         vue.$set('meta', data.meta);
         vue.highlightPost(queryParameters.selectedPostUid);
+        vue.setupMaterialize();
       });
     },
 
@@ -76,6 +77,13 @@ new Vue({
       });
 
       this.$set('selectedPostUid', uid);
+    },
+
+    setupMaterialize: function() {
+      $('.dropdown-button').each(function() {
+        $(this).dropdown();
+      });
+      $('.modal-trigger').leanModal();
     }
   }
 });
