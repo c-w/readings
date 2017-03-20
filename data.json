@@ -1,6 +1,14 @@
 {
   "content": [
     {
+      "date": "2017-03-19",
+      "summary": "Less of a book and more of a sales-pitch for some commercial linter. Nothing really useful in here that hasn't already been said hundreds of times in other resources like Clean Code and similar.",
+      "title": "Real-World Maintainable Software",
+      "topics": ["Software Engineering"],
+      "type": "Book",
+      "url": "http://www.oreilly.com/programming/free/real-world-maintainable-software.csp"
+    },
+    {
       "date": "2017-03-14",
       "summary": "Great reference and introduction to the modern shell scripting ecosystem, how to write readable code using bash, etc. The article covers the usual suspects that people don't know about like default values, variable modifiers, strict mode, trap, shellcheck, ...",
       "title": "Shell Scripts Matter",
