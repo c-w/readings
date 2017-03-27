@@ -1,6 +1,30 @@
 {
   "content": [
     {
+      "date": "2017-03-26",
+      "summary": "One common way to address the maintenance problems related to monolithic applications is to split out micro-services. This article contrasts this approach with an alternative: keep a single service but increase modularity. This gives us much of the same benefits as micro-services (strong interfaces and encapsulation, responsibility and development boundaries, information hiding) while avoiding the complexity that comes with running multiple services: deployment, monitoring, network latency, difficulty of cross-boundary changes, etc. Some advantages of micro-services are not captured by the modularity approach (e.g. independent deployments, not being tied to the same programming language to implement all the system), but those are usually a minor advantage when not dealing with huge projects and teams: a well modularized system can be trivially split into micro-services anyways if the need arises.",
+      "title": "Modules vs. microservices",
+      "topics": ["Software Engineering"],
+      "type": "Article",
+      "url": "https://www.oreilly.com/ideas/modules-vs-microservices"
+    },
+    {
+      "date": "2017-03-26",
+      "summary": "Another article in the growing wave of frustrated Go users beyond the early adopter hype. The author's main complaints are around the lack of generics, inclusion of null and lack of good support for third-party packages. The author purports that TypeScript has much of the advantages of Go, like ease of learning and good support for concurrency, without most of its bad parts.",
+      "title": "Changes I would make to Go",
+      "topics": ["Go"],
+      "type": "Article",
+      "url": "http://sitr.us/2017/02/21/changes-i-would-make-to-go.html"
+    },
+    {
+      "date": "2017-03-26",
+      "summary": "A serial-job-hopper now turned CTO's thoughts on developer retention: people quit because of boredom. Ways to minimize boredom include: avoid working on the same project for too long so rotate people around; avoid legacy system maintenance by having smaller services that can be fixed or replaced with less dread; review the sorts of work that people are doing to spread the boring copy/paste integration jobs around; avoid internal tools and instead favour open source as developers will be more engaged in learning them due to portability across projects and companies.",
+      "title": "Coding is boring, unless...",
+      "topics": ["Management"],
+      "type": "Article",
+      "url": "https://blog.enki.com/coding-is-boring-unless-4e496720d664"
+    },
+    {
       "date": "2017-03-19",
       "summary": "Less of a book and more of a sales-pitch for some commercial linter. Nothing really useful in here that hasn't already been said hundreds of times in other resources like Clean Code and similar.",
       "title": "Real-World Maintainable Software",
