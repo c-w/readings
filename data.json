@@ -1,6 +1,30 @@
 {
   "content": [
     {
+      "date": "2017-05-07",
+      "summary": "Nothing really new here that isn't already mentioned in dozens of other software craftsmanship books. However, it's a short enough read so that it could act as a decent albeit shallow introduction to the field.",
+      "title": "97 Things Every Programmer Should Know",
+      "topics": ["Software Engineering"],
+      "type": "Book",
+      "url": "http://shop.oreilly.com/product/9780596809492.do"
+    },
+    {
+      "date": "2017-05-07",
+      "summary": "Not sure what's the audience for this book. On one hand, there is a lot of decent advice here, however it almost all pertains to the management of large open source projects; if a project makes it large, shouldn't the maintainers already know all the fairly straight-forward human dynamics and technologies mentioned in this book?",
+      "title": "Producing Open Source Software",
+      "topics": ["Software Engineering"],
+      "type": "Book",
+      "url": "http://shop.oreilly.com/product/9780596007591.do"
+    },
+    {
+      "date": "2017-05-07",
+      "summary": "Pretty short and low on insights. Most of the content can be reduced to making sure that micro-services are the right tool for the job rather than a hammer-nail situation.",
+      "title": "Microservices AntiPatterns and Pitfalls",
+      "topics": ["Software Engineering"],
+      "type": "Book",
+      "url": "http://www.oreilly.com/programming/free/microservices-antipatterns-and-pitfalls.csp"
+    },
+    {
       "date": "2017-03-26",
       "summary": "One common way to address the maintenance problems related to monolithic applications is to split out micro-services. This article contrasts this approach with an alternative: keep a single service but increase modularity. This gives us much of the same benefits as micro-services (strong interfaces and encapsulation, responsibility and development boundaries, information hiding) while avoiding the complexity that comes with running multiple services: deployment, monitoring, network latency, difficulty of cross-boundary changes, etc. Some advantages of micro-services are not captured by the modularity approach (e.g. independent deployments, not being tied to the same programming language to implement all the system), but those are usually a minor advantage when not dealing with huge projects and teams: a well modularized system can be trivially split into micro-services anyways if the need arises.",
       "title": "Modules vs. microservices",
