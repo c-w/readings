@@ -1,6 +1,14 @@
 {
   "content": [
     {
+      "date": "2017-07-15",
+      "summary": "Overall the book is well written, but it's hard to get a lot out of it, mainly because it's not clear what the target audience is for this book. There isn't enough technical detail here for engineers to get a full understanding of how Spark works and what are its advantages, challenges and trade-offs. There aren't enough basics to enable a novice to get started with Spark end to end, including deployment, tuning, productionization considerations, etc. There are a number of application examples aiming to introduce the reader to Spark in a practical way, but they are somewhat hard to follow because they contain a fair bit of domain-specific knowledge.",
+      "title": "Advanced Analytics with Spark: Patterns for Learning from Data at Scale",
+      "topics": ["Machine Learning"],
+      "type": "Book",
+      "url": "https://www.amazon.co.uk/dp/B072KFWZ8S/"
+    },
+    {
       "date": "2017-05-07",
       "summary": "Nothing really new here that isn't already mentioned in dozens of other software craftsmanship books. However, it's a short enough read so that it could act as a decent albeit shallow introduction to the field.",
       "title": "97 Things Every Programmer Should Know",
