@@ -1,6 +1,14 @@
 {
   "content": [
     {
+      "date": "2017-07-16",
+      "summary": "This was suggested reading in the University of Edinburgh's software engineering course in 2014; still a good read a few years down the road: quick to get through and an overall good introduction to a bunch of should-know issues related to developing software.",
+      "title": "Facts and Fallacies of Software Engineering",
+      "topics": ["Software Engineering"],
+      "type": "Book",
+      "url": "https://www.amazon.co.uk/dp/B001TKD4RG"
+    },
+    {
       "date": "2017-07-15",
       "summary": "Overall the book is well written, but it's hard to get a lot out of it, mainly because it's not clear what the target audience is for this book. There isn't enough technical detail here for engineers to get a full understanding of how Spark works and what are its advantages, challenges and trade-offs. There aren't enough basics to enable a novice to get started with Spark end to end, including deployment, tuning, productionization considerations, etc. There are a number of application examples aiming to introduce the reader to Spark in a practical way, but they are somewhat hard to follow because they contain a fair bit of domain-specific knowledge.",
       "title": "Advanced Analytics with Spark: Patterns for Learning from Data at Scale",
