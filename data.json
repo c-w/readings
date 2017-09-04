@@ -1,6 +1,14 @@
 {
   "content": [
     {
+      "date": "2017-09-04",
+      "summary": "A really good read; a sequence of conversations with accomplished software folks. All conversations cover similar topics which exposes differences and similarities in how people think about the act of creating software; for example extreme programming, collective code ownership and test-driven development are more controversial among these experts than among the modern-day hive mind. Another constant is the disillusionment with current plumbing-style software development: a necessary but dull way of dealing with ever-increasing complexity.",
+      "title": "Coders at Work: Reflections on the Craft of Programming",
+      "topics": ["Software Engineering"],
+      "type": "Book",
+      "url": "https://www.amazon.co.uk/dp/B001TKD4RG"
+    },
+    {
       "date": "2017-07-16",
       "summary": "This was suggested reading in the University of Edinburgh's software engineering course in 2014; still a good read a few years down the road: quick to get through and an overall good introduction to a bunch of should-know issues related to developing software.",
       "title": "Facts and Fallacies of Software Engineering",
