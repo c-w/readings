@@ -1,6 +1,13 @@
 {
   "content": [
     {
+      "date": "2018-02-25",
+      "summary": "Pretty light in content. Can essentially be summarized with 'interfaces are good' and 'dependency injection is good', without giving much help on how to achieve the titular clean architecture in the face of other forces on the project such a schedule, exiting legacy code, team ability, etc.",
+      "title": "Clean Architecture: A Craftsman's Guide to Software Structure and Design",
+      "topics": ["Software Engineering"],
+      "type": "Book",
+      "url": "https://www.amazon.com/dp/B075LRM681/"
+    },
       "date": "2017-09-04",
       "summary": "A really good read; a sequence of conversations with accomplished software folks. All conversations cover similar topics which exposes differences and similarities in how people think about the act of creating software; for example extreme programming, collective code ownership and test-driven development are more controversial among these experts than among the modern-day hive mind. Another constant is the disillusionment with current plumbing-style software development: a necessary but dull way of dealing with ever-increasing complexity.",
       "title": "Coders at Work: Reflections on the Craft of Programming",
