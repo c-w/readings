@@ -1,0 +1,83 @@
+.modal-content.image-text-wrap::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+.image-text-wrap-left {
+  float: left;
+  margin-right: 10px;
+}
+
+.deemphasize {
+  opacity: .3 !important;
+}
+
+.modal-menu,
+.card-menu {
+  position: absolute;
+  color: black;
+  cursor: pointer;
+}
+
+.modal-action .modal-menu,
+.card-action .card-menu,
+.card-reveal .card-menu {
+  bottom: 20px;
+}
+
+.card-reveal .card-menu.icon.close {
+  right: 25px;
+}
+
+.modal-action .modal-menu.icon.close,
+.card-action .card-menu.icon.more {
+  right: 15px;
+}
+
+.card-deselect .card-menu {
+  top: 15px;
+}
+
+.card-deselect .card-menu.icon.close {
+  right: 15px;
+}
+
+.toast.error .message {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.fade-transition {
+  transition: all .5s ease;
+  opacity: 1;
+}
+
+.fade-enter,
+.fade-leave {
+  opacity: 0;
+}
+
+.icon {
+  font-size: 25px;
+}
+
+nav .icon {
+  color: rgba(255, 255, 255, .7);
+}
+
+nav .active .icon {
+  color: rgba(255, 255, 255, 1);
+}
+
+[v-cloak] {
+  display: none;
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+
+nav input[type="search"] {
+    height: 64px;
+}
