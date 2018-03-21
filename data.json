@@ -1,6 +1,22 @@
 {
   "content": [
     {
+      "date": "2018-03-18",
+      "summary": "Great read. Lots of actionable items on how to improve API design and naming. Also includes a good explanation of REST patterns.",
+      "title": "Web API Design: Crafting Interfaces that Developers Love",
+      "topics": ["Software Engineering"],
+      "type": "Book",
+      "url": "https://pages.apigee.com/rs/apigee/images/api-design-ebook-2012-03.pdf"
+    },
+    {
+      "date": "2018-03-17",
+      "summary": "Fairly light in content. A catalogue of team dysfunctions without much insight on how to avoid them or fix them.",
+      "title": "Adrenaline Junkies and Template Zombies: Understanding Patterns of Project Behavior",
+      "topics": ["Software Engineering"],
+      "type": "Book",
+      "url": "https://www.amazon.com/dp/B00DY3KQHM/"
+    },
+    {
       "date": "2018-02-25",
       "summary": "Pretty light in content. Can essentially be summarized with 'interfaces are good' and 'dependency injection is good', without giving much help on how to achieve the titular clean architecture in the face of other forces on the project such a schedule, exiting legacy code, team ability, etc.",
       "title": "Clean Architecture: A Craftsman's Guide to Software Structure and Design",
