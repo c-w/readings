@@ -154,9 +154,7 @@ function createFilters(posts) {
 /*----------------------------------------------------------------------------*/
 
 function formatDataUrl() {
-  var user = window.location.hostname.split('.')[0];
-  var repo = window.location.pathname;
-  return 'https://raw.githubusercontent.com/' + user + repo + 'master/data.json';
+  return 'https://raw.githubusercontent.com/c-w/readings-blog/master/data.json';
 }
 
 function idFromFilter(filter) {
