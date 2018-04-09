@@ -1,6 +1,14 @@
 {
   "content": [
     {
+      "date": "2018-04-08",
+      "summary": "Pretty good read. Nothing drastically new, but very digestible with good comparisons of how code patterns like the decorator are implemented in a container context. Some great examples of how to increase reusability of containers.",
+      "title": "Designing Distributed Systems: Patterns and Paradigms for Scalable, Reliable Services",
+      "topics": ["Software Engineering"],
+      "type": "Book",
+      "url": "https://azure.microsoft.com/mediahandler/files/resourcefiles/baf44271-3870-454f-868c-23d48e7672cb/Designing_Distributed_Systems.pdf"
+    },
+    {
       "date": "2018-03-18",
       "summary": "Great read. Lots of actionable items on how to improve API design and naming. Also includes a good explanation of REST patterns.",
       "title": "Web API Design: Crafting Interfaces that Developers Love",
