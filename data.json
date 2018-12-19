@@ -1,6 +1,14 @@
 {
   "content": [
     {
+      "date": "2018-12-19",
+      "summary": "Quite (perhaps overly) thorough. Includes a bunch of low level distributed systems theory, overview of database algorithms, etc. Nevertheless, a good overview of the database landscape.",
+      "title": "Designing Data-Intensive Applications",
+      "topics": ["Software Engineering", "Databases", "Computer Science"],
+      "type": "Book",
+      "url": "https://www.amazon.com/dp/B06XPJML5D/"
+    },
+    {
       "date": "2018-04-08",
       "summary": "Pretty good read. Nothing drastically new, but very digestible with good comparisons of how code patterns like the decorator are implemented in a container context. Some great examples of how to increase reusability of containers.",
       "title": "Designing Distributed Systems: Patterns and Paradigms for Scalable, Reliable Services",
