@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://justamouse.com/readings",
   "devDependencies": {
-    "gh-pages": "^1.1.0"
+    "gh-pages": "^2.0.1"
   },
   "scripts": {
     "deploy": "gh-pages -d src"
