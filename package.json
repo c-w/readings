@@ -1,8 +1,8 @@
 {
-  "name": "readings-blog",
+  "name": "readings",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://c-w.github.io/readings-blog",
+  "homepage": "https://justamouse.com/readings",
   "devDependencies": {
     "gh-pages": "^1.1.0"
   },
