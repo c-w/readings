@@ -154,7 +154,7 @@ function createFilters(posts) {
 /*----------------------------------------------------------------------------*/
 
 function formatDataUrl() {
-  return 'https://raw.githubusercontent.com/c-w/readings-blog/master/data.json';
+  return 'https://raw.githubusercontent.com/c-w/readings/master/data.json';
 }
 
 function idFromFilter(filter) {
