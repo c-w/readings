@@ -1,6 +1,14 @@
 {
   "content": [
     {
+      "date": "2019-04-29",
+      "summary": "Does not seem to have aged well. Many of the patterns focus on data access, object-relational mapping, transactions, etc. which seem to be fairly well understood problems nowadays. Other patterns address technologies that don't seem to be much of a concern anymore such as distributed objects or object databases.",
+      "title": "Patterns of Enterprise Application Architecture",
+      "topics": ["Software Engineering"],
+      "type": "Book",
+      "url": "https://www.amazon.com/dp/B008OHVDFM/"
+    },
+    {
       "date": "2018-12-19",
       "summary": "Quite (perhaps overly) thorough. Includes a bunch of low level distributed systems theory, overview of database algorithms, etc. Nevertheless, a good overview of the database landscape.",
       "title": "Designing Data-Intensive Applications",
