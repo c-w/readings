@@ -1,6 +1,22 @@
 {
   "content": [
     {
+      "date": "2019-06-07",
+      "summary": "Very nice read that gives an intuitively understandable story-based introduction to lean/agile development processes such as kanban, multi-functional integrated teams, prioritization, optimizing flow of work, and so forth.",
+      "title": "The Phoenix Project: A Novel about IT, DevOps, and Helping Your Business Win",
+      "topics": ["Software Engineering", "Management"],
+      "type": "Book",
+      "url": "https://www.amazon.com/dp/B078Y98RG8/"
+    },
+    {
+      "date": "2019-05-30",
+      "summary": "Lots of fairly basic advice about how to run a retrospective. The catalog of activities at the end of the book however has some good ideas for exercises that may be less worn out than 'Mad, Sad, Glad'. The book also includes a useful classification of the types of teams and contexts in which each of the exercises may be applicable.",
+      "title": "Agile Retrospectives: Making Good Teams Great",
+      "topics": ["Software Engineering", "Management"],
+      "type": "Book",
+      "url": "https://www.amazon.com/dp/B00B03SRJW/"
+    },
+    {
       "date": "2019-04-29",
       "summary": "Does not seem to have aged well. Many of the patterns focus on data access, object-relational mapping, transactions, etc. which seem to be fairly well understood problems nowadays. Other patterns address technologies that don't seem to be much of a concern anymore such as distributed objects or object databases.",
       "title": "Patterns of Enterprise Application Architecture",
