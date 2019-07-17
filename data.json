@@ -1,6 +1,22 @@
 {
   "content": [
     {
+      "date": "2019-07-17",
+      "summary": "Quick overview of the 'pit of success' idea, i.e. striving to build systems in such a way that it's easy for the user to do the right thing.",
+      "title": "Falling Into The Pit of Success",
+      "topics": ["Software Engineering"],
+      "type": "Article",
+      "url": "https://blog.codinghorror.com/falling-into-the-pit-of-success/"
+    },
+    {
+      "date": "2019-06-30",
+      "summary": "Really good book on software management philosophy. Explains the importance of empathy, slack, how to set up motivation systems, etc.",
+      "title": "Managing Humans: Biting and Humorous Tales of a Software Engineering Manager",
+      "topics": ["Software Engineering", "Management"],
+      "type": "Book",
+      "url": "https://www.amazon.com/dp/B01J53IE1O/"
+    },
+    {
       "date": "2019-06-07",
       "summary": "Very nice read that gives an intuitively understandable story-based introduction to lean/agile development processes such as kanban, multi-functional integrated teams, prioritization, optimizing flow of work, and so forth.",
       "title": "The Phoenix Project: A Novel about IT, DevOps, and Helping Your Business Win",
