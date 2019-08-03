@@ -1,6 +1,14 @@
 {
   "content": [
     {
+      "date": "2019-08-03",
+      "summary": "Fun to read introduction to common team problems and their symptoms. Status and ego symptomatic of inattention to results. Low standards symptomatic of avoidance of accountability. Ambiguity symptomatic of lack of commitment. Artificial harmony symptomatic of fear of conflict. Invulnerability symptomatic of absence of trust. While it's useful to have this catalog of things to watch out for, besides a few concrete exercises the book falls short at providing immediately actionable countermeasures to the problems... no silver bullet.",
+      "title": "The Five Dysfunctions of a Team: A Leadership Fable",
+      "topics": ["Management"],
+      "type": "Book",
+      "url": "https://www.amazon.com/dp/B006960LQW"
+    },
+    {
       "date": "2019-07-17",
       "summary": "Quick overview of the 'pit of success' idea, i.e. striving to build systems in such a way that it's easy for the user to do the right thing.",
       "title": "Falling Into The Pit of Success",
