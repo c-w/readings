@@ -471,7 +471,8 @@ nav input[type="search"] {
   height: 64px;
 }
 
-html, body, #page {
+#page {
   height: 100%;
+  min-height: 100vh;
 }
 </style>
