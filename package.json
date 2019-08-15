@@ -6,7 +6,9 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "predeploy": "npm run build",
+    "preprod": "npm run build",
+    "prod": "serve dist",
+    "predeploy": "cross-env NODE_ENV=production npm run build",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
@@ -18,9 +20,11 @@
     "@vue/cli-plugin-eslint": "^3.10.0",
     "@vue/cli-service": "^3.10.0",
     "babel-eslint": "^10.0.1",
+    "cross-env": "^5.2.0",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
     "gh-pages": "^2.0.1",
+    "serve": "^11.1.0",
     "vue-template-compiler": "^2.6.10"
   }
 }
