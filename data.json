@@ -1,6 +1,14 @@
 {
   "content": [
     {
+      "date": "2019-09-01",
+      "summary": "Great read on leadership beyond the line manager level. Covers how to build and empower teams (debt removal is required to get to slack, slack is required to get to innovation), how to best spend energy as a directory (full focus on particular teams at a time instead of spreading attention), how to adjust management style with the team's life-cycle phase (different approaches are required for start-up vs growth vs maintenance phase), etc.",
+      "title": "An Elegant Puzzle: Systems of Engineering Management",
+      "topics": ["Management"],
+      "type": "Book",
+      "url": "https://www.amazon.com/dp/B07QYCHJ7V"
+    },
+    {
       "date": "2019-08-03",
       "summary": "Fun to read introduction to common team problems and their symptoms. Status and ego symptomatic of inattention to results. Low standards symptomatic of avoidance of accountability. Ambiguity symptomatic of lack of commitment. Artificial harmony symptomatic of fear of conflict. Invulnerability symptomatic of absence of trust. While it's useful to have this catalog of things to watch out for, besides a few concrete exercises the book falls short at providing immediately actionable countermeasures to the problems... no silver bullet.",
       "title": "The Five Dysfunctions of a Team: A Leadership Fable",
