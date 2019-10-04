@@ -1,6 +1,14 @@
 {
   "content": [
     {
+      "date": "2019-10-04",
+      "summary": "Empirical study on engineers at Microsoft to identify traits of great managers. The main findings circle around being a shield for the team, building the culture, enabling growth and leading with transparency. Technical skill is less important as long as the manager has sufficient ability to grasp the team's context.",
+      "title": "What Makes a Great Manager of Software Engineers?",
+      "topics": ["Management"],
+      "type": "Article",
+      "url": "https://www.microsoft.com/en-us/research/uploads/prod/2018/06/kalliamvakou-tse-2018.pdf"
+    },
+    {
       "date": "2019-09-01",
       "summary": "Great read on leadership beyond the line manager level. Covers how to build and empower teams (debt removal is required to get to slack, slack is required to get to innovation), how to best spend energy as a directory (full focus on particular teams at a time instead of spreading attention), how to adjust management style with the team's life-cycle phase (different approaches are required for start-up vs growth vs maintenance phase), etc.",
       "title": "An Elegant Puzzle: Systems of Engineering Management",
