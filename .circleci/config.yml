@@ -1,9 +1,33 @@
 version: 2
 jobs:
-  build:
+  lint:
     docker:
       - image: circleci/node:lts
     steps:
       - checkout
       - run: npm install
       - run: npm run lint
+  deploy:
+    docker:
+      - image: circleci/node:lts
+    steps:
+      - checkout
+      - run: npm install
+      - run: npm run deploy
+
+workflows:
+  version: 2
+  lint-deploy:
+    jobs:
+      - lint:
+          filters:
+            tags:
+              only: /.*/
+      - deploy:
+          requires:
+            - lint
+          filters:
+            tags:
+              only: /.*/
+            branches:
+              ignore: /.*/
