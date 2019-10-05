@@ -9,7 +9,7 @@
     "preprod": "npm run build",
     "prod": "serve dist",
     "predeploy": "cross-env NODE_ENV=production npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist -u \"Circle CI <circle@circleci.com>\""
   },
   "dependencies": {
     "core-js": "^2.6.5",
