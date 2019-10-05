@@ -151,7 +151,9 @@ const queryParameters = parseQueryParameters();
 /* main                                                                       */
 /*----------------------------------------------------------------------------*/
 
-/* global Cookies, marked, Materialize, $ */
+/* global Cookies, Materialize, $ */
+
+import * as marked from 'marked';
 
 export default {
   data: function() {
