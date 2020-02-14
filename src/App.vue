@@ -388,6 +388,10 @@ function showError(message) {
 </script>
 
 <style>
+.dropdown-content {
+  overflow-x: hidden;
+}
+
 .modal-content.image-text-wrap::after {
   display: block;
   clear: both;
