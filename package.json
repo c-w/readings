@@ -9,7 +9,7 @@
     "preprod": "npm run build",
     "prod": "serve dist",
     "predeploy": "cross-env NODE_ENV=production npm run build",
-    "deploy": "gh-pages -d dist -u \"Circle CI <circle@circleci.com>\" -x -r \"https://$GITHUB_TOKEN@github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME\""
+    "deploy": "gh-pages -d dist -u \"Circle CI <circle@circleci.com>\" -x -r \"https://$GITHUB_TOKEN@github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME\" -m \"Build $CIRCLE_BUILD_NUM [ci skip]\""
   },
   "dependencies": {
     "core-js": "^2.6.5",
