@@ -15,21 +15,21 @@
     "deploy": "gh-pages -d dist -u \"Circle CI <circle@circleci.com>\" -x -r \"https://$GITHUB_TOKEN@github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME\" -m \"Build $CIRCLE_BUILD_NUM [ci skip]\""
   },
   "dependencies": {
-    "core-js": "^2.6.5",
-    "vue": "^2.6.10"
+    "core-js": "^2.6.11",
+    "vue": "^2.6.11"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.10.0",
-    "@vue/cli-plugin-eslint": "^3.10.0",
-    "@vue/cli-service": "^4.1.2",
-    "babel-eslint": "^10.0.1",
-    "cross-env": "^5.2.0",
+    "@vue/cli-plugin-babel": "^3.12.1",
+    "@vue/cli-plugin-eslint": "^3.12.1",
+    "@vue/cli-service": "^4.2.3",
+    "babel-eslint": "^10.1.0",
+    "cross-env": "^5.2.1",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
-    "gh-pages": "^2.0.1",
+    "gh-pages": "^2.2.0",
     "js-cookie": "^2.2.1",
     "marked": "^0.7.0",
-    "serve": "^11.1.0",
-    "vue-template-compiler": "^2.6.10"
+    "serve": "^11.3.0",
+    "vue-template-compiler": "^2.6.11"
   }
 }
