@@ -1,0 +1,58 @@
+{
+  "data.json": {
+    "path": "content",
+    "schema": {
+      "properties": {
+        "date": {
+          "type": "string",
+          "format": "date"
+        },
+        "summary": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "topics": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "Bash",
+              "C#",
+              "Computer Science",
+              "Data Science",
+              "Databases",
+              "Design",
+              "Front-end",
+              "Go",
+              "Java",
+              "Javascript",
+              "Libraries",
+              "Machine Learning",
+              "Management",
+              "Marketing",
+              "Meta",
+              "Natural Language Processing",
+              "Python",
+              "Software Engineering"
+            ]
+          }
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "Article",
+            "Book",
+            "Paper",
+            "Video"
+          ]
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    }
+  }
+}

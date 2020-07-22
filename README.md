@@ -9,22 +9,3 @@ forth.
 
 The frontend for the blog is hosted on [gh-pages](https://justamouse.com/readings).
 It's built using VueJS and MaterializeCSS and pulls data from this repository.
-
-## Data schema
-
-```json
-{
-  "content": [
-    {
-    "date": "YYYY-MM-DD",
-    "summary": "string",
-    "title": "string",
-    "topics": [
-      "string"
-    ],
-    "type": "string",
-    "url": "string"
-    }
-  ]
-}
-```
