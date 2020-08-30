@@ -1,6 +1,14 @@
 {
   "content": [
     {
+      "date": "2020-08-30",
+      "summary": "Good companion to Clean Code as it offers some reinforcing but also some diverging perspectives on what makes code maintainable.",
+      "title": "A Philosophy of Software Design",
+      "topics": ["Software Engineering"],
+      "type": "Book",
+      "url": "https://www.amazon.com/dp/B07N1XLQ7D"
+    },
+    {
       "date": "2019-10-04",
       "summary": "Empirical study on engineers at Microsoft to identify traits of great managers. The main findings circle around being a shield for the team, building the culture, enabling growth and leading with transparency. Technical skill is less important as long as the manager has sufficient ability to grasp the team's context.",
       "title": "What Makes a Great Manager of Software Engineers?",
