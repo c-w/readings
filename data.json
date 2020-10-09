@@ -1,6 +1,14 @@
 {
   "content": [
     {
+      "date": "2020-10-09",
+      "summary": "Great overview of language features that make C# a joy to work with: tuples, async enumerators, nullability checking, etc.",
+      "title": "C# in Depth: Fourth Edition",
+      "topics": ["C#"],
+      "type": "Book",
+      "url": "https://www.amazon.com/dp/1617294535/"
+    },
+    {
       "date": "2020-08-30",
       "summary": "Good companion to Clean Code as it offers some reinforcing but also some diverging perspectives on what makes code maintainable.",
       "title": "A Philosophy of Software Design",
