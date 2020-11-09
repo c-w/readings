@@ -1,6 +1,14 @@
 {
   "content": [
     {
+      "date": "2020-11-09",
+      "summary": "Good overview of basic architecture concepts like caching, sharding, replication, searching, background jobs, and so forth. Also provides some nice examples of incrementally evolving architecture, e.g. starting with a single server, scaling vertically, splitting out dedicated services, etc.",
+      "title": "Web Scalability for Startup Engineers",
+      "topics": ["Software Engineering"],
+      "type": "Book",
+      "url": "https://www.amazon.com/dp/B00ZPS4KI0/"
+    },
+    {
       "date": "2020-10-09",
       "summary": "Great overview of language features that make C# a joy to work with: tuples, async enumerators, nullability checking, etc.",
       "title": "C# in Depth: Fourth Edition",
