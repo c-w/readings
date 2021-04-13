@@ -1,6 +1,14 @@
 {
   "content": [
     {
+      "date": "2021-04-11",
+      "summary": "Felt a little redundant with The Phoenix Project and the story itself was less captivating as there were a lot of cross-references to the previous book. The content focuses on the five ideals: locality and simplicity, focus flow and joy, improvement of daily work, psychological safety, customer focus.",
+      "title": "The Unicorn Project: A Novel about Developers, Digital Disruption, and Thriving in the Age of Data",
+      "topics": ["Software Engineering", "Management"],
+      "type": "Book",
+      "url": "https://www.amazon.com/dp/B07QT9QR41/"
+    },
+    {
       "date": "2020-11-09",
       "summary": "Good overview of basic architecture concepts like caching, sharding, replication, searching, background jobs, and so forth. Also provides some nice examples of incrementally evolving architecture, e.g. starting with a single server, scaling vertically, splitting out dedicated services, etc.",
       "title": "Web Scalability for Startup Engineers",
