@@ -1,5 +1,3 @@
-[![CircleCI](https://circleci.com/gh/c-w/readings.svg?style=svg)](https://circleci.com/gh/c-w/readings)
-
 ## What's this?
 
 This blog is a space for me to write about software things sometimes. The bulk
