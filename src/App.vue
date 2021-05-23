@@ -25,7 +25,8 @@
                     data-constrainwidth="false"
                     data-beloworigin="true"
                     data-alignment="right"
-                    class="dropdown-button" href="#!" role="button"
+                    v-bind:class="{ 'dropdown-button': true, 'toggled': isAnyFilterActive }"
+                    href="#!" role="button"
                     id="filters-trigger">
                   <i class="icon filter zmdi zmdi-filter-list tooltipped"
                       data-tooltip="Filter"
@@ -184,6 +185,10 @@ export default {
   },
 
   computed: {
+    isAnyFilterActive: function() {
+      return this.filterKey !== allTopic;
+    },
+
     filteredPosts: function() {
       const search = this.searchKey.toLowerCase();
 
@@ -205,6 +210,7 @@ export default {
         this.styling = data.styling;
         this.meta = data.meta;
         this.highlightPost(queryParameters.selectedPostUid);
+        this.applyFilter(queryParameters.selectedFilterUid);
         this.setupMaterialize();
       });
     },
@@ -225,6 +231,19 @@ export default {
       });
 
       this.selectedPostUid = uid;
+    },
+
+    applyFilter: function(uid) {
+      if (!uid) {
+        return;
+      }
+
+      const filter = this.filters.find(filter => filter.uid === uid);
+      if (!filter) {
+        return;
+      }
+
+      this.filterKey = filter.topic;
     },
 
     setupMaterialize: function() {
@@ -309,6 +328,7 @@ function idFromPost(post) {
 
 function parseQueryParameters() {
   return {
+    selectedFilterUid: parseHash(filterPrefix),
     selectedPostUid: parseHash(postPrefix)
   };
 }
@@ -462,6 +482,7 @@ nav .icon {
   color: rgba(255, 255, 255, .7);
 }
 
+nav .toggled .icon,
 nav .active .icon {
   color: rgba(255, 255, 255, 1);
 }
