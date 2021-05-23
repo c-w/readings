@@ -6,7 +6,7 @@
     "npm": "^6.13.4"
   },
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "cross-env VUE_APP_BUILD_URL=\"http://localhost:8080\" vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "preprod": "npm run build",
