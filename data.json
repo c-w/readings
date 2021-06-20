@@ -2,6 +2,16 @@
   "content": [
     {
       "topics": [
+        "Bash"
+      ],
+      "title": "Advanced Bash-Scripting Guide: Manipulating Strings",
+      "url": "https://tldp.org/LDP/abs/html/string-manipulation.html",
+      "type": "Article",
+      "date": "2021-06-20",
+      "summary": "Canonical resource to look up bash string manipulation syntax."
+    },
+    {
+      "topics": [
         "Management"
       ],
       "title": "Staff Engineer: Leadership beyond the management track",
