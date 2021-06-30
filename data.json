@@ -2,6 +2,16 @@
   "content": [
     {
       "topics": [
+        "Java"
+      ],
+      "date": "2021-06-29",
+      "type": "Book",
+      "url": "https://www.manning.com/books/kotlin-in-action",
+      "title": "Kotlin in Action",
+      "summary": "Really good introduction to Kotlin coming from Java. Covers idiomatic code, patterns, etc while building a base understanding of the foundations of the language without wasting time on basic programming constructs."
+    },
+    {
+      "topics": [
         "Bash"
       ],
       "title": "Advanced Bash-Scripting Guide: Manipulating Strings",
