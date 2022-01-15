@@ -28,7 +28,7 @@
     "eslint-plugin-vue": "^5.0.0",
     "gh-pages": "^2.2.0",
     "js-cookie": "^2.2.1",
-    "marked": "^0.7.0",
+    "marked": "^4.0.10",
     "serve": "^11.3.2",
     "vue-template-compiler": "^2.6.12"
   }
