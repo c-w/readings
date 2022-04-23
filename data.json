@@ -2,6 +2,16 @@
   "content": [
     {
       "topics": [
+        "Management"
+      ],
+      "url": "https://smile.amazon.com/dp/B06XP3GJ7F/",
+      "date": "2022-04-22",
+      "title": "The Manager's Path: A Guide for Tech Leaders Navigating Growth and Change",
+      "type": "Book",
+      "summary": "Useful"
+    },
+    {
+      "topics": [
         "Software Engineering"
       ],
       "date": "2021-12-08",
