@@ -2,6 +2,16 @@
   "content": [
     {
       "topics": [
+        "Databases"
+      ],
+      "url": "https://knock.app/blog/zero-downtime-postgres-upgrades",
+      "type": "Article",
+      "date": "2023-12-13",
+      "title": "Zero downtime Postgres upgrades",
+      "summary": "In-depth guide to zero downtime major Postgres version upgrades using logical replication. "
+    },
+    {
+      "topics": [
         "Management"
       ],
       "url": "https://smile.amazon.com/dp/B06XP3GJ7F/",
